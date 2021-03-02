@@ -2,11 +2,36 @@
 require(__DIR__."/MQPublish.inc.php");
 session_start();
 ?>
+
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="mystyle.css">
+</head>
+<body>
+
 <form method="POST">
-<input type="text" name="username"/>
-<input type="password" name="password"/>
-<input type="submit" name="submit" value="Login"/>
+<div class="container">
+	<h1>Login</h1>
+        <p>Please fill in username and password to log in.</p>
+        <hr>
+
+        <label for="usr"><b>Username</b></label>
+        <input type="text" placeholder="Enter Username" name="usr" id="usr" required>
+
+		<label for="psw"><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
+        <hr>
+
+        <button type="submit" class="registerbtn">Register</button>
+</div>
+
+<div class="container signin">
+	<p>Don't have an account? <a href="register.php">Register</a>.</p>
+</div>
 </form>
+</body>
+</html>
 
 <?php
 if(isset($_POST["submit"])){
