@@ -65,7 +65,7 @@ session_start();
     </div>
 </nav>
 <!-- Register Form -->
-<form method="POST">
+<form method="POST" action="register.php">
     <div class="container register-form">
         <div class="form">
             <div class="note">
