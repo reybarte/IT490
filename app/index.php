@@ -66,7 +66,7 @@ session_start();
 <section class="jumbotron text-center">
     <div class="container">
         <h1 class="jumbotron-heading">Couch Potatoes</h1>
-        <p class="lead text-muted mb-0">Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un peintre anonyme assembla ensemble des morceaux de texte pour réaliser un livre spécimen de polices de texte...</p>
+        <p class="lead text-muted mb-0">Anti-Scalper</p>
     </div>
 </section>
 <div class="container">
@@ -75,20 +75,27 @@ session_start();
             <div class="card bg-light mb-3">
                 <div class="card-header bg-primary text-white text-uppercase"><i class="fa fa-list"></i> Categories</div>
                 <ul class="list-group category_block">
-                    <li class="list-group-item"><a href="#">Cras justo odio</a></li>
-                    <li class="list-group-item"><a href="#">Dapibus ac facilisis in</a></li>
-                    <li class="list-group-item"><a href="#">Morbi leo risus</a></li>
-                    <li class="list-group-item"><a href="#">Porta ac consectetur ac</a></li>
-                    <li class="list-group-item"><a href="#">Vestibulum at eros</a></li>
+                    <li class="list-group-item"><a href="#">Category 1</a></li>
+                    <li class="list-group-item"><a href="#">Category 2</a></li>
+                    <li class="list-group-item"><a href="#">Category 3</a></li>
+                    <li class="list-group-item"><a href="#">Category 4</a></li>
+                    <li class="list-group-item"><a href="#">Category 5</a></li>
                 </ul>
             </div>
             <div class="card bg-light mb-3">
                 <div class="card-header bg-success text-white text-uppercase">Last product</div>
                 <div class="card-body">
                     <img class="img-fluid" src="https://dummyimage.com/600x400/55595c/fff" />
-                    <h5 class="card-title">Product title</h5>
+                    <h4 class="card-title"><a href="#" title="View Product">GeForce RTX 3090</a></h4>
                     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <p class="bloc_left_price">99.00 $</p>
+                    <div class="row">
+                        <div class="col">
+                            <p class="btn btn-danger btn-block">999.00 $</p>
+                        </div>
+                        <div class="col">
+                            <a href="#" class="btn btn-success btn-block">Add to cart</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -98,11 +105,11 @@ session_start();
                     <div class="card">
                         <img class="card-img-top" src="https://dummyimage.com/600x400/55595c/fff" alt="Card image cap">
                         <div class="card-body">
-                            <h4 class="card-title"><a href="#" title="View Product">Product title</a></h4>
+                            <h4 class="card-title"><a href="#" title="View Product">GeForce RTX 3090</a></h4>
                             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                             <div class="row">
                                 <div class="col">
-                                    <p class="btn btn-danger btn-block">99.00 $</p>
+                                    <p class="btn btn-danger btn-block">999.00 $</p>
                                 </div>
                                 <div class="col">
                                     <a href="#" class="btn btn-success btn-block">Add to cart</a>
@@ -115,11 +122,11 @@ session_start();
                     <div class="card">
                         <img class="card-img-top" src="https://dummyimage.com/600x400/55595c/fff" alt="Card image cap">
                         <div class="card-body">
-                            <h4 class="card-title"><a href="#" title="View Product">Product title</a></h4>
+                            <h4 class="card-title"><a href="#" title="View Product">GeForce RTX 3080</a></h4>
                             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                             <div class="row">
                                 <div class="col">
-                                    <p class="btn btn-danger btn-block">99.00 $</p>
+                                    <p class="btn btn-danger btn-block">999.00 $</p>
                                 </div>
                                 <div class="col">
                                     <a href="#" class="btn btn-success btn-block">Add to cart</a>
@@ -132,11 +139,11 @@ session_start();
                     <div class="card">
                         <img class="card-img-top" src="https://dummyimage.com/600x400/55595c/fff" alt="Card image cap">
                         <div class="card-body">
-                            <h4 class="card-title"><a href="#" title="View Product">Product title</a></h4>
+                            <h4 class="card-title"><a href="#" title="View Product">GeForce RTX 3070</a></h4>
                             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                             <div class="row">
                                 <div class="col">
-                                    <p class="btn btn-danger btn-block">99.00 $</p>
+                                    <p class="btn btn-danger btn-block">999.00 $</p>
                                 </div>
                                 <div class="col">
                                     <a href="#" class="btn btn-success btn-block">Add to cart</a>
@@ -149,11 +156,11 @@ session_start();
                     <div class="card">
                         <img class="card-img-top" src="https://dummyimage.com/600x400/55595c/fff" alt="Card image cap">
                         <div class="card-body">
-                            <h4 class="card-title"><a href="#" title="View Product">Product title</a></h4>
+                            <h4 class="card-title"><a href="#" title="View Product">GeForce RTX 3060 Ti</a></h4>
                             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                             <div class="row">
                                 <div class="col">
-                                    <p class="btn btn-danger btn-block">99.00 $</p>
+                                    <p class="btn btn-danger btn-block">999.00 $</p>
                                 </div>
                                 <div class="col">
                                     <a href="#" class="btn btn-success btn-block">Add to cart</a>
@@ -166,11 +173,11 @@ session_start();
                     <div class="card">
                         <img class="card-img-top" src="https://dummyimage.com/600x400/55595c/fff" alt="Card image cap">
                         <div class="card-body">
-                            <h4 class="card-title"><a href="#" title="View Product">Product title</a></h4>
+                            <h4 class="card-title"><a href="#" title="View Product">GeForce RTX 3060</a></h4>
                             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                             <div class="row">
                                 <div class="col">
-                                    <p class="btn btn-danger btn-block">99.00 $</p>
+                                    <p class="btn btn-danger btn-block">999.00 $</p>
                                 </div>
                                 <div class="col">
                                     <a href="#" class="btn btn-success btn-block">Add to cart</a>
@@ -183,11 +190,11 @@ session_start();
                     <div class="card">
                         <img class="card-img-top" src="https://dummyimage.com/600x400/55595c/fff" alt="Card image cap">
                         <div class="card-body">
-                            <h4 class="card-title"><a href="#" title="View Product">Product title</a></h4>
+                            <h4 class="card-title"><a href="#" title="View Product">GeForce RTX 3090</a></h4>
                             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                             <div class="row">
                                 <div class="col">
-                                    <p class="btn btn-danger btn-block">99.00 $</p>
+                                    <p class="btn btn-danger btn-block">999.00 $</p>
                                 </div>
                                 <div class="col">
                                     <a href="#" class="btn btn-success btn-block">Add to cart</a>
@@ -227,7 +234,7 @@ session_start();
                 <h5>About</h5>
                 <hr class="bg-white mb-2 mt-0 d-inline-block mx-auto w-25">
                 <p class="mb-0">
-                    Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression.
+                We are a bot that notifies users via email when specific PC hardware (Geforce RTX 3000 Series) on Amazon has become available, directing them to a mockup product page on our site for purchasing and product details.
                 </p>
             </div>
 
@@ -265,7 +272,7 @@ session_start();
             </div>
             <div class="col-12">
                 <p class="float-left">
-                    <a href="#">Back to top</a>
+                    <a href="#"><br>Back to top</a>
                 </p>
             </div>
         </div>
