@@ -156,7 +156,7 @@ session_start();
                     <div class="card">
                         <img class="card-img-top" src="https://dummyimage.com/600x400/55595c/fff" alt="Card image cap">
                         <div class="card-body">
-                            <h4 class="card-title"><a href="#" title="View Product">GeForce RTX 3060 Ti</a></h4>
+                            <h4 class="card-title ti"><a href="#" title="View Product">GeForce RTX 3060 Ti</a></h4>
                             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                             <div class="row">
                                 <div class="col">
