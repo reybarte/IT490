@@ -83,17 +83,17 @@ session_start();
                 </ul>
             </div>
             <div class="card bg-light mb-3">
-                <div class="card-header bg-success text-white text-uppercase">Last product</div>
+                <div class="card-header bg-primary text-white text-uppercase">Last product</div>
                 <div class="card-body">
                     <img class="img-fluid" src="https://dummyimage.com/600x400/55595c/fff" />
                     <h4 class="card-title"><a href="#" title="View Product">GeForce RTX 3090</a></h4>
                     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                     <div class="row">
                         <div class="col">
-                            <p class="btn btn-danger btn-block">999.00 $</p>
+                            <p class="btn btn-secondary btn-block">999.00 $</p>
                         </div>
                         <div class="col">
-                            <a href="#" class="btn btn-success btn-block">Add to cart</a>
+                            <a href="#" class="btn btn-primary btn-block">Add to cart</a>
                         </div>
                     </div>
                 </div>
@@ -109,10 +109,10 @@ session_start();
                             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                             <div class="row">
                                 <div class="col">
-                                    <p class="btn btn-danger btn-block">999.00 $</p>
+                                    <p class="btn btn-secondary btn-block">999.00 $</p>
                                 </div>
                                 <div class="col">
-                                    <a href="#" class="btn btn-success btn-block">Add to cart</a>
+                                    <a href="#" class="btn btn-primary btn-block">Add to cart</a>
                                 </div>
                             </div>
                         </div>
@@ -126,10 +126,10 @@ session_start();
                             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                             <div class="row">
                                 <div class="col">
-                                    <p class="btn btn-danger btn-block">999.00 $</p>
+                                    <p class="btn btn-secondary btn-block">999.00 $</p>
                                 </div>
                                 <div class="col">
-                                    <a href="#" class="btn btn-success btn-block">Add to cart</a>
+                                    <a href="#" class="btn btn-primary btn-block">Add to cart</a>
                                 </div>
                             </div>
                         </div>
@@ -143,10 +143,10 @@ session_start();
                             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                             <div class="row">
                                 <div class="col">
-                                    <p class="btn btn-danger btn-block">999.00 $</p>
+                                    <p class="btn btn-secondary btn-block">999.00 $</p>
                                 </div>
                                 <div class="col">
-                                    <a href="#" class="btn btn-success btn-block">Add to cart</a>
+                                    <a href="#" class="btn btn-primary btn-block">Add to cart</a>
                                 </div>
                             </div>
                         </div>
@@ -160,10 +160,10 @@ session_start();
                             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                             <div class="row">
                                 <div class="col">
-                                    <p class="btn btn-danger btn-block">999.00 $</p>
+                                    <p class="btn btn-secondary btn-block">999.00 $</p>
                                 </div>
                                 <div class="col">
-                                    <a href="#" class="btn btn-success btn-block">Add to cart</a>
+                                    <a href="#" class="btn btn-primary btn-block">Add to cart</a>
                                 </div>
                             </div>
                         </div>
@@ -177,10 +177,10 @@ session_start();
                             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                             <div class="row">
                                 <div class="col">
-                                    <p class="btn btn-danger btn-block">999.00 $</p>
+                                    <p class="btn btn-secondary btn-block">999.00 $</p>
                                 </div>
                                 <div class="col">
-                                    <a href="#" class="btn btn-success btn-block">Add to cart</a>
+                                    <a href="#" class="btn btn-primary btn-block">Add to cart</a>
                                 </div>
                             </div>
                         </div>
@@ -194,10 +194,10 @@ session_start();
                             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                             <div class="row">
                                 <div class="col">
-                                    <p class="btn btn-danger btn-block">999.00 $</p>
+                                    <p class="btn btn-secondary btn-block">999.00 $</p>
                                 </div>
                                 <div class="col">
-                                    <a href="#" class="btn btn-success btn-block">Add to cart</a>
+                                    <a href="#" class="btn btn-primary btn-block">Add to cart</a>
                                 </div>
                             </div>
                         </div>
