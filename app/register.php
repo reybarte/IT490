@@ -2,8 +2,33 @@
 require(__DIR__."/MQPublish.inc.php");
 //require(__DIR__."/header.php");
 session_start();
-?>
 
+if(isset($_POST["submit"])){
+	$email = $_POST["email"];
+	$username = $_POST["username"];
+	$password = $_POST["password"];
+	$firstName = $_POST["firstName"];
+	$lastName = $_POST["lastName"];
+	//TODO validate
+    $pswdHash = hash("sha512", $password, false );
+	//calls function from MQPublish.inc.php to communicate with MQ
+	$response = (array)register($email, $username, $firstName, $lastName, $pswdHash);
+    if($response["status"] == 200){
+        $_SESSION["user"] = $response["data"];
+        header("Refresh:5; url = login.php");
+        alert("Login Successful");
+}
+else if ($response["status"] == 400){
+        header("Refresh:5; url = register.php");
+
+}
+else {
+        echo "something else";
+        var_export($response);
+}
+
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -113,23 +138,4 @@ session_start();
 </body>
 </html>
 
-<?php
-if(isset($_POST["submit"])){
-	$email = $_POST["email"];
-	$username = $_POST["username"];
-	$password = $_POST["password"];
-	$firstName = $_POST["firstName"];
-	$lastName = $_POST["lastName"];
-	//TODO validate
-    $pswdHash = hash("sha512", $password, false );
-	//calls function from MQPublish.inc.php to communicate with MQ
-	$response = register($email, $username, $firstName, $lastName, $pswdHash);
-	if($response["status"] == 200){
-		$_SESSION["user"] = $response["data"];
-	}
-	else{
-		var_export($response);
-	}
 
-}
-?>
