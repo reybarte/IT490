@@ -56,10 +56,6 @@ session_start();
                         </button>
                     </div>
                 </div>
-                <a class="btn btn-primary btn-sm ml-3" href="#">
-                    <i class="fa fa-shopping-cart"></i> Cart
-                    <span class="badge badge-light">0</span>
-                </a>
             </form>
         </div>
     </div>

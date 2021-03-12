@@ -54,10 +54,6 @@ session_start();
                         </button>
                     </div>
                 </div>
-                <a class="btn btn-primary btn-sm ml-3" href="#">
-                    <i class="fa fa-shopping-cart"></i> Cart
-                    <span class="badge badge-light">0</span>
-                </a>
             </form>
         </div>
     </div>
@@ -93,7 +89,7 @@ session_start();
                             <p class="btn btn-secondary btn-block">999.00 $</p>
                         </div>
                         <div class="col">
-                            <a href="#" class="btn btn-primary btn-block">Add to cart</a>
+                            <a href="#" class="btn btn-primary btn-block">Buy Now</a>
                         </div>
                     </div>
                 </div>
@@ -112,7 +108,7 @@ session_start();
                                     <p class="btn btn-secondary btn-block">999.00 $</p>
                                 </div>
                                 <div class="col">
-                                    <a href="#" class="btn btn-primary btn-block">Add to cart</a>
+                                    <a href="#" class="btn btn-primary btn-block">Buy Now</a>
                                 </div>
                             </div>
                         </div>
@@ -129,7 +125,7 @@ session_start();
                                     <p class="btn btn-secondary btn-block">999.00 $</p>
                                 </div>
                                 <div class="col">
-                                    <a href="#" class="btn btn-primary btn-block">Add to cart</a>
+                                    <a href="#" class="btn btn-primary btn-block">Buy Now</a>
                                 </div>
                             </div>
                         </div>
@@ -146,7 +142,7 @@ session_start();
                                     <p class="btn btn-secondary btn-block">999.00 $</p>
                                 </div>
                                 <div class="col">
-                                    <a href="#" class="btn btn-primary btn-block">Add to cart</a>
+                                    <a href="#" class="btn btn-primary btn-block">Buy Now</a>
                                 </div>
                             </div>
                         </div>
@@ -163,7 +159,7 @@ session_start();
                                     <p class="btn btn-secondary btn-block">999.00 $</p>
                                 </div>
                                 <div class="col">
-                                    <a href="#" class="btn btn-primary btn-block">Add to cart</a>
+                                    <a href="#" class="btn btn-primary btn-block">Buy Now</a>
                                 </div>
                             </div>
                         </div>
@@ -180,7 +176,7 @@ session_start();
                                     <p class="btn btn-secondary btn-block">999.00 $</p>
                                 </div>
                                 <div class="col">
-                                    <a href="#" class="btn btn-primary btn-block">Add to cart</a>
+                                    <a href="#" class="btn btn-primary btn-block">Buy Now</a>
                                 </div>
                             </div>
                         </div>
@@ -197,7 +193,7 @@ session_start();
                                     <p class="btn btn-secondary btn-block">999.00 $</p>
                                 </div>
                                 <div class="col">
-                                    <a href="#" class="btn btn-primary btn-block">Add to cart</a>
+                                    <a href="#" class="btn btn-primary btn-block">Buy Now</a>
                                 </div>
                             </div>
                         </div>
