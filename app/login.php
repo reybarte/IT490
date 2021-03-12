@@ -85,7 +85,7 @@ session_start();
                 
                     <div class="nextPage">
                         <br>
-                        <p>Don't have an account? <a href="register.php">Register</a>.</p>
+                        <p>Do not have an account? <a href="register.php">Register</a>.</p>
                     </div>
                 </div>
                 </div>
@@ -102,9 +102,9 @@ if(isset($_POST["submit"])){
 	$username = $_POST["username"];
 	$password = $_POST["password"];
 	//TODO validate
-
+    $pswdHash = hash("sha512", $password, false );
 	//calls function from MQPublish.inc.php to communicate with MQ
-	$response = login($username, $password);
+	$response = login($username, $pswdHash);
 	if($response["status"] == 200){
 		$_SESSION["user"] = $response["data"];
 	}
