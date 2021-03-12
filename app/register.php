@@ -69,13 +69,15 @@ session_start();
 
 <?php
 if(isset($_POST["submit"])){
+	$email = $_POST["email"];
 	$username = $_POST["username"];
 	$password = $_POST["password"];
+	$firstName = $_POST["firstName"];
+	$lastName = $_POST["lastName"];
 	//TODO validate
-	
 
 	//calls function from MQPublish.inc.php to communicate with MQ
-	$response = register($username, $password);
+	$response = register($email, $username, $firstName, $lastName, $password);
 	if($response["status"] == 200){
 		$_SESSION["user"] = $response["data"];
 	}
