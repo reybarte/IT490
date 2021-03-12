@@ -1,4 +1,5 @@
-myprivatecreds.*
+/.vscode
 /vendor/
+/var
 config.*
 *.log
