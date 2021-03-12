@@ -75,9 +75,9 @@ if(isset($_POST["submit"])){
 	$firstName = $_POST["firstName"];
 	$lastName = $_POST["lastName"];
 	//TODO validate
-
+    $pswdHash = hash("sha512", $password, false );
 	//calls function from MQPublish.inc.php to communicate with MQ
-	$response = register($email, $username, $firstName, $lastName, $password);
+	$response = register($email, $username, $firstName, $lastName, $pswdHash);
 	if($response["status"] == 200){
 		$_SESSION["user"] = $response["data"];
 	}
