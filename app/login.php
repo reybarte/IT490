@@ -2,8 +2,33 @@
 require(__DIR__."/MQPublish.inc.php");
 //require(__DIR__."/header.php");
 session_start();
-?>
 
+
+if(isset($_POST["submit"])){
+	$username = $_POST["username"];
+	$password = $_POST["password"];
+	//TODO validate
+    $pswdHash = hash("sha512", $password, false );
+	//calls function from MQPublish.inc.php to communicate with MQ
+	$response = (array)login($username, $pswdHash);
+    if($response["status"] == 200){
+        $_SESSION["user"] = $response["data"];
+        header("Refresh:5; url = index.php");
+        alert("Login Successful");
+    }
+    else if ($response["status"] == 400){
+        header("Refresh:5; url = login.php");
+    }
+    else if ($response["status"] == 403){
+        header("Refresh:5; url = login.php")
+    }
+    else {
+        echo "something else";
+        var_export($response);
+    }
+
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -97,20 +122,4 @@ session_start();
 </body>
 </html>
 
-<?php
-if(isset($_POST["submit"])){
-	$username = $_POST["username"];
-	$password = $_POST["password"];
-	//TODO validate
-    $pswdHash = hash("sha512", $password, false );
-	//calls function from MQPublish.inc.php to communicate with MQ
-	$response = login($username, $pswdHash);
-	if($response["status"] == 200){
-		$_SESSION["user"] = $response["data"];
-	}
-	else{
-		var_export($response);
-	}
 
-}
-?>
