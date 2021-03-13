@@ -1,4 +1,5 @@
 <?php
+require(__DIR__ . "/../../admin.php");
 function getDB(){
 	global $db;
 	if(!isset($db)){
