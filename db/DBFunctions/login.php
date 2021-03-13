@@ -7,8 +7,8 @@ function login($username, $password){
 	$password = hash('sha512', $password, false);
 	//TODO do proper checking, maybe user doesn't exist
 	if($result){
-		if($password == $result["password"]){
-			unset($result["password"]);//never return password, there's no need to
+		if($password == $result["Password"]){
+			unset($result["Password"]);//never return password, there's no need to
 			return array("status"=>200, "data"=>$result);//send user data back so app can use it
 		}
 		else{
