@@ -20,7 +20,7 @@ if(isset($_POST["submit"])){
         header("Refresh:5; url = login.php");
     }
     else if ($response["status"] == 403){
-        header("Refresh:5; url = login.php")
+        header("Refresh:5; url = login.php");
     }
     else {
         echo "something else";
