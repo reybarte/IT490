@@ -10,9 +10,9 @@ if(isset($_POST["submit"])){
 	$firstName = $_POST["firstName"];
 	$lastName = $_POST["lastName"];
 	//TODO validate
-    $pswdHash = hash("sha512", $password, false );
+    
 	//calls function from MQPublish.inc.php to communicate with MQ
-	$response = (array)register($email, $username, $firstName, $lastName, $pswdHash);
+	$response = (array)register($email, $username, $firstName, $lastName, $password);
     if($response["status"] == 200){
         $_SESSION["user"] = $response["data"];
         header("Refresh:5; url = login.php");
