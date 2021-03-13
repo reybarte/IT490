@@ -6,12 +6,12 @@ function register($email, $username, $fName, $lName, $password){
 	$result = $stmt->execute([":email"=>$email,":username"=>$username,":fName"=>$fName,":lName"=>$lName,":password"=>$password]);
 	//TODO do proper checking, maybe user doesn't exist
 	if($result){
-		return array("status"=>200, "message"=>"Did we register successfully?");
+		return array("status"=>200, "message"=>"Registered");
 	}
 	else{
 		//must return a proper message so that the app can parse it
 		//and display a user friendly message to the user
-		return array("status"=>400, "message"=>"Error, please try again!");
+		return array("status"=>400, "message"=>"Error");
 	}
 }
 ?>
