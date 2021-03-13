@@ -1,8 +1,8 @@
 <?php
 
-require_once(__DIR__.'/../../lib/path.inc');
-require_once(__DIR__.'/../../lib/get_host_info.inc');
-require_once(__DIR__.'/../../lib/rabbitMQLib.inc');
+require_once(__DIR__.'/../lib/path.inc');
+require_once(__DIR__.'/../lib/get_host_info.inc');
+require_once(__DIR__.'/../lib/rabbitMQLib.inc');
 require(__DIR__."/dbconnection.php");
 
 //separate files for DB calls so it's easier to divide work
@@ -22,7 +22,8 @@ function request_processor($req){
 		case "login":
 			return login($req['username'], $req['password']);
 		case "register":
-			return register($req["username"], $req["password"]);
+			//return register($req["username"], $req["password"]);
+			return register($req["email"], $req["username"], $req["fName"], $req["lName"], $req["password"]);
 		case "validate_session":
 			return validate($req['session_id']);
 		case "echo":
