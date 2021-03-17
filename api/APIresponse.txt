@@ -1,0 +1,17 @@
+|asin|
+B08HBVX53D
+|title|
+PNY GeForce RTX 3090 24GB XLR8 Gaming Uprising EPIC-X RGB Triple Fan Graphics Card
+|current_price|
+3138
+|description|
+Make sure this fits by entering your model number.
+NVIDIA Ampere architecture, with 1395MHz core clock and 1695MHz boost clock speeds to help meet the needs of demanding games.
+24GB GDDR6X (384-bit) on-board memory, plus 5248 CUDA processing cores and up to 936GB/sec of memory bandwidth provide the memory needed to create striking visual realism.
+PCI Express 4.0 interface - Offers compatibility with a range of systems. Also includes DisplayPort and HDMI outputs for expanded connectivity.
+NVIDIA GeForce Experience - Capture and share videos, screenshots, and livestreams with friends. Keep your drivers up to date and optimize your game settings. It's the essential companion to your GeForce graphics card.
+
+|out_of_stock|
+false
+
+
