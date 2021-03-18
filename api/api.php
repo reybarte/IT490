@@ -1,9 +1,9 @@
 <?php
-function apicall($asin){
+function apiCall($asin) {
 	$curl = curl_init();
-
+	echo $asin;
 	curl_setopt_array($curl, [
-			CURLOPT_URL => "https://amazon-products1.p.rapidapi.com/product?country=US&asin=" . $asin,
+			CURLOPT_URL => "https://amazon-products1.p.rapidapi.com/product?country=US&asin=".$asin,
 			CURLOPT_RETURNTRANSFER => true,
 			CURLOPT_FOLLOWLOCATION => true,
 			CURLOPT_ENCODING => "",
@@ -17,21 +17,34 @@ function apicall($asin){
 			],
 	]);
 
+	//json object
 	$response = curl_exec($curl);
+	//format json object
+	$response = json_decode($response);
+	var_dump($response);
+	$arr = ["asin"=>$response->asin, "title"=>$response->title, "current_price"=>$response->prices->current_price, "description"=>$response->description];
+	if($response->out_of_stock) {
+		$arr["out_of_stock"]="true";
+	} else {
+		$arr["out_of_stock"]="false";
+	}
 	$err = curl_error($curl);
 
 	curl_close($curl);
 
 	$file = fopen("APIresponse.txt", "a");
 
-	if ($err) {
-		fwrite($file, $err);
+	if (!$err) {
+		foreach ($arr as $key=>$value){
+			fwrite($file, "|" . $key . "|\n" . $value);
+			fwrite($file, "\n");
+		}
 	} else {
-		fwrite($file, $response);
+		fwrite($file, $err);
 	}
 
-	fwrite($file, "\n");
-	fclose($close);
-	return $response;
+	fwrite($file, "\n\n");
+	fclose($file);
+	return $arr;
 }
 ?>

@@ -3,6 +3,7 @@
 require_once(__DIR__.'/../lib/path.inc');
 require_once(__DIR__.'/../lib/get_host_info.inc');
 require_once(__DIR__.'/../lib/rabbitMQLib.inc');
+require(__DIR__."/api.php");
 
 function request_processor($req){
 	echo "Received Request".PHP_EOL;
@@ -13,8 +14,8 @@ function request_processor($req){
 	//Handle message type
 	$type = $req['type'];
 	switch($type){
-		case "apiCall":
-			return apicall($req["asin"]);
+		case "apiRequest":
+			return apiCall($req["asin"]);
 	}
 	return array("return_code" => '0',
 		"message" => "Server received request and processed it");

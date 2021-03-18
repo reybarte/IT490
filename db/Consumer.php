@@ -26,6 +26,11 @@ function request_processor($req){
 			return register($req["email"], $req["username"], $req["fName"], $req["lName"], $req["password"]);
 		case "validate_session":
 			return validate($req['session_id']);
+		case "apiCall":
+			$arr = apiClient($req['asin']);
+			return apiSaveDB($arr->asin, $arr->title, $arr->current_price, $arr->description, $arr->out_of_stock);
+		case "apiCache":
+			return apiGetCache($req['asin']);
 		case "echo":
 			return array("return_code"=>'0', "message"=>"Echo: " .$req["message"]);
 	}
