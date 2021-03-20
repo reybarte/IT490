@@ -5,7 +5,7 @@ function apiClient($asin){
                 require_once(__DIR__.'/../../lib/get_host_info.inc');
                 require_once(__DIR__.'/../../lib/rabbitMQLib.inc');
 
-                $client = new RabbitMQClient('APIDBQ.ini', 'testServer');
+                $client = new RabbitMQClient('APIDBQ.ini', 'dbServer');
                 $msg = ["asin"=>$asin, "type"=>"apiRequest"];
                 $response = $client->send_request($msg);
                 return $response;

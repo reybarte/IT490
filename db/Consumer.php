@@ -8,6 +8,9 @@ require(__DIR__."/dbconnection.php");
 //separate files for DB calls so it's easier to divide work
 require(__DIR__."/DBFunctions/login.php");
 require(__DIR__."/DBFunctions/register.php");
+require(__DIR__."/DBFunctions/apiClient.php");
+require(__DIR__."/DBFunctions/apiSaveDB.php");
+require(__DIR__."/DBFunctions/apiGetCache.php");
 //TODO add more as they're developed
 
 function request_processor($req){
@@ -22,7 +25,6 @@ function request_processor($req){
 		case "login":
 			return login($req['username'], $req['password']);
 		case "register":
-			//return register($req["username"], $req["password"]);
 			return register($req["email"], $req["username"], $req["fName"], $req["lName"], $req["password"]);
 		case "validate_session":
 			return validate($req['session_id']);
@@ -37,8 +39,7 @@ function request_processor($req){
 	return array("return_code" => '0',
 		"message" => "Server received request and processed it");
 }
-//will probably need to update the testRabbitMQ.ini path here
-$server = new rabbitMQServer("APPDBQ.ini", "sampleServer");
+$server = new rabbitMQServer("APPDBQ.ini", "dbServer");
 
 echo "Rabbit MQ Server Start" . PHP_EOL;
 $server->process_requests('request_processor');

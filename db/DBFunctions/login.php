@@ -11,7 +11,7 @@ function login($username, $password){
 			unset($result["Password"]);//never return password, there's no need to
 			return array("status"=>200, "data"=>$result);//send user data back so app can use it
 		}
-		else{s\
+		else{
 			//must return proepr message blah blah blah see below
 			return array("status"=>403, "message"=>"Unverified");
 		}
