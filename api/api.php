@@ -28,6 +28,31 @@ function apiCall($asin) {
 	} else {
 		$arr["out_of_stock"]="false";
 	}
+/*	
+	if(count($response->images) == 1) {
+		$img = $response->images[0];
+	}
+	else if(count($response["images"]) > 1) {
+		$img = $response->images[0];
+		for ($x = 1; $x < count($response->images); $x++) {
+			$img = $img.",".$response->images[$x];
+		}
+	}
+	$arr["images"]=$img;
+*/
+	$featureCount = count($response->features);
+	if($featureCount == 1) {
+		$features = $response->features[0];
+	} else if ($featureCount > 1)
+		for ($x = 1; $x < $featureCount; $x++) {
+			$features = $features.",".$response->features;
+		}
+	} else {
+		$features = ["None"];
+	}
+	$arr["features"] = $features;
+
+
 	$err = curl_error($curl);
 
 	curl_close($curl);
