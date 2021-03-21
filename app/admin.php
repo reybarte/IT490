@@ -1,6 +1,6 @@
 <?php
 require("MQFunctions/apiCall.php");
-if(isset($_POST["apiCall"])) {
+if(isset($_POST["request"])) {
 	apiCall($_POST["asin"]);
 	
 }
