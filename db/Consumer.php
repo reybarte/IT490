@@ -30,7 +30,7 @@ function request_processor($req){
 			return validate($req['session_id']);
 		case "apiCall":
 			$arr = apiClient($req['asin']);
-			return apiSaveDB($arr->asin, $arr->title, $arr->current_price, $arr->description, $arr->out_of_stock);
+			return ["empty"=>"nonsense"];// apiSaveDB($arr->asin, $arr->title, $arr->current_price, $arr->description, $arr->out_of_stock);
 		case "apiCache":
 			return apiGetCache($req['asin']);
 		case "echo":

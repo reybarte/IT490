@@ -73,6 +73,7 @@ class rabbitMQServer
 					'',
 					$req->get('reply_to')
 				);
+				$conn->close();
 				return;
 			}
 		}
@@ -107,6 +108,7 @@ class rabbitMQServer
 			{
 				$this->conn_queue->wait();
 			}
+			$conn->close();
 		}
 		catch (Exception $e)
 		{
@@ -128,6 +130,8 @@ class rabbitMQClient
 	private $response_queue = array();
 	private $exchange_type = "topic";
 	private $channel;
+
+	private $connection;
 	function __construct($machine, $server = "rabbitMQ")
 	{
 		$this->machine = getHostInfo($server, array($machine));
@@ -146,11 +150,11 @@ class rabbitMQClient
 		}
 		$this->exchange = $this->machine[$server]["EXCHANGE"];
 		$this->queue = $this->machine[$server]["QUEUE"];
+		$this->connection = new AMQPStreamConnection($this->BROKER_HOST, $this->BROKER_PORT, $this->USER, $this->PASSWORD);
 		$this->consume();
 	}
 	function get_connection(){
-		return new AMQPStreamConnection($this->BROKER_HOST, $this->BROKER_PORT,
-					$this->USER, $this->PASSWORD);
+		return $this->connection;
 	}
 	function process_response($response){
 		$uid = $response->get('correlation_id');
@@ -207,6 +211,7 @@ class rabbitMQClient
 			}
 			$response = $this->response_queue[$uid];
 			unset($this->response_queue[$uid]);
+			$this->get_connection()->close();
 			return $response;
 		}
 		catch(Exception $e)
@@ -228,9 +233,6 @@ class rabbitMQClient
 			$conn = $this->get_connection();
 			$channel = $channel->channel();
 			$channel->exchange_declare($this->exchange, AMQPExchangeType::DIRECT, false, false, true);
-
-
-
 			$conn->connect();
 			$channel = new AMQPChannel($conn);
 			$exchange = new AMQPExchange($channel);
