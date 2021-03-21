@@ -80,3 +80,75 @@ NVIDIA GeForce Experience - Capture and share videos, screenshots, and livestrea
 false
 
 
+|asin|
+B08HH5WF97
+|title|
+ASUS TUF Gaming NVIDIA GeForce RTX 3080 OC Edition Graphics Card- PCIe 4.0, 10GB GDDR6X, HDMI 2.1, DisplayPort 1.4a, Dual Ball Fan Bearings
+|current_price|
+-1
+|description|
+Make sure this fits by entering your model number.
+NVIDIA Ampere Streaming Multiprocessors: The building blocks for the world’s fastest, most efficient GPU, the all-new Ampere SM brings 2X the FP32 throughput and improved power efficiency.
+2nd Generation RT Cores: Experience 2X the throughput of 1st Gen RT Cores, plus concurrent RT and shading for a whole new level of ray tracing performance.
+3rd Generation Tensor Cores: Get up to 2X the throughput with structural sparsity and advanced AI algorithms such as DLSS. Now with support for up to 8K resolution, these cores deliver a massive boost in game performance and all-new AI capabilities.
+Axial-Tech Fan Design has been newly tuned with a reversed central fan direction for less turbulence.
+Military-grade Capacitors and other TUF components enhance durability and performance.
+Dual Ball Fan Bearings can last up to twice as long as sleeve bearing designs.
+GPU Tweak II provides intuitive performance tweaking, thermal controls, and system monitoring.
+
+|out_of_stock|
+true
+|images|
+none
+|features|
+,Array,Array,Array,Array
+
+
+|asin|
+B08HH5WF97
+|title|
+ASUS TUF Gaming NVIDIA GeForce RTX 3080 OC Edition Graphics Card- PCIe 4.0, 10GB GDDR6X, HDMI 2.1, DisplayPort 1.4a, Dual Ball Fan Bearings
+|current_price|
+-1
+|description|
+Make sure this fits by entering your model number.
+NVIDIA Ampere Streaming Multiprocessors: The building blocks for the world’s fastest, most efficient GPU, the all-new Ampere SM brings 2X the FP32 throughput and improved power efficiency.
+2nd Generation RT Cores: Experience 2X the throughput of 1st Gen RT Cores, plus concurrent RT and shading for a whole new level of ray tracing performance.
+3rd Generation Tensor Cores: Get up to 2X the throughput with structural sparsity and advanced AI algorithms such as DLSS. Now with support for up to 8K resolution, these cores deliver a massive boost in game performance and all-new AI capabilities.
+Axial-Tech Fan Design has been newly tuned with a reversed central fan direction for less turbulence.
+Military-grade Capacitors and other TUF components enhance durability and performance.
+Dual Ball Fan Bearings can last up to twice as long as sleeve bearing designs.
+GPU Tweak II provides intuitive performance tweaking, thermal controls, and system monitoring.
+
+|out_of_stock|
+true
+|images|
+https://images-na.ssl-images-amazon.com/images/I/81hR9CkZz5L.jpg
+|features|
+Brand ASUS,Graphics Coprocessor NVIDIA GeForce RTX 3080,Video Output Interface DisplayPort, HDMI,Chipset Brand NVIDIA,Graphics RAM Type GDDR6
+
+
+|asin|
+B08HH5WF97
+|title|
+ASUS TUF Gaming NVIDIA GeForce RTX 3080 OC Edition Graphics Card- PCIe 4.0, 10GB GDDR6X, HDMI 2.1, DisplayPort 1.4a, Dual Ball Fan Bearings
+|current_price|
+-1
+|description|
+Make sure this fits by entering your model number.
+NVIDIA Ampere Streaming Multiprocessors: The building blocks for the world’s fastest, most efficient GPU, the all-new Ampere SM brings 2X the FP32 throughput and improved power efficiency.
+2nd Generation RT Cores: Experience 2X the throughput of 1st Gen RT Cores, plus concurrent RT and shading for a whole new level of ray tracing performance.
+3rd Generation Tensor Cores: Get up to 2X the throughput with structural sparsity and advanced AI algorithms such as DLSS. Now with support for up to 8K resolution, these cores deliver a massive boost in game performance and all-new AI capabilities.
+Axial-Tech Fan Design has been newly tuned with a reversed central fan direction for less turbulence.
+Military-grade Capacitors and other TUF components enhance durability and performance.
+Dual Ball Fan Bearings can last up to twice as long as sleeve bearing designs.
+GPU Tweak II provides intuitive performance tweaking, thermal controls, and system monitoring.
+
+|out_of_stock|
+true
+|images|
+https://images-na.ssl-images-amazon.com/images/I/81hR9CkZz5L.jpg
+|features|
+Brand ASUS,Graphics Coprocessor NVIDIA GeForce RTX 3080,Video Output Interface DisplayPort, HDMI,Chipset Brand NVIDIA,Graphics RAM Type GDDR6
+
+
