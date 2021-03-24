@@ -48,7 +48,7 @@ function apiCall($asin) {
 	} elseif ($featureCount > 1) {
 		$features = $response->features[0];
 		for ($x = 1; $x < $featureCount; $x++) {
-			$features = $features.",".$response->features[$x];
+			$features = $features."|||".$response->features[$x];
 		}
 	} else {
 		$features = ["None"];
