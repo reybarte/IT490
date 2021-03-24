@@ -1,0 +1,154 @@
+|asin|
+B08HBVX53D
+|title|
+PNY GeForce RTX 3090 24GB XLR8 Gaming Uprising EPIC-X RGB Triple Fan Graphics Card
+|current_price|
+3138
+|description|
+Make sure this fits by entering your model number.
+NVIDIA Ampere architecture, with 1395MHz core clock and 1695MHz boost clock speeds to help meet the needs of demanding games.
+24GB GDDR6X (384-bit) on-board memory, plus 5248 CUDA processing cores and up to 936GB/sec of memory bandwidth provide the memory needed to create striking visual realism.
+PCI Express 4.0 interface - Offers compatibility with a range of systems. Also includes DisplayPort and HDMI outputs for expanded connectivity.
+NVIDIA GeForce Experience - Capture and share videos, screenshots, and livestreams with friends. Keep your drivers up to date and optimize your game settings. It's the essential companion to your GeForce graphics card.
+
+|out_of_stock|
+false
+
+
+"{\"error\":true,\"message\":\"Invalid ASIN!\"}"
+{"error":false,"asin":"B08HBVX53D","title":"PNY GeForce RTX 3090 24GB XLR8 Gaming Uprising EPIC-X RGB Triple Fan Graphics Card","images":["https://images-na.ssl-images-amazon.com/images/I/61wjSBzPYtL.jpg","https://images-na.ssl-images-amazon.com/images/I/61fjA2l8VkL.jpg","https://images-na.ssl-images-amazon.com/images/I/515coZQprWL.jpg","https://images-na.ssl-images-amazon.com/images/I/61pRGQsCrXL.jpg","https://images-na.ssl-images-amazon.com/images/I/61Cson3mg-L.jpg","https://images-na.ssl-images-amazon.com/images/I/61fZKSTSCaL.jpg","https://images-na.ssl-images-amazon.com/images/I/61rCGkv4SiL.jpg"],"full_link":"https://www.amazon.com/dp/B08HBVX53D/?psc=1","description":"Make sure this fits by entering your model number.\nNVIDIA Ampere architecture, with 1395MHz core clock and 1695MHz boost clock speeds to help meet the needs of demanding games.\n24GB GDDR6X (384-bit) on-board memory, plus 5248 CUDA processing cores and up to 936GB/sec of memory bandwidth provide the memory needed to create striking visual realism.\nPCI Express 4.0 interface - Offers compatibility with a range of systems. Also includes DisplayPort and HDMI outputs for expanded connectivity.\nNVIDIA GeForce Experience - Capture and share videos, screenshots, and livestreams with friends. Keep your drivers up to date and optimize your game settings. It's the essential companion to your GeForce graphics card.\n","prices":{"current_price":3136.0,"previous_price":-1.0,"checkout_discount":-1.0,"prime_only_discount":-1.0,"currency":"$"},"reviews":{"total_reviews":114,"stars":4.5},"coupon":{"coupon_code":"","coupon_discount":0.0,"box_coupon":false,"box_coupon_discount":0.0},"prime":false,"amazon_choice":false,"out_of_stock":false,"deal_info":{"deal_id":"","lightning_deal":false,"requested_perc":-1,"timestamp_end":-1},"category":"Electronics","sub_categories":"","sold_by":"","shipped_by":"","brand":"NVIDIA","features":["Brand PNY","Graphics Coprocessor NVIDIA GeForce RTX 3090","Video Output Interface DisplayPort, HDMI","Chipset Brand NVIDIA","Graphics RAM Type GDDR6X"],"dimensions":"","weight":""}
+|asin|
+B08HBVX53D
+|title|
+PNY GeForce RTX 3090 24GB XLR8 Gaming Uprising EPIC-X RGB Triple Fan Graphics Card
+|current_price|
+3136
+|description|
+Make sure this fits by entering your model number.
+NVIDIA Ampere architecture, with 1395MHz core clock and 1695MHz boost clock speeds to help meet the needs of demanding games.
+24GB GDDR6X (384-bit) on-board memory, plus 5248 CUDA processing cores and up to 936GB/sec of memory bandwidth provide the memory needed to create striking visual realism.
+PCI Express 4.0 interface - Offers compatibility with a range of systems. Also includes DisplayPort and HDMI outputs for expanded connectivity.
+NVIDIA GeForce Experience - Capture and share videos, screenshots, and livestreams with friends. Keep your drivers up to date and optimize your game settings. It's the essential companion to your GeForce graphics card.
+
+|out_of_stock|
+false
+
+
+|asin|
+
+|title|
+
+|current_price|
+
+|description|
+
+|out_of_stock|
+false
+
+
+|asin|
+B08HBVX53D
+|title|
+PNY GeForce RTX 3090 24GB XLR8 Gaming Uprising EPIC-X RGB Triple Fan Graphics Card
+|current_price|
+3136
+|description|
+Make sure this fits by entering your model number.
+NVIDIA Ampere architecture, with 1395MHz core clock and 1695MHz boost clock speeds to help meet the needs of demanding games.
+24GB GDDR6X (384-bit) on-board memory, plus 5248 CUDA processing cores and up to 936GB/sec of memory bandwidth provide the memory needed to create striking visual realism.
+PCI Express 4.0 interface - Offers compatibility with a range of systems. Also includes DisplayPort and HDMI outputs for expanded connectivity.
+NVIDIA GeForce Experience - Capture and share videos, screenshots, and livestreams with friends. Keep your drivers up to date and optimize your game settings. It's the essential companion to your GeForce graphics card.
+
+|out_of_stock|
+false
+
+
+|asin|
+B08HBVX53D
+|title|
+PNY GeForce RTX 3090 24GB XLR8 Gaming Uprising EPIC-X RGB Triple Fan Graphics Card
+|current_price|
+3136
+|description|
+Make sure this fits by entering your model number.
+NVIDIA Ampere architecture, with 1395MHz core clock and 1695MHz boost clock speeds to help meet the needs of demanding games.
+24GB GDDR6X (384-bit) on-board memory, plus 5248 CUDA processing cores and up to 936GB/sec of memory bandwidth provide the memory needed to create striking visual realism.
+PCI Express 4.0 interface - Offers compatibility with a range of systems. Also includes DisplayPort and HDMI outputs for expanded connectivity.
+NVIDIA GeForce Experience - Capture and share videos, screenshots, and livestreams with friends. Keep your drivers up to date and optimize your game settings. It's the essential companion to your GeForce graphics card.
+
+|out_of_stock|
+false
+
+
+|asin|
+B08HH5WF97
+|title|
+ASUS TUF Gaming NVIDIA GeForce RTX 3080 OC Edition Graphics Card- PCIe 4.0, 10GB GDDR6X, HDMI 2.1, DisplayPort 1.4a, Dual Ball Fan Bearings
+|current_price|
+-1
+|description|
+Make sure this fits by entering your model number.
+NVIDIA Ampere Streaming Multiprocessors: The building blocks for the world’s fastest, most efficient GPU, the all-new Ampere SM brings 2X the FP32 throughput and improved power efficiency.
+2nd Generation RT Cores: Experience 2X the throughput of 1st Gen RT Cores, plus concurrent RT and shading for a whole new level of ray tracing performance.
+3rd Generation Tensor Cores: Get up to 2X the throughput with structural sparsity and advanced AI algorithms such as DLSS. Now with support for up to 8K resolution, these cores deliver a massive boost in game performance and all-new AI capabilities.
+Axial-Tech Fan Design has been newly tuned with a reversed central fan direction for less turbulence.
+Military-grade Capacitors and other TUF components enhance durability and performance.
+Dual Ball Fan Bearings can last up to twice as long as sleeve bearing designs.
+GPU Tweak II provides intuitive performance tweaking, thermal controls, and system monitoring.
+
+|out_of_stock|
+true
+|images|
+none
+|features|
+,Array,Array,Array,Array
+
+
+|asin|
+B08HH5WF97
+|title|
+ASUS TUF Gaming NVIDIA GeForce RTX 3080 OC Edition Graphics Card- PCIe 4.0, 10GB GDDR6X, HDMI 2.1, DisplayPort 1.4a, Dual Ball Fan Bearings
+|current_price|
+-1
+|description|
+Make sure this fits by entering your model number.
+NVIDIA Ampere Streaming Multiprocessors: The building blocks for the world’s fastest, most efficient GPU, the all-new Ampere SM brings 2X the FP32 throughput and improved power efficiency.
+2nd Generation RT Cores: Experience 2X the throughput of 1st Gen RT Cores, plus concurrent RT and shading for a whole new level of ray tracing performance.
+3rd Generation Tensor Cores: Get up to 2X the throughput with structural sparsity and advanced AI algorithms such as DLSS. Now with support for up to 8K resolution, these cores deliver a massive boost in game performance and all-new AI capabilities.
+Axial-Tech Fan Design has been newly tuned with a reversed central fan direction for less turbulence.
+Military-grade Capacitors and other TUF components enhance durability and performance.
+Dual Ball Fan Bearings can last up to twice as long as sleeve bearing designs.
+GPU Tweak II provides intuitive performance tweaking, thermal controls, and system monitoring.
+
+|out_of_stock|
+true
+|images|
+https://images-na.ssl-images-amazon.com/images/I/81hR9CkZz5L.jpg
+|features|
+Brand ASUS,Graphics Coprocessor NVIDIA GeForce RTX 3080,Video Output Interface DisplayPort, HDMI,Chipset Brand NVIDIA,Graphics RAM Type GDDR6
+
+
+|asin|
+B08HH5WF97
+|title|
+ASUS TUF Gaming NVIDIA GeForce RTX 3080 OC Edition Graphics Card- PCIe 4.0, 10GB GDDR6X, HDMI 2.1, DisplayPort 1.4a, Dual Ball Fan Bearings
+|current_price|
+-1
+|description|
+Make sure this fits by entering your model number.
+NVIDIA Ampere Streaming Multiprocessors: The building blocks for the world’s fastest, most efficient GPU, the all-new Ampere SM brings 2X the FP32 throughput and improved power efficiency.
+2nd Generation RT Cores: Experience 2X the throughput of 1st Gen RT Cores, plus concurrent RT and shading for a whole new level of ray tracing performance.
+3rd Generation Tensor Cores: Get up to 2X the throughput with structural sparsity and advanced AI algorithms such as DLSS. Now with support for up to 8K resolution, these cores deliver a massive boost in game performance and all-new AI capabilities.
+Axial-Tech Fan Design has been newly tuned with a reversed central fan direction for less turbulence.
+Military-grade Capacitors and other TUF components enhance durability and performance.
+Dual Ball Fan Bearings can last up to twice as long as sleeve bearing designs.
+GPU Tweak II provides intuitive performance tweaking, thermal controls, and system monitoring.
+
+|out_of_stock|
+true
+|images|
+https://images-na.ssl-images-amazon.com/images/I/81hR9CkZz5L.jpg
+|features|
+Brand ASUS,Graphics Coprocessor NVIDIA GeForce RTX 3080,Video Output Interface DisplayPort, HDMI,Chipset Brand NVIDIA,Graphics RAM Type GDDR6
+
+
