@@ -18,6 +18,10 @@
 body {
     overflow-y: scroll; /* Show vertical scrollbar */
 }
+/*Removes hover effect*/
+.removeHover{
+    pointer-events: none;
+}
 
 
 
