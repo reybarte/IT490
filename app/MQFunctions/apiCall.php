@@ -6,7 +6,7 @@ function apiCall($asin) {
 		require_once(__DIR__.'/../../lib/rabbitMQLib.inc');
 
 		$client = new RabbitMQClient('APPDBQ.ini', 'testServer');
-		$msg = ["asin"=>$asin, "type"=>"register"];
+		$msg = ["asin"=>$asin, "type"=>"apiCall"];
 		$response = $client->send_request($msg);
 		return $response;
 	}
