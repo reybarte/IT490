@@ -36,6 +36,9 @@ session_start();
                         <a class="nav-link" href="../productlist.php">Products</a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link" href="#">Statistics</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link" href="../login.php">Login</a>
                     </li>
                     <li class="nav-item">
@@ -65,8 +68,8 @@ session_start();
         <figure class="card card-product-grid card-lg"> <a href="#" class="img-wrap" data-abc="true"> <img src="../card.jpg"> </a>
             <figcaption class="info-wrap">
                 <div class="row">
-                    <div class="col-md-5 col-xs-5"> <a href="#" class="title" data-abc="true">RTX 3070</a> <span class="rated">ASIN</span> </div>
-                    <div class="col-md-4 col-xs-4"> <a href="#" class="title" data-abc="true">$420</a> <span class="rated">Price</span> </div>
+                    <div class="col-md-5 col-xs-5"> <a href="#" class="title removeHover" data-abc="true">RTX 3070</a> <span class="rated">ASIN</span> </div>
+                    <div class="col-md-4 col-xs-4"> <a href="#" class="title removeHover" data-abc="true">$420</a> <span class="rated">Price</span> </div>
                     <div class="col-md-3 col-xs-3">
                         <div class="btn btn-secondary"> In Stock </div>
                     </div>

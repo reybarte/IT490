@@ -36,6 +36,9 @@ session_start();
                         <a class="nav-link" href="productlist.php">Products</a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link" href="#">Statistics</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link" href="login.php">Login</a>
                     </li>
                     <li class="nav-item">
