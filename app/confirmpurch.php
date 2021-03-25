@@ -37,6 +37,9 @@ $confnum = (rand() . "<br>");
                         <a class="nav-link" href="productlist.php">Products</a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link" href="#">Statistics</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link" href="login.php">Login</a>
                     </li>
                     <li class="nav-item">
@@ -60,12 +63,18 @@ $confnum = (rand() . "<br>");
             </div>
         </div>
     </nav>
-    <div class="jumbotron text-center">
-  <h1 class="display-3">Thank You!</h1>
-  <br> <h2> Order Confirmation Number: <?php echo $confnum; ?> </h2>  
-  <p class="lead"><strong>Thank you for shopping with us and supporting our tireless fight against <strong>SCALPERS!</strong></p>
-  <hr>
-  <p class="lead">
-    <a class="btn btn-primary btn-sm" href="index.php" role="button">Continue to homepage</a>
-  </p>
-</div>
+    <!-- Conformation Page -->
+    <div class="jumbotron text-center pt-4 pb-5">
+        <div class="card card-body mt-3">
+            <div class="container">
+                <h1 class="jumbotron-heading">Thank You!</h1>
+            </div>
+            <div class="borderRow media-body">
+                <h4> Order Confirmation Number: <?php echo $confnum; ?> </h4>
+            </div>
+            <div class="media-body">
+                <h5 class="media-title font-weight-semibold pb-2">Thank you for shopping with us and supporting our tireless fight against <strong>SCALPERS!</strong></h5>
+            </div class="media-body">
+            <div class="buy bottom-wrap"> <a href="index.php" class="btn btn-primary"> Continue to Homepage </a></div>
+        </div>
+    </div>
