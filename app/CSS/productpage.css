@@ -1,12 +1,3 @@
-/*For home page card listings, adds spacing*/
-.col-12{
-    padding-bottom: 2%;
-}
-/*For home page title size on 3060Ti card*/
-.ti{
-    font-size: 1.4rem;
-    padding-bottom: 0px; 
-}
 /*For nav bar title centering*/
 .navbar-brand{
     padding-left: 100px;
@@ -30,12 +21,12 @@ body {
 
 /*All Product Page Below*/
 a {
-	text-decoration: none !important
+	text-decoration: none !important;
 }
 
 .card-product-list,
 .card-product-grid {
-	margin-bottom: 0
+	margin-bottom: 0;
 }
 
 .card {
@@ -54,26 +45,26 @@ a {
 	background-clip: border-box;
 	border: 1px solid rgba(0, 0, 0, 0.1);
 	border-radius: 23px;
-	margin-top: 50px
+	margin-top: 50px;
 }
 
 .card-product-grid .img-wrap {
 	border-radius: 0.2rem 0.2rem 0 0;
-	height: 220px
+	height: 220px;
 }
 
 .card .img-wrap {
-	overflow: hidden
+	overflow: hidden;
 }
 
 .card-lg .img-wrap {
-	height: 280px
+	height: 280px;
 }
 
 .card-product-grid .img-wrap {
 	border-radius: 0.2rem 0.2rem 0 0;
 	height: 275px;
-	padding: 16px
+	padding: 16px;
 }
 
 [class*='card-product'] .img-wrap img {
@@ -82,37 +73,38 @@ a {
 	width: auto;
 	display: inline-block;
 	-o-object-fit: cover;
-	object-fit: cover
+	object-fit: cover;
 }
 
 .img-wrap {
 	text-align: center;
-	display: block
+	display: block;
 }
 
 .card-product-grid .info-wrap {
 	overflow: hidden;
-	padding: 18px 20px
+	padding: 18px 20px;
 }
 
 [class*='card-product'] a.title {
-	color: #212529;
-	display: block
+	color: #171a1d;
+	display: block;
+	font-size: 15pt;
 }
 
 .card-product-grid .bottom-wrap {
 	padding: 18px;
-	border-top: 1px solid #e4e4e4
+	border-top: 1px solid #e4e4e4;
 }
 
 .bottom-wrap-desc {
 	padding: 0px;
-	border-top: 1px solid #e4e4e4
+	border-top: 1px solid #e4e4e4;
 }
 
 .rated {
 	font-size: 14px;
-	color: #747981
+	color: #747981;
 }
 
 .btn {
@@ -130,7 +122,7 @@ a {
 	padding: 0.45rem 0.85rem;
 	font-size: 1rem;
 	line-height: 1.5;
-	border-radius: 0.2rem
+	border-radius: 0.2rem;
 }
 /*Centers the Buy Now Button*/
 .buy{

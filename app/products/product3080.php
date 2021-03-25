@@ -65,11 +65,11 @@ session_start();
 
     <!--Product Page-->
     <div class="container d-flex justify-content-center">
-        <figure class="card card-product-grid card-lg"> <a href="#" class="img-wrap" data-abc="true"> <img src="../card.jpg"> </a>
+        <figure class="card card-product-grid card-lg"> <a href="#" class="img-wrap removeHover"> <img src="../card.jpg"> </a>
             <figcaption class="info-wrap">
                 <div class="row">
-                    <div class="col-md-5 col-xs-5"> <a href="#" class="title removeHover" data-abc="true">RTX 3080</a> <span class="rated">ASIN</span> </div>
-                    <div class="col-md-4 col-xs-4"> <a href="#" class="title removeHover" data-abc="true">$69</a> <span class="rated">Price</span> </div>
+                    <div class="col-md-5 col-xs-5"> <a href="#" class="title removeHover">RTX 3080</a> <span class="rated">ASIN</span> </div>
+                    <div class="col-md-4 col-xs-4"> <a href="#" class="title removeHover">$69</a> <span class="rated">Price</span> </div>
                     <div class="col-md-3 col-xs-3">
                         <div class="btn btn-secondary"> In Stock </div>
                     </div>
@@ -78,11 +78,11 @@ session_start();
             <div class="bottom-wrap-desc">
                 <figcaption class="info-wrap">
                     <div class="row">
-                        <div class="col-md-9 col-xs-9"> <a href="#" class="title" data-abc="true">Description</a> <span class="rated">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsam accusantium exercitationem pariatur at. Blanditiis repudiandae eveniet assumenda praesentium reiciendis consequatur tenetur voluptatem velit soluta pariatur? Omnis a sunt quo ea.</span></div>
+                        <div class="col-md-12 col-xs-12"> <a href="#" class="title removeHover">Description</a> <span class="rated">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsam accusantium exercitationem pariatur at. Blanditiis repudiandae eveniet assumenda praesentium reiciendis consequatur tenetur voluptatem velit soluta pariatur? Omnis a sunt quo ea.</span></div>
                     </div>
                 </figcaption>
             </div>
-            <div class="bottom-wrap buy"> <a href="../checkoutpage.php" class="btn btn-primary" data-abc="true"> Buy now </a>
+            <div class="bottom-wrap buy"> <a href="../checkoutpage.php" class="btn btn-primary"> Buy now </a></div>
         </figure>
     </div>
 

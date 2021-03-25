@@ -36,6 +36,9 @@ session_start();
                         <a class="nav-link" href="productlist.php">Products</a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link" href="#">Statistics</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link" href="login.php">Login</a>
                     </li>
                     <li class="nav-item">
@@ -59,54 +62,37 @@ session_start();
             </div>
         </div>
     </nav>
-    
-   <!-- CHECK OUT -->
 
-   <div class="container d-flex justify-content-center">
-        <div class= "box col-xs-6 col-sm-6 col-md-6 col-lg-6">
-
-
-        <div class="row">
-            <h1 class="textCenter">Checkout</h1>
-        </div>
-
-        <div class="row borderRow">
-                
-                <div class="col-md-6 col-xs-6"> <h3>RTX 3090</h3> <span class="rated">ASIN: xxx</span> </div>
-                
-                
-
-
-                <div class="col-md-4 col-xs-4 textRight">
-                     <h3>$999.99</h3> 
+    <!-- CHECK OUT -->
+    <div class="container d-flex justify-content-center">
+        <div class="box col-xs-6 col-sm-6 col-md-6 col-lg-6">
+            <div class="row p-2">
+                <h3 class="textCenter media-title font-weight-semibold">Checkout</h3>
+            </div>
+            <div class="borderRow media align-items-center align-items-lg-start text-center text-lg-left flex-column flex-lg-row">
+                <div class="media-body">
+                    <h4 class="media-title font-weight-semibold">RTX 3090</h4>
+                    <h6 class="media-title font-weight-semibold">ASIN</h6>
                 </div>
-        </div>
-
-        <div class="row borderRow">
-                <div class="col-md-6 col-xs-6"> 
-                    <h3>Points Available:</h3> 
+                <div class="text-center pt-1">
+                    <a href="#" type="button" class="btn btn-secondary mt-2">$3,999</a>
                 </div>
+            </div>
 
-
-                <div class="col-md-4 col-xs-4 textRight">
-                     <h3>$999.99</h3> 
+            <div class="borderRow media align-items-center align-items-lg-start text-center text-lg-left flex-column flex-lg-row">
+                <div class="media-body">
+                    <h4 class="media-title font-weight-semibold pt-2">Points Balance</h4>
                 </div>
+                <div class="text-center pb-1 pt-1">
+                    <a href="#" type="button" class="btn btn-secondary">$5,000</a>
+                </div>
+            </div>
+            <div class="row borderRow media align-items-center align-items-lg-start text-center text-lg-left flex-column flex-lg-row m-1">
+                <div class="buy bottom-wrap"> <a href="confirmpurch.php" class="btn btn-primary"> Purchase </a></div>
+            </div>
         </div>
-        
-        
-        <div class="row borderRow">
-        <div class="buy bottom-wrap"> <a href="confirmpurch.php" class="btn btn-primary" data-abc="true"> Purchase </a>
-
-        </div>
-        
-        
-        </div>
-
-
-
     </div>
     <!-- END of CHECKOUT -->
-
 </body>
 
 </html>
