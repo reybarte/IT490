@@ -6,7 +6,7 @@ function roleChange($email, $role){
 		require_once(__DIR__.'/../../lib/rabbitMQLib.inc');
 
 		$client = new RabbitMQClient('APPDBQ.ini', 'testServer');
-		$msg = array("email"=>$email, "role"=>$role);
+		$msg = ["email"=>$email, "role"=>$role, "type"=>"roleChange"];
 		$response = $client->send_request($msg);
 		return $response;
 	}
