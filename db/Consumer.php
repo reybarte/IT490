@@ -11,6 +11,7 @@ require(__DIR__."/DBFunctions/register.php");
 require(__DIR__."/DBFunctions/apiClient.php");
 require(__DIR__."/DBFunctions/apiSaveDB.php");
 require(__DIR__."/DBFunctions/apiGetCache.php");
+require(__DIR__."/DBFunctions/roleChange.php");
 //TODO add more as they're developed
 
 function request_processor($req){
@@ -33,6 +34,8 @@ function request_processor($req){
 			return apiSaveDB($arr->asin, $arr->title, $arr->current_price, $arr->description, $arr->features, $arr->images, $arr->out_of_stock);
 		case "apiCache":
 			return apiGetCache($req['asin']);
+		case "roleChange":
+			return roleChange($req['email'],$req['role']);
 		case "echo":
 			return array("return_code"=>'0', "message"=>"Echo: " .$req["message"]);
 	}
