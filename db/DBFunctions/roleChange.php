@@ -1,10 +1,10 @@
 <?php
 function roleChange($email, $role){
 	//from dbconnection.php
-	$stmt = getDB()->prepare("SELECT * from USERS where email=:email");
+	$stmt = getDB()->prepare("SELECT * from Users where email=:email");
 	$stmt->execute(["email"=>$email]);
 	//check if user not found
-	if (!$statement->rowCount()) {
+	if (!$stmt->rowCount()) {
 		return ["status"=>400, "message"=>"Nonexistent"];
 	}
 	$result = $stmt->fetch(PDO::FETCH_ASSOC);
@@ -14,10 +14,10 @@ function roleChange($email, $role){
 	}
 	//otherwise update role of user
 	$stmt = getDB()->prepare("UPDATE Users SET role=:role WHERE email=:email");
-	$result = $stmt->execute([":email"=>$email,":role"=>$role]);}
+	$result = $stmt->execute([":email"=>$email,":role"=>$role]);
 
 	if($result){
-		return ["status"=>200, "message"=>"Role Changed");
+		return ["status"=>200, "message"=>"Role Changed"];
 	} else {
 		//must return a proper message so that the app can parse it
 		//and display a user friendly message to the user
