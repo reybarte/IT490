@@ -1,10 +1,10 @@
 <?php
 function roleChange($email, $role){
 	//from dbconnection.php
-	$stmt = getDB()->prepare("SELECT * from USERS where email=:email");
+	$stmt = getDB()->prepare("SELECT * from Users where email=:email");
 	$stmt->execute(["email"=>$email]);
 	//check if user not found
-	if (!$statement->rowCount()) {
+	if (!$stmt->rowCount()) {
 		return ["status"=>400, "message"=>"Nonexistent"];
 	}
 	$result = $stmt->fetch(PDO::FETCH_ASSOC);
