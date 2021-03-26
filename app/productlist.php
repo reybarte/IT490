@@ -2,7 +2,18 @@
 require(__DIR__ . "/MQPublish.inc.php");
 //require(__DIR__."/header.php");
 session_start();
+ob_start();
+$data = getCache()->data;
+ob_end_clean();
+foreach($data as $key => $value) {
+	$asinData[strval($value->asin)] = (array)$value;
+	}
+	//var_dump($asinData);
+foreach($asinData as $key => $value){
+	//echo $key . ":" . $value["current_price"]."\n";
+	}
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -71,16 +82,16 @@ session_start();
                     <div class="media align-items-center align-items-lg-start text-center text-lg-left flex-column flex-lg-row">
                         <div class="media-body">
                             <h6 class="media-title font-weight-semibold"> <a href="products/product3090.php" data-abc="true">RTX 3090</a> </h6>
-                            <p class="mb-3">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda itaque ipsa praesentium. Consectetur quis voluptatem eius suscipit! Quia, enim! Reiciendis vel odio sed illum nesciunt magni nobis saepe ut sint!</p>
+			    <p class="mb-3"><?php echo $asinData["B08J5F3G18"]["description"];?></p>
                         </div>
 
                         <div class="mt-3 mt-lg-3 ml-lg-3 text-center">
-                            <a href="#" type="button" class="btn btn-secondary mt-4">$3,999</a>
+			<a href="#" type="button" class="btn btn-secondary mt-4"><?php echo "$".$asinData["B08J5F3G18"]["current_price"];?></a>
                         </div>
 
                         <div class="mt-3 mt-lg-3 ml-lg-3 text-center">
-                            <a href="#" type="button" class="btn btn-secondary mt-4">In Stock</a>
-                        </div>
+			<a href="#" type="button" class="btn btn-secondary mt-4"><?php if($asinData["B08J5F3G18"]["out_of_stock"]) {echo "Out Of Stock";} else {echo "In Stock";} ?></a>
+			</div>
 
                         <div class="mt-3 mt-lg-3 ml-lg-3 text-center">
                             <a href="products/product3090.php" type="button" class="btn btn-primary mt-4">View</a>

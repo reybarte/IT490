@@ -1,6 +1,5 @@
 <?php
-require("MQFunctions/apiCall.php");
-require("MQFunctions/roleChange.php");
+require("MQPublish.inc.php");
 if(isset($_POST["request"])) {
 	apiCall($_POST["asin"]);
 
