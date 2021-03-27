@@ -1,16 +1,16 @@
 <?php
-function apiGetCache($asin){
+function getCache(){
 	//from dbconnection.php
 	$stmt = getDB()->prepare("SELECT * FROM Products");
-	$stmt->execute([":asin"=>$asin]);
+	$stmt->execute();
 	$result = $stmt->fetchAll();
 	if($result){
-			return array("status"=>200, "data"=>$result);//send user data back so app can use it
+			return ["status"=>200, "data"=>$result];//send user data back so app can use it
 	}
 	else{
 		//must return a proper message so that the app can parse it
 		//and display a user friendly message to the user
-		return array("status"=>400, "message"=>"Product not found in DB");
+		return ["status"=>400, "message"=>"Product not found in DB"];
 	}
 }
 
