@@ -1,7 +1,17 @@
 <?php
-//require(__DIR__ . "../MQPublish.inc.php");
+require(__DIR__ . "/../MQPublish.inc.php");
 //require(__DIR__."/header.php");
 session_start();
+ob_start();
+$data = getCache()->data;
+ob_end_clean();
+foreach ($data as $key => $value) {
+    $asinData[strval($value->asin)] = (array)$value;
+}
+//var_dump($asinData);
+foreach ($asinData as $key => $value) {
+    //echo $key . ":" . $value["current_price"]."\n";
+}
 ?>
 
 <!DOCTYPE html>
@@ -65,20 +75,26 @@ session_start();
 
     <!--Product Page-->
     <div class="container d-flex justify-content-center">
-        <figure class="card card-product-grid card-lg"> <a href="#" class="img-wrap removeHover"> <img src="../card.jpg"> </a>
+        <figure class="card card-product-grid card-lg"> <a href="#" class="img-wrap removeHover"> <img src="<?php echo $asinData["B08L8L9TCZ"]["images"]; ?>"> </a>
             <figcaption class="info-wrap">
                 <div class="row">
-                    <div class="col-md-5 col-xs-5"> <a href="#" class="title removeHover">RTX 3070</a> <span class="rated">ASIN</span> </div>
-                    <div class="col-md-4 col-xs-4"> <a href="#" class="title removeHover">$420</a> <span class="rated">Price</span> </div>
-                    <div class="col-md-3 col-xs-3">
-                        <div class="btn btn-secondary"> In Stock </div>
+                    <div class="col-md-4 col-xs-4"> <a href="#" class="title removeHover">RTX 3070</a> <span class="rated"><?php echo $asinData["B08L8L9TCZ"]["asin"]; ?></span></div>
+                    <div class="col-md-4 col-xs-4 pl-5"> <a href="#" class="title removeHover"><?php echo "$" . $asinData["B08L8L9TCZ"]["current_price"]; ?></a><span class="rated">Price</span> </div>
+                    <div class="col-md-4 col-xs-4 leftpad">
+                        <div class="btn btn-secondary">
+                            <?php if ($asinData["B08L8L9TCZ"]["out_of_stock"]) {
+                                echo "Out Of Stock";
+                            } else {
+                                echo "In Stock";
+                            } ?></a>
+                        </div>
                     </div>
                 </div>
             </figcaption>
             <div class="bottom-wrap-desc">
                 <figcaption class="info-wrap">
                     <div class="row">
-                        <div class="col-md-12 col-xs-12"> <a href="#" class="title removeHover">Description</a> <span class="rated">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsam accusantium exercitationem pariatur at. Blanditiis repudiandae eveniet assumenda praesentium reiciendis consequatur tenetur voluptatem velit soluta pariatur? Omnis a sunt quo ea.</span></div>
+                        <div class="col-md-12 col-xs-12"> <a href="#" class="title removeHover">Description</a> <span class="rated"> <span class="rated"><?php echo $asinData["B08L8L9TCZ"]["description"]; ?></span></div>
                     </div>
                 </figcaption>
             </div>

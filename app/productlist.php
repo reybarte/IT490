@@ -81,25 +81,18 @@ foreach ($asinData as $key => $value) {
                 <div class="card card-body">
                     <div class="media align-items-center align-items-lg-start text-center text-lg-left flex-column flex-lg-row">
                         <div class="media-body">
-                            <h6 class="media-title font-weight-semibold"> <a href="products/product3090.php">RTX 3090</a> </h6>
-                            <p class="mb-3"><?php echo $asinData["B08J5F3G18"]["description"]; ?></p>
-                        </div>
-
-                        <div class="mt-3 mt-lg-3 ml-lg-3 text-center">
-                            <a href="#" type="button" class="btn btn-secondary mt-4"><?php echo "$" . $asinData["B08J5F3G18"]["current_price"]; ?></a>
-                        </div>
-
-                        <div class="mt-3 mt-lg-3 ml-lg-3 text-center">
-                            <a href="#" type="button" class="btn btn-secondary mt-4">
-                                <?php if ($asinData["B08J5F3G18"]["out_of_stock"]) {
-                                    echo "Out Of Stock";
-                                } else {
-                                    echo "In Stock";
-                                } ?></a>
-                        </div>
-
-                        <div class="mt-3 mt-lg-3 ml-lg-3 text-center">
-                            <a href="products/product3090.php" type="button" class="btn btn-primary mt-4">View</a>
+                            <h6 class="media-title font-weight-semibold"> <a href="products/product3090.php">RTX 3090</a></h6>
+                            <p class="mb-1"><?php echo $asinData["B08J5F3G18"]["description"]; ?></p>
+                            <div class="buttonsright">
+                                <a href="#" type="button" class="btn btn-secondary mr-2"><?php echo "$" . $asinData["B08J5F3G18"]["current_price"]; ?></a>
+                                <a href="#" type="button" class="btn btn-secondary mr-2">
+                                    <?php if ($asinData["B08J5F3G18"]["out_of_stock"]) {
+                                        echo "Out Of Stock";
+                                    } else {
+                                        echo "In Stock";
+                                    } ?></a>
+                                <a href="products/product3090.php" type="button" class="btn btn-primary">View</a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -107,39 +100,18 @@ foreach ($asinData as $key => $value) {
                 <div class="card card-body mt-3">
                     <div class="media align-items-center align-items-lg-start text-center text-lg-left flex-column flex-lg-row">
                         <div class="media-body">
-                            <h6 class="media-title font-weight-semibold"> <a href="products/product3080.php">RTX 3080</a> </h6>
-                            <p class="mb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut expedita repellendus numquam eum, quas unde velit amet laboriosam eos magni nulla architecto odio sint rem, quisquam neque atque non et!</p>
-                        </div>
-                        <div class="mt-3 mt-lg-3 ml-lg-3 text-center">
-                            <a href="#" type="button" class="btn btn-secondary mt-4">$69</a>
-                        </div>
-
-                        <div class="mt-3 mt-lg-3 ml-lg-3 text-center">
-                            <a href="#" type="button" class="btn btn-secondary mt-4">In Stock</a>
-                        </div>
-
-                        <div class="mt-3 mt-lg-3 ml-lg-3 text-center">
-                            <a href="products/product3080.php" type="button" class="btn btn-primary mt-4">View</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card card-body mt-3">
-                    <div class="media align-items-center align-items-lg-start text-center text-lg-left flex-column flex-lg-row">
-                        <div class="media-body">
-                            <h6 class="media-title font-weight-semibold"> <a href="products/product3070.php">RTX 3070</a> </h6>
-                            <p class="mb-3">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ullam nemo minus quam praesentium vero magnam similique sapiente consequatur dolorem quas quia debitis, corporis architecto, natus illum doloribus qui error fugiat.</p>
-                        </div>
-                        <div class="mt-3 mt-lg-3 ml-lg-3 text-center">
-                            <a href="#" type="button" class="btn btn-secondary mt-4">$420</a>
-                        </div>
-
-                        <div class="mt-3 mt-lg-3 ml-lg-3 text-center">
-                            <a href="#" type="button" class="btn btn-secondary mt-4">In Stock</a>
-                        </div>
-
-                        <div class="mt-3 mt-lg-3 ml-lg-3 text-center">
-                            <a href="products/product3070.php" type="button" class="btn btn-primary mt-4">View</a>
+                            <h6 class="media-title font-weight-semibold"> <a href="products/product3080.php">RTX 3080</a></h6>
+                            <p class="mb-1"><?php echo $asinData["B08HH5WF97"]["description"]; ?></p>
+                            <div class="buttonsright">
+                                <a href="#" type="button" class="btn btn-secondary mr-2"><?php echo "$" . $asinData["B08HH5WF97"]["current_price"]; ?></a>
+                                <a href="#" type="button" class="btn btn-secondary mr-2">
+                                    <?php if ($asinData["B08HH5WF97"]["out_of_stock"]) {
+                                        echo "Out Of Stock";
+                                    } else {
+                                        echo "In Stock";
+                                    } ?></a>
+                                <a href="products/product3080.php" type="button" class="btn btn-primary">View</a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -147,19 +119,18 @@ foreach ($asinData as $key => $value) {
                 <div class="card card-body mt-3">
                     <div class="media align-items-center align-items-lg-start text-center text-lg-left flex-column flex-lg-row">
                         <div class="media-body">
-                            <h6 class="media-title font-weight-semibold"> <a href="products/product3060ti.php">RTX 3060 Ti</a> </h6>
-                            <p class="mb-3">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam tempora quis distinctio deleniti a aut soluta itaque, id rem sequi harum dicta hic explicabo repellendus, eveniet omnis saepe. Ipsam, nemo?</p>
-                        </div>
-                        <div class="mt-3 mt-lg-3 ml-lg-3 text-center">
-                            <a href="#" type="button" class="btn btn-secondary mt-4">$6,999</a>
-                        </div>
-
-                        <div class="mt-3 mt-lg-3 ml-lg-3 text-center">
-                            <a href="#" type="button" class="btn btn-secondary mt-4">In Stock</a>
-                        </div>
-
-                        <div class="mt-3 mt-lg-3 ml-lg-3 text-center">
-                            <a href="products/product3060ti.php" type="button" class="btn btn-primary mt-4">View</a>
+                            <h6 class="media-title font-weight-semibold"> <a href="products/product3070.php">RTX 3070</a></h6>
+                            <p class="mb-1"><?php echo $asinData["B08L8L9TCZ"]["description"]; ?></p>
+                            <div class="buttonsright">
+                                <a href="#" type="button" class="btn btn-secondary mr-2"><?php echo "$" . $asinData["B08L8L9TCZ"]["current_price"]; ?></a>
+                                <a href="#" type="button" class="btn btn-secondary mr-2">
+                                    <?php if ($asinData["B08L8L9TCZ"]["out_of_stock"]) {
+                                        echo "Out Of Stock";
+                                    } else {
+                                        echo "In Stock";
+                                    } ?></a>
+                                <a href="products/product3070.php" type="button" class="btn btn-primary">View</a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -167,22 +138,41 @@ foreach ($asinData as $key => $value) {
                 <div class="card card-body mt-3">
                     <div class="media align-items-center align-items-lg-start text-center text-lg-left flex-column flex-lg-row">
                         <div class="media-body">
-                            <h6 class="media-title font-weight-semibold"> <a href="products/product3060.php">RTX 3060</a> </h6>
-                            <p class="mb-3">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos in dolor sint beatae aspernatur sed distinctio doloremque enim voluptatibus vel officia illo at nihil voluptatum corrupti, odio ratione, iure labore.</p>
-                        </div>
-                        <div class="mt-3 mt-lg-3 ml-lg-3 text-center">
-                            <a href="#" type="button" class="btn btn-secondary mt-4">$1,999</a>
-                        </div>
-
-                        <div class="mt-3 mt-lg-3 ml-lg-3 text-center">
-                            <a href="#" type="button" class="btn btn-secondary mt-4">In Stock</a>
-                        </div>
-
-                        <div class="mt-3 mt-lg-3 ml-lg-3 text-center">
-                            <a href="products/product3060.php" type="button" class="btn btn-primary mt-4">View</a>
+                            <h6 class="media-title font-weight-semibold"> <a href="products/product3060ti.php">RTX 3060 Ti</a></h6>
+                            <p class="mb-3"><?php echo $asinData["B08R876RTH"]["description"]; ?></p>
+                            <div class="buttonsright">
+                                <a href="#" type="button" class="btn btn-secondary mr-2"><?php echo "$" . $asinData["B08R876RTH"]["current_price"]; ?></a>
+                                <a href="#" type="button" class="btn btn-secondary mr-2">
+                                    <?php if ($asinData["B08R876RTH"]["out_of_stock"]) {
+                                        echo "Out Of Stock";
+                                    } else {
+                                        echo "In Stock";
+                                    } ?></a>
+                                <a href="products/product3060ti.php" type="button" class="btn btn-primary">View</a>
+                            </div>
                         </div>
                     </div>
                 </div>
+
+                <div class="card card-body mt-3">
+                    <div class="media align-items-center align-items-lg-start text-center text-lg-left flex-column flex-lg-row">
+                        <div class="media-body">
+                            <h6 class="media-title font-weight-semibold"> <a href="products/product3060.php">RTX 3060</a></h6>
+                            <p class="mb-3"><?php echo $asinData["B08WHJPBFX"]["description"]; ?></p>
+                            <div class="buttonsright">
+                                <a href="#" type="button" class="btn btn-secondary mr-2"><?php echo "$" . $asinData["B08WHJPBFX"]["current_price"]; ?></a>
+                                <a href="#" type="button" class="btn btn-secondary mr-2">
+                                    <?php if ($asinData["B08WHJPBFX"]["out_of_stock"]) {
+                                        echo "Out Of Stock";
+                                    } else {
+                                        echo "In Stock";
+                                    } ?></a>
+                                <a href="products/product3060.php" type="button" class="btn btn-primary">View</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </div>
