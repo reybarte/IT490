@@ -15,7 +15,7 @@ if (isset($_POST["submit"])) {
 	ob_end_clean();
 
 	if ($response["status"] == 200) {
-		$_SESSION["user"] = $response["data"];
+		$_SESSION["user"] = (array)$response["data"];
 		echo "<script>alert('Login Success')</script>";
 		echo "<script>window.location = 'index.php'; </script>";
 	} else if ($response["status"] == 400) {
@@ -117,7 +117,6 @@ if (isset($_POST["submit"])) {
 					</div>
 				</div>
 			</div>
-		</div>
 		</div>
 	</form>
 </body>
