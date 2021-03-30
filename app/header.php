@@ -1,5 +1,21 @@
-<!-- Nav -->
-<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+<?php
+
+?>
+
+<style>
+    /*For NavBar hover effect on Profile dropdown*/
+    .dropdown:hover .dropdown-menu {
+        display: block !important;
+        max-width: 100px;
+        min-width: 100px;
+    }
+
+    .dropdown-menu {
+        margin-top: 0 !important;
+    }
+</style>
+
+<!-- NavBar -->
 <nav class="navbar navbar-expand-md navbar-dark bg-dark">
     <div class="container-fluid">
         <a class="navbar-brand" href="index.php">GPU Guru</a>
@@ -23,6 +39,7 @@
                     <div class="dropdown-menu">
                         <a href="#" class="dropdown-item">Profile</a>
                         <a href="login.php" class="dropdown-item">Login</a>
+                        <a href="#" class="dropdown-item">Logout</a>
                         <a href="register.php" class="dropdown-item">Register</a>
                         <a href="admin.php" class="dropdown-item">Admin</a>
                     </div>

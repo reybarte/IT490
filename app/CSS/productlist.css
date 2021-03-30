@@ -1,15 +1,7 @@
-/*For nav bar title centering*/
-.navbar-brand{
-    padding-left: 100px;
-}
 /*Removes hover effect*/
 .btn-secondary{
     pointer-events: none;
 }
-
-
-
-
 
 /*For products page list*/
 body {

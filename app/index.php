@@ -1,7 +1,17 @@
 <?php
 require(__DIR__ . "/MQPublish.inc.php");
-//require(__DIR__."/header.php");
+require(__DIR__ . "/header.php");
 session_start();
+ob_start();
+$data = getCache()->data;
+ob_end_clean();
+foreach ($data as $key => $value) {
+    $asinData[strval($value->asin)] = (array)$value;
+}
+//var_dump($asinData);
+foreach ($asinData as $key => $value) {
+    //echo $key . ":" . $value["current_price"]."\n";
+}
 ?>
 
 <!DOCTYPE html>
@@ -19,51 +29,6 @@ session_start();
 </head>
 
 <body>
-    <!-- Nav -->
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
-        <div class="container">
-            <a class="navbar-brand" href="index.php">GPU Guru</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="collapse navbar-collapse justify-content-end" id="navbarsExampleDefault">
-                <ul class="navbar-nav m-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="index.php">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="productlist.php">Products</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Statistics</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="login.php">Login</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="register.php">Register</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Settings</a>
-                    </li>
-                </ul>
-
-                <form class="form-inline my-2 my-lg-0">
-                    <div class="input-group input-group-sm">
-                        <input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" placeholder="Search...">
-                        <div class="input-group-append">
-                            <button type="button" class="btn btn-secondary btn-number">
-                                <i class="fa fa-search"></i>
-                            </button>
-                        </div>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </nav>
-
     <!-- Homepage -->
     <section class="jumbotron text-center">
         <div class="container">
@@ -92,14 +57,20 @@ session_start();
                     <div class="col-12 col-md-6 col-lg-4">
                         <div class="card">
                             <div class="card-body">
-                                <h4 class="card-title"><a href="#" title="View Product">GeForce RTX 3090</a></h4>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                <h4 class="card-title"><a href="products/product3090.php" title="View Product">GeForce RTX 3090</a></h4>
+                                <p class="card-text"><?php echo $asinData["B08J5F3G18"]["description"]; ?></p>
                                 <div class="row">
                                     <div class="col">
-                                        <p class="btn btn-secondary btn-block">999.00 $</p>
+                                        <p class="btn btn-secondary btn-block"><?php echo "$" . $asinData["B08J5F3G18"]["current_price"]; ?></p>
                                     </div>
                                     <div class="col">
-                                        <a href="#" class="btn btn-primary btn-block">Buy Now</a>
+                                        <div class="btn btn-secondary">
+                                            <?php if ($asinData["B08J5F3G18"]["out_of_stock"]) {
+                                                echo "Out Of Stock";
+                                            } else {
+                                                echo "In Stock";
+                                            } ?></a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -108,14 +79,20 @@ session_start();
                     <div class="col-12 col-md-6 col-lg-4">
                         <div class="card">
                             <div class="card-body">
-                                <h4 class="card-title"><a href="#" title="View Product">GeForce RTX 3080</a></h4>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                <h4 class="card-title"><a href="products/product3080.php" title="View Product">GeForce RTX 3080</a></h4>
+                                <p class="card-text"><?php echo $asinData["B08HH5WF97"]["description"]; ?></p>
                                 <div class="row">
                                     <div class="col">
-                                        <p class="btn btn-secondary btn-block">999.00 $</p>
+                                        <p class="btn btn-secondary btn-block"><?php echo "$" . $asinData["B08HH5WF97"]["current_price"]; ?></p>
                                     </div>
                                     <div class="col">
-                                        <a href="#" class="btn btn-primary btn-block">Buy Now</a>
+                                        <div class="btn btn-secondary">
+                                            <?php if ($asinData["B08HH5WF97"]["out_of_stock"]) {
+                                                echo "Out Of Stock";
+                                            } else {
+                                                echo "In Stock";
+                                            } ?></a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -124,14 +101,20 @@ session_start();
                     <div class="col-12 col-md-6 col-lg-4">
                         <div class="card">
                             <div class="card-body">
-                                <h4 class="card-title"><a href="#" title="View Product">GeForce RTX 3070</a></h4>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                <h4 class="card-title"><a href="products/product3070.php" title="View Product">GeForce RTX 3070</a></h4>
+                                <p class="card-text"><?php echo $asinData["B08L8L9TCZ"]["description"]; ?></p>
                                 <div class="row">
                                     <div class="col">
-                                        <p class="btn btn-secondary btn-block">999.00 $</p>
+                                        <p class="btn btn-secondary btn-block"><?php echo "$" . $asinData["B08L8L9TCZ"]["current_price"]; ?></p>
                                     </div>
                                     <div class="col">
-                                        <a href="#" class="btn btn-primary btn-block">Buy Now</a>
+                                        <div class="btn btn-secondary">
+                                            <?php if ($asinData["B08L8L9TCZ"]["out_of_stock"]) {
+                                                echo "Out Of Stock";
+                                            } else {
+                                                echo "In Stock";
+                                            } ?></a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -140,14 +123,20 @@ session_start();
                     <div class="col-12 col-md-6 col-lg-4">
                         <div class="card">
                             <div class="card-body">
-                                <h4 class="card-title ti"><a href="#" title="View Product">GeForce RTX 3060 Ti</a></h4>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                <h4 class="card-title ti"><a href="products/product3060ti.php" title="View Product">GeForce RTX 3060 Ti</a></h4>
+                                <p class="card-text"><?php echo $asinData["B08R876RTH"]["description"]; ?></p>
                                 <div class="row">
                                     <div class="col">
-                                        <p class="btn btn-secondary btn-block">999.00 $</p>
+                                        <p class="btn btn-secondary btn-block"><?php echo "$" . $asinData["B08R876RTH"]["current_price"]; ?></p>
                                     </div>
                                     <div class="col">
-                                        <a href="#" class="btn btn-primary btn-block">Buy Now</a>
+                                        <div class="btn btn-secondary">
+                                            <?php if ($asinData["B08R876RTH"]["out_of_stock"]) {
+                                                echo "Out Of Stock";
+                                            } else {
+                                                echo "In Stock";
+                                            } ?></a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -156,14 +145,20 @@ session_start();
                     <div class="col-12 col-md-6 col-lg-4">
                         <div class="card">
                             <div class="card-body">
-                                <h4 class="card-title"><a href="#" title="View Product">GeForce RTX 3060</a></h4>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                <h4 class="card-title"><a href="products/product3060.php" title="View Product">GeForce RTX 3060</a></h4>
+                                <p class="card-text"><?php echo $asinData["B08WHJPBFX"]["description"]; ?></p>
                                 <div class="row">
                                     <div class="col">
-                                        <p class="btn btn-secondary btn-block">999.00 $</p>
+                                        <p class="btn btn-secondary btn-block"><?php echo "$" . $asinData["B08WHJPBFX"]["current_price"]; ?></p>
                                     </div>
                                     <div class="col">
-                                        <a href="#" class="btn btn-primary btn-block">Buy Now</a>
+                                        <div class="btn btn-secondary">
+                                            <?php if ($asinData["B08WHJPBFX"]["out_of_stock"]) {
+                                                echo "Out Of Stock";
+                                            } else {
+                                                echo "In Stock";
+                                            } ?></a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -172,14 +167,20 @@ session_start();
                     <div class="col-12 col-md-6 col-lg-4">
                         <div class="card">
                             <div class="card-body">
-                                <h4 class="card-title"><a href="#" title="View Product">GeForce RTX 3090</a></h4>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                <h4 class="card-title"><a href="products/product3090.php" title="View Product">GeForce RTX 3090</a></h4>
+                                <p class="card-text"><?php echo $asinData["B08J5F3G18"]["description"]; ?></p>
                                 <div class="row">
                                     <div class="col">
-                                        <p class="btn btn-secondary btn-block">999.00 $</p>
+                                        <p class="btn btn-secondary btn-block"><?php echo "$" . $asinData["B08J5F3G18"]["current_price"]; ?></p>
                                     </div>
                                     <div class="col">
-                                        <a href="#" class="btn btn-primary btn-block">Buy Now</a>
+                                        <div class="btn btn-secondary">
+                                            <?php if ($asinData["B08J5F3G18"]["out_of_stock"]) {
+                                                echo "Out Of Stock";
+                                            } else {
+                                                echo "In Stock";
+                                            } ?></a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>

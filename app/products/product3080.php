@@ -42,7 +42,7 @@ foreach ($asinData as $key => $value) {
                     <li class="nav-item">
                         <a class="nav-link" href="../index.php">Home</a>
                     </li>
-                    <li class="nav-item active">
+                    <li class="nav-item">
                         <a class="nav-link" href="../productlist.php">Products</a>
                     </li>
                     <li class="nav-item">
