@@ -18,7 +18,6 @@ if (isset($_SESSION["user"])) {
 			$roleFlag = false;
 		}
 	}
-	echo "Hello user (" . $_SESSION["user"]["user_name"] . ").";
 } else {
 	echo "<script>alert('You must be logged in to access this page.')</script>";
 	echo "<script>window.location = 'login.php'; </script>";
@@ -31,26 +30,27 @@ if (isset($_SESSION["user"])) {
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 	<link rel="stylesheet" href="CSS/style.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-	<title>Login</title>
+	<script src="JS/navbar.js"></script>
+	<title>Admin</title>
 </head>
 
 <body>
 	<!-- Nav -->
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 	<nav class="navbar navbar-expand-md navbar-dark bg-dark">
-		<div class="container">
+		<div class="container-fluid">
 			<a class="navbar-brand" href="index.php">GPU Guru</a>
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
 			</button>
 
-			<div class="collapse navbar-collapse justify-content-end" id="navbarsExampleDefault">
-				<ul class="navbar-nav m-auto">
+			<div class="collapse navbar-collapse" id="navbarCollapse">
+				<ul class="navbar-nav w-100">
 					<li class="nav-item">
 						<a class="nav-link" href="index.php">Home</a>
 					</li>
@@ -60,27 +60,16 @@ if (isset($_SESSION["user"])) {
 					<li class="nav-item">
 						<a class="nav-link" href="#">Statistics</a>
 					</li>
-					<li class="nav-item active">
-						<a class="nav-link" href="login.php">Login</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="register.php">Register</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#">Settings</a>
-					</li>
-				</ul>
-
-				<form class="form-inline my-2 my-lg-0">
-					<div class="input-group input-group-sm">
-						<input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" placeholder="Search...">
-						<div class="input-group-append">
-							<button type="button" class="btn btn-secondary btn-number">
-								<i class="fa fa-search"></i>
-							</button>
+					<div class="nav-item dropdown ml-auto">
+						<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Profile</a>
+						<div class="dropdown-menu">
+							<a href="#" class="dropdown-item">Profile</a>
+							<a href="login.php" class="dropdown-item">Login</a>
+							<a href="register.php" class="dropdown-item">Register</a>
+							<a href="admin.php" class="dropdown-item active">Admin</a>
 						</div>
 					</div>
-				</form>
+				</ul>
 			</div>
 		</div>
 	</nav>
@@ -90,7 +79,7 @@ if (isset($_SESSION["user"])) {
 		<div class="container register-form">
 			<div class="form">
 				<div class="note">
-					<p>Welcome Admin.</p>
+					<p><?php echo "Welcome " . $_SESSION["user"]["user_name"]; ?></p>
 				</div>
 				<div class="form-content">
 					<div class="row">
@@ -108,7 +97,7 @@ if (isset($_SESSION["user"])) {
 							?>
 
 							<div class="form-group pt-2">
-								<input type="text" class="form-control" placeholder="Enter Username" name="usr" id="usr">
+								<input type="text" class="form-control" placeholder="Enter Email" name="email" id="email">
 								<label for="cl" class="pl-2 pr-1">Select Role Change:</label>
 								<input type="radio" id="cl" name="role" value="client">
 								<label for="cl">Client</label>

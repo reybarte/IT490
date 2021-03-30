@@ -1,3 +1,15 @@
+/*For NavBar*/
+.dropdown:hover .dropdown-menu{
+    display: block !important;
+    max-width: 100px;
+    min-width: 100px;
+}
+.dropdown-menu{
+    margin-top: 0 !important;
+}
+
+
+
 /*For home page card listings, adds spacing*/
 .col-12{
     padding-bottom: 2%;
@@ -12,11 +24,6 @@ body {
     overflow-y: scroll; /* Show vertical scrollbar */
   }
 
-/*For nav bar title centering*/
-.navbar-brand{
-    padding-left: 100px;
-}
-
 /*Removes hover effect*/
 .btn-secondary{
     pointer-events: none;
@@ -26,8 +33,6 @@ body {
 .members{
     pointer-events: none;
 }
-
-
 
 
 
