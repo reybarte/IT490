@@ -24,7 +24,7 @@
                         <a href="#" class="dropdown-item">Profile</a>
                         <a href="login.php" class="dropdown-item">Login</a>
                         <a href="register.php" class="dropdown-item">Register</a>
-                        <a href="admin.php" class="dropdown-item active">Admin</a>
+                        <a href="admin.php" class="dropdown-item">Admin</a>
                     </div>
                 </div>
             </ul>
