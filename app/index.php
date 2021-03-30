@@ -25,6 +25,7 @@ foreach ($asinData as $key => $value) {
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="JS/desclimit.js"></script> <!-- Add 'limitdesc' as a class variable to limit characters -->
     <title>Home</title>
 </head>
 
@@ -38,27 +39,13 @@ foreach ($asinData as $key => $value) {
     </section>
     <div class="container">
         <div class="row">
-            <div class="col-12 col-sm-3">
-                <div class="card bg-light mb-3">
-                    <div class="card-header bg-primary text-white text-uppercase">Couch Potatoes Members</div>
-                    <ul class="list-group category_block">
-                        <li class="list-group-item members"><a href="#">Derek</a></li>
-                        <li class="list-group-item members"><a href="#">Reynaldo</a></li>
-                        <li class="list-group-item members"><a href="#">Andrea</a></li>
-                        <li class="list-group-item members"><a href="#">Tony</a></li>
-                        <li class="list-group-item members"><a href="#">Michael</a></li>
-                        <li class="list-group-item members"><a href="#">Paul</a></li>
-                    </ul>
-                </div>
-
-            </div>
             <div class="col">
                 <div class="row">
-                    <div class="col-12 col-md-6 col-lg-4">
+                    <div class="col-12 col-md-6 col-lg-4 pb-3">
                         <div class="card">
                             <div class="card-body">
                                 <h4 class="card-title"><a href="products/product3090.php" title="View Product">GeForce RTX 3090</a></h4>
-                                <p class="card-text"><?php echo $asinData["B08J5F3G18"]["description"]; ?></p>
+                                <p class="card-text limitdesc"><?php echo $asinData["B08J5F3G18"]["description"]; ?></p>
                                 <div class="row">
                                     <div class="col">
                                         <p class="btn btn-secondary btn-block"><?php echo "$" . $asinData["B08J5F3G18"]["current_price"]; ?></p>
@@ -76,11 +63,11 @@ foreach ($asinData as $key => $value) {
                             </div>
                         </div>
                     </div>
-                    <div class="col-12 col-md-6 col-lg-4">
+                    <div class="col-12 col-md-6 col-lg-4 pb-3">
                         <div class="card">
                             <div class="card-body">
                                 <h4 class="card-title"><a href="products/product3080.php" title="View Product">GeForce RTX 3080</a></h4>
-                                <p class="card-text"><?php echo $asinData["B08HH5WF97"]["description"]; ?></p>
+                                <p class="card-text limitdesc"><?php echo $asinData["B08HH5WF97"]["description"]; ?></p>
                                 <div class="row">
                                     <div class="col">
                                         <p class="btn btn-secondary btn-block"><?php echo "$" . $asinData["B08HH5WF97"]["current_price"]; ?></p>
@@ -98,11 +85,11 @@ foreach ($asinData as $key => $value) {
                             </div>
                         </div>
                     </div>
-                    <div class="col-12 col-md-6 col-lg-4">
+                    <div class="col-12 col-md-6 col-lg-4 pb-3">
                         <div class="card">
                             <div class="card-body">
                                 <h4 class="card-title"><a href="products/product3070.php" title="View Product">GeForce RTX 3070</a></h4>
-                                <p class="card-text"><?php echo $asinData["B08L8L9TCZ"]["description"]; ?></p>
+                                <p class="card-text limitdesc"><?php echo $asinData["B08L8L9TCZ"]["description"]; ?></p>
                                 <div class="row">
                                     <div class="col">
                                         <p class="btn btn-secondary btn-block"><?php echo "$" . $asinData["B08L8L9TCZ"]["current_price"]; ?></p>
@@ -120,11 +107,11 @@ foreach ($asinData as $key => $value) {
                             </div>
                         </div>
                     </div>
-                    <div class="col-12 col-md-6 col-lg-4">
+                    <div class="col-12 col-md-6 col-lg-4 pb-3">
                         <div class="card">
                             <div class="card-body">
-                                <h4 class="card-title ti"><a href="products/product3060ti.php" title="View Product">GeForce RTX 3060 Ti</a></h4>
-                                <p class="card-text"><?php echo $asinData["B08R876RTH"]["description"]; ?></p>
+                                <h4 class="card-title"><a href="products/product3060ti.php" title="View Product">GeForce RTX 3060 Ti</a></h4>
+                                <p class="card-text limitdesc"><?php echo $asinData["B08R876RTH"]["description"]; ?></p>
                                 <div class="row">
                                     <div class="col">
                                         <p class="btn btn-secondary btn-block"><?php echo "$" . $asinData["B08R876RTH"]["current_price"]; ?></p>
@@ -142,11 +129,11 @@ foreach ($asinData as $key => $value) {
                             </div>
                         </div>
                     </div>
-                    <div class="col-12 col-md-6 col-lg-4">
+                    <div class="col-12 col-md-6 col-lg-4 pb-3">
                         <div class="card">
                             <div class="card-body">
                                 <h4 class="card-title"><a href="products/product3060.php" title="View Product">GeForce RTX 3060</a></h4>
-                                <p class="card-text"><?php echo $asinData["B08WHJPBFX"]["description"]; ?></p>
+                                <p class="card-text limitdesc"><?php echo $asinData["B08WHJPBFX"]["description"]; ?></p>
                                 <div class="row">
                                     <div class="col">
                                         <p class="btn btn-secondary btn-block"><?php echo "$" . $asinData["B08WHJPBFX"]["current_price"]; ?></p>
@@ -164,11 +151,11 @@ foreach ($asinData as $key => $value) {
                             </div>
                         </div>
                     </div>
-                    <div class="col-12 col-md-6 col-lg-4">
+                    <div class="col-12 col-md-6 col-lg-4 pb-3">
                         <div class="card">
                             <div class="card-body">
                                 <h4 class="card-title"><a href="products/product3090.php" title="View Product">GeForce RTX 3090</a></h4>
-                                <p class="card-text"><?php echo $asinData["B08J5F3G18"]["description"]; ?></p>
+                                <p class="card-text limitdesc"><?php echo $asinData["B08J5F3G18"]["description"]; ?></p>
                                 <div class="row">
                                     <div class="col">
                                         <p class="btn btn-secondary btn-block"><?php echo "$" . $asinData["B08J5F3G18"]["current_price"]; ?></p>
@@ -193,7 +180,7 @@ foreach ($asinData as $key => $value) {
     </div>
 
     <!-- Footer -->
-    <footer class="text-light">
+    <footer class="text-light mt-3">
         <div class="container">
             <div class="row">
                 <div class="col-md-3 col-lg-4 col-xl-3">

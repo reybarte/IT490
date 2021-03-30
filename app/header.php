@@ -1,5 +1,6 @@
 <?php
-
+$currentURL = ["index" => 0, "productlist" => 0, "login" => 0, "register" => 0, "admin" => 0];
+$currentURL[pathinfo($_SERVER["REQUEST_URI"], PATHINFO_FILENAME)] = 1;
 ?>
 
 <style>
@@ -25,10 +26,10 @@
 
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav w-100">
-                <li class="nav-item">
+                <li class="nav-item <?php echo $currentURL['index'] ? 'active' : '' ?> ">
                     <a class="nav-link" href="index.php">Home</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item <?php echo $currentURL['productlist'] ? 'active' : '' ?> ">
                     <a class="nav-link" href="productlist.php">Products</a>
                 </li>
                 <li class="nav-item">
@@ -37,11 +38,11 @@
                 <div class="nav-item dropdown ml-auto">
                     <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Profile</a>
                     <div class="dropdown-menu">
-                        <a href="#" class="dropdown-item">Profile</a>
-                        <a href="login.php" class="dropdown-item">Login</a>
+                        <a href="#" class="dropdown-item <?php echo $currentURL['productlist'] ? 'active' : '' ?> ">Profile</a>
                         <a href="#" class="dropdown-item">Logout</a>
-                        <a href="register.php" class="dropdown-item">Register</a>
-                        <a href="admin.php" class="dropdown-item">Admin</a>
+                        <a href="login.php" class="dropdown-item <?php echo $currentURL['login'] ? 'active' : '' ?> ">Login</a>
+                        <a href="register.php" class="dropdown-item <?php echo $currentURL['register'] ? 'active' : '' ?> ">Register</a>
+                        <a href="admin.php" class="dropdown-item <?php echo $currentURL['admin'] ? 'active' : '' ?> ">Admin</a>
                     </div>
                 </div>
             </ul>
