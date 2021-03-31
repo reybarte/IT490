@@ -1,21 +1,10 @@
-/*For home page card listings, adds spacing*/
-.col-12{
-    padding-bottom: 2%;
-}
-/*For home page title size on 3060Ti card*/
-.ti{
-    font-size: 1.4rem;
-    padding-bottom: 0px; 
-}
+/*index.php, login.php, register.php, admin.php use this .css file*/
 
+
+/*For home page title size on 3060Ti card*/
 body {
     overflow-y: scroll; /* Show vertical scrollbar */
   }
-
-/*For nav bar title centering*/
-.navbar-brand{
-    padding-left: 100px;
-}
 
 /*Removes hover effect*/
 .btn-secondary{
@@ -26,8 +15,6 @@ body {
 .members{
     pointer-events: none;
 }
-
-
 
 
 
@@ -76,56 +63,8 @@ padding-bottom: 3%;
     color: #fff;
 }
 
-/*For home page and footer*/
-.bloc_left_price {
-    color: #c01508;
-    text-align: center;
-    font-weight: bold;
-    font-size: 150%;
-}
-.category_block li:hover {
-    background-color: #007bff;
-}
-.category_block li:hover a {
-    color: #ffffff;
-}
-.category_block li a {
-    color: #343a40;
-}
-.add_to_cart_block .price {
-    color: #c01508;
-    text-align: center;
-    font-weight: bold;
-    font-size: 200%;
-    margin-bottom: 0;
-}
-.add_to_cart_block .price_discounted {
-    color: #343a40;
-    text-align: center;
-    text-decoration: line-through;
-    font-size: 140%;
-}
-.product_rassurance {
-    padding: 10px;
-    margin-top: 15px;
-    background: #ffffff;
-    border: 1px solid #6c757d;
-    color: #6c757d;
-}
-.product_rassurance .list-inline {
-    margin-bottom: 0;
-    text-transform: uppercase;
-    text-align: center;
-}
-.product_rassurance .list-inline li:hover {
-    color: #343a40;
-}
-.reviews_product .fa-star {
-    color: gold;
-}
-.pagination {
-    margin-top: 20px;
-}
+
+/*For home pages footer*/
 footer {
     background: #343a40;
     padding: 40px;

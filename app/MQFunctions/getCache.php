@@ -1,18 +1,16 @@
 <?php
-function getCache() {
-	try{
-		require_once(__DIR__.'/../../lib/path.inc');
-		require_once(__DIR__.'/../../lib/get_host_info.inc');
-		require_once(__DIR__.'/../../lib/rabbitMQLib.inc');
+function getCache()
+{
+	try {
+		require_once(__DIR__ . '/../../lib/path.inc');
+		require_once(__DIR__ . '/../../lib/get_host_info.inc');
+		require_once(__DIR__ . '/../../lib/rabbitMQLib.inc');
 
 		$client = new RabbitMQClient('APPDBQ.ini', 'testServer');
-		$msg = ["type"=>"getCache"];
+		$msg = ["type" => "getCache"];
 		$response = $client->send_request($msg);
 		return $response;
-	}
-	catch(Exception $e){
+	} catch (Exception $e) {
 		return $e->getMessage();
 	}
 }
-
-?>
