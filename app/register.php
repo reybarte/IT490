@@ -96,7 +96,6 @@ if (isset($_POST["submit"])) {
 				<div class="note">
 					<p>Please fill in this form to create an account.</p>
 				</div>
-
 				<div class="form-content">
 					<div class="row">
 						<div class="col-md-6">
