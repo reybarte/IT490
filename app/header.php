@@ -2,7 +2,8 @@
 $currentURL = ["index" => 0, "productlist" => 0, "login" => 0, "register" => 0, "admin" => 0];
 $currentURL[pathinfo($_SERVER["REQUEST_URI"], PATHINFO_FILENAME)] = 1;
 
-$prodPage = pathinfo(__DIR__, PATHINFO_FILENAME) == "products" ? 1:0;
+$prodPage = pathinfo($_SERVER["REQUEST_URI"], PATHINFO_DIRNAME) == "/products" ? 1:0;
+
 ?>
 
 <style>
