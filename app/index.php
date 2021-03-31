@@ -44,14 +44,14 @@ foreach ($asinData as $key => $value) {
                     <div class="col-12 col-md-6 col-lg-4 pb-3">
                         <div class="card">
                             <div class="card-body">
-                                <h4 class="card-title"><a href="products/product3090.php" title="View Product">GeForce RTX 3090</a></h4>
-                                <p class="card-text limitdesc"><?php echo $asinData["B08J5F3G18"]["description"]; ?></p>
+                                <h4 class="card-title text-center"><a href="products/product3090.php" title="View Product">GeForce RTX 3090</a></h4>
+                                <p class="card-text limitdesc text-center"><?php echo $asinData["B08J5F3G18"]["description"]; ?></p>
                                 <div class="row">
-                                    <div class="col">
-                                        <p class="btn btn-secondary btn-block indexButton"><?php echo "$" . $asinData["B08J5F3G18"]["current_price"]; ?></p>
+                                    <div class="col text-center">
+                                        <p class="btn btn-secondary btn"><?php echo "$" . $asinData["B08J5F3G18"]["current_price"]; ?></p>
                                     </div>
-                                    <div class="col">
-                                        <div class="btn btn-secondary">
+                                    <div class="col text-center">
+                                        <div class="btn btn-secondary btn">
                                             <?php if ($asinData["B08J5F3G18"]["out_of_stock"]) {
                                                 echo "Out Of Stock";
                                             } else {
@@ -66,14 +66,14 @@ foreach ($asinData as $key => $value) {
                     <div class="col-12 col-md-6 col-lg-4 pb-3">
                         <div class="card">
                             <div class="card-body">
-                                <h4 class="card-title"><a href="products/product3080.php" title="View Product">GeForce RTX 3080</a></h4>
-                                <p class="card-text limitdesc"><?php echo $asinData["B08HH5WF97"]["description"]; ?></p>
+                                <h4 class="card-title text-center"><a href="products/product3080.php" title="View Product">GeForce RTX 3080</a></h4>
+                                <p class="card-text limitdesc text-center"><?php echo $asinData["B08HH5WF97"]["description"]; ?></p>
                                 <div class="row">
-                                    <div class="col">
-                                        <p class="btn btn-secondary btn-block"><?php echo "$" . $asinData["B08HH5WF97"]["current_price"]; ?></p>
+                                    <div class="col text-center">
+                                        <p class="btn btn-secondary btn"><?php echo "$" . $asinData["B08HH5WF97"]["current_price"]; ?></p>
                                     </div>
-                                    <div class="col">
-                                        <div class="btn btn-secondary">
+                                    <div class="col text-center">
+                                        <div class="btn btn-secondary btn">
                                             <?php if ($asinData["B08HH5WF97"]["out_of_stock"]) {
                                                 echo "Out Of Stock";
                                             } else {
@@ -88,14 +88,14 @@ foreach ($asinData as $key => $value) {
                     <div class="col-12 col-md-6 col-lg-4 pb-3">
                         <div class="card">
                             <div class="card-body">
-                                <h4 class="card-title"><a href="products/product3070.php" title="View Product">GeForce RTX 3070</a></h4>
-                                <p class="card-text limitdesc"><?php echo $asinData["B08L8L9TCZ"]["description"]; ?></p>
+                                <h4 class="card-title text-center"><a href="products/product3070.php" title="View Product">GeForce RTX 3070</a></h4>
+                                <p class="card-text limitdesc text-center"><?php echo $asinData["B08L8L9TCZ"]["description"]; ?></p>
                                 <div class="row">
-                                    <div class="col">
-                                        <p class="btn btn-secondary btn-block"><?php echo "$" . $asinData["B08L8L9TCZ"]["current_price"]; ?></p>
+                                    <div class="col text-center">
+                                        <p class="btn btn-secondary btn"><?php echo "$" . $asinData["B08L8L9TCZ"]["current_price"]; ?></p>
                                     </div>
-                                    <div class="col">
-                                        <div class="btn btn-secondary">
+                                    <div class="col text-center">
+                                        <div class="btn btn-secondary btn">
                                             <?php if ($asinData["B08L8L9TCZ"]["out_of_stock"]) {
                                                 echo "Out Of Stock";
                                             } else {
@@ -110,14 +110,14 @@ foreach ($asinData as $key => $value) {
                     <div class="col-12 col-md-6 col-lg-4 pb-3">
                         <div class="card">
                             <div class="card-body">
-                                <h4 class="card-title"><a href="products/product3060ti.php" title="View Product">GeForce RTX 3060 Ti</a></h4>
-                                <p class="card-text limitdesc"><?php echo $asinData["B08R876RTH"]["description"]; ?></p>
+                                <h4 class="card-title text-center"><a href="products/product3060ti.php" title="View Product">GeForce RTX 3060 Ti</a></h4>
+                                <p class="card-text limitdesc text-center"><?php echo $asinData["B08R876RTH"]["description"]; ?></p>
                                 <div class="row">
-                                    <div class="col">
-                                        <p class="btn btn-secondary btn-block"><?php echo "$" . $asinData["B08R876RTH"]["current_price"]; ?></p>
+                                    <div class="col text-center">
+                                        <p class="btn btn-secondary btn"><?php echo "$" . $asinData["B08R876RTH"]["current_price"]; ?></p>
                                     </div>
-                                    <div class="col">
-                                        <div class="btn btn-secondary">
+                                    <div class="col text-center">
+                                        <div class="btn btn-secondary btn">
                                             <?php if ($asinData["B08R876RTH"]["out_of_stock"]) {
                                                 echo "Out Of Stock";
                                             } else {
@@ -132,14 +132,14 @@ foreach ($asinData as $key => $value) {
                     <div class="col-12 col-md-6 col-lg-4 pb-3">
                         <div class="card">
                             <div class="card-body">
-                                <h4 class="card-title"><a href="products/product3060.php" title="View Product">GeForce RTX 3060</a></h4>
-                                <p class="card-text limitdesc"><?php echo $asinData["B08WHJPBFX"]["description"]; ?></p>
+                                <h4 class="card-title text-center"><a href="products/product3060.php" title="View Product">GeForce RTX 3060</a></h4>
+                                <p class="card-text limitdesc text-center"><?php echo $asinData["B08WHJPBFX"]["description"]; ?></p>
                                 <div class="row">
-                                    <div class="col">
-                                        <p class="btn btn-secondary btn-block"><?php echo "$" . $asinData["B08WHJPBFX"]["current_price"]; ?></p>
+                                    <div class="col text-center">
+                                        <p class="btn btn-secondary btn"><?php echo "$" . $asinData["B08WHJPBFX"]["current_price"]; ?></p>
                                     </div>
-                                    <div class="col">
-                                        <div class="btn btn-secondary">
+                                    <div class="col text-center">
+                                        <div class="btn btn-secondary btn">
                                             <?php if ($asinData["B08WHJPBFX"]["out_of_stock"]) {
                                                 echo "Out Of Stock";
                                             } else {
@@ -154,14 +154,14 @@ foreach ($asinData as $key => $value) {
                     <div class="col-12 col-md-6 col-lg-4 pb-3">
                         <div class="card">
                             <div class="card-body">
-                                <h4 class="card-title"><a href="products/product3090.php" title="View Product">GeForce RTX 3090</a></h4>
-                                <p class="card-text limitdesc"><?php echo $asinData["B08J5F3G18"]["description"]; ?></p>
+                                <h4 class="card-title text-center"><a href="products/product3090.php" title="View Product">GeForce RTX 3090</a></h4>
+                                <p class="card-text limitdesc text-center"><?php echo $asinData["B08J5F3G18"]["description"]; ?></p>
                                 <div class="row">
-                                    <div class="col">
-                                        <p class="btn btn-secondary btn-block"><?php echo "$" . $asinData["B08J5F3G18"]["current_price"]; ?></p>
+                                    <div class="col text-center">
+                                        <p class="btn btn-secondary btn"><?php echo "$" . $asinData["B08J5F3G18"]["current_price"]; ?></p>
                                     </div>
-                                    <div class="col">
-                                        <div class="btn btn-secondary">
+                                    <div class="col text-center">
+                                        <div class="btn btn-secondary btn">
                                             <?php if ($asinData["B08J5F3G18"]["out_of_stock"]) {
                                                 echo "Out Of Stock";
                                             } else {
