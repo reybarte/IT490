@@ -1,7 +1,17 @@
 <?php
+session_start();
 require(__DIR__ . "/MQPublish.inc.php");
 require(__DIR__ . "/header.php");
-session_start();
+ob_start();
+$data = getCache()->data;
+ob_end_clean();
+foreach ($data as $key => $value) {
+    $asinData[strval($value->asin)] = (array)$value;
+}
+//var_dump($asinData);
+foreach ($asinData as $key => $value) {
+    //echo $key . ":" . $value["current_price"]."\n";
+}
 ?>
 
 <!DOCTYPE html>
@@ -28,10 +38,10 @@ session_start();
             <div class="borderRow media align-items-center align-items-lg-start text-center text-lg-left flex-column flex-lg-row">
                 <div class="media-body">
                     <h4 class="media-title font-weight-semibold">RTX 3090</h4>
-                    <h6 class="media-title font-weight-semibold">ASIN</h6>
+                    <h6 class="media-title font-weight-semibold"><?php echo $asinData["B08J5F3G18"]["asin"]; ?></h6>
                 </div>
                 <div class="text-center pt-1">
-                    <a href="#" type="button" class="btn btn-secondary mt-2">$3,999</a>
+                    <a href="#" type="button" class="btn btn-secondary mt-2"><?php echo "$" . $asinData["B08J5F3G18"]["current_price"]; ?></a>
                 </div>
             </div>
 
