@@ -2,7 +2,7 @@
 $currentURL = ["index" => 0, "productlist" => 0, "login" => 0, "register" => 0, "admin" => 0];
 $currentURL[pathinfo($_SERVER["REQUEST_URI"], PATHINFO_FILENAME)] = 1;
 
-$prodPage = pathinfo($_SERVER["REQUEST_URI"], PATHINFO_DIRNAME) == "/products" ? 1:0;
+$prodPage = pathinfo(pathinfo($_SERVER["REQUEST_URI"], PATHINFO_DIRNAME), PATHINFO_FILENAME) == "products" ? 1 : 0;
 
 ?>
 
@@ -30,10 +30,10 @@ $prodPage = pathinfo($_SERVER["REQUEST_URI"], PATHINFO_DIRNAME) == "/products" ?
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav w-100">
                 <li class="nav-item <?php echo $currentURL['index'] ? 'active' : '' ?> ">
-				<a class="nav-link" href="<?php echo $prodPage ? '../index.php':'index.php'?>">Home</a>
+                    <a class="nav-link" href="<?php echo $prodPage ? '../index.php' : 'index.php' ?>">Home</a>
                 </li>
                 <li class="nav-item <?php echo $currentURL['productlist'] ? 'active' : '' ?> ">
-                    <a class="nav-link" href="<?php echo $prodPage ? '../productlist.php':'productlist.php'?>">Products</a>
+                    <a class="nav-link" href="<?php echo $prodPage ? '../productlist.php' : 'productlist.php' ?>">Products</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Statistics</a>
@@ -42,9 +42,9 @@ $prodPage = pathinfo($_SERVER["REQUEST_URI"], PATHINFO_DIRNAME) == "/products" ?
                     <a href="#" class="nav-link dropdown-toggle <?php echo ($currentURL['login'] || $currentURL['register'] || $currentURL['admin']) ? 'active' : '' ?>" data-toggle="dropdown">Profile</a>
                     <div class="dropdown-menu">
                         <a href="#" class="dropdown-item">Logout</a>
-                        <a href="<?php echo $prodPage ? '../login.php':'login.php'?>" class="dropdown-item <?php echo $currentURL['login'] ? 'active' : '' ?> ">Login</a>
-                        <a href="<?php echo $prodPage ? '../register.php':'register.php'?>" class="dropdown-item <?php echo $currentURL['register'] ? 'active' : '' ?> ">Register</a>
-                        <a href="<?php echo $prodPage ? '../admin.php':'admin.php'?>" class="dropdown-item <?php echo $currentURL['admin'] ? 'active' : '' ?> ">Admin</a>
+                        <a href="<?php echo $prodPage ? '../login.php' : 'login.php' ?>" class="dropdown-item <?php echo $currentURL['login'] ? 'active' : '' ?> ">Login</a>
+                        <a href="<?php echo $prodPage ? '../register.php' : 'register.php' ?>" class="dropdown-item <?php echo $currentURL['register'] ? 'active' : '' ?> ">Register</a>
+                        <a href="<?php echo $prodPage ? '../admin.php' : 'admin.php' ?>" class="dropdown-item <?php echo $currentURL['admin'] ? 'active' : '' ?> ">Admin</a>
                     </div>
                 </div>
             </ul>

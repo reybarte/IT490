@@ -48,7 +48,7 @@ foreach ($asinData as $key => $value) {
                                 <p class="card-text limitdesc"><?php echo $asinData["B08J5F3G18"]["description"]; ?></p>
                                 <div class="row">
                                     <div class="col">
-                                        <p class="btn btn-secondary btn-block"><?php echo "$" . $asinData["B08J5F3G18"]["current_price"]; ?></p>
+                                        <p class="btn btn-secondary btn-block indexButton"><?php echo "$" . $asinData["B08J5F3G18"]["current_price"]; ?></p>
                                     </div>
                                     <div class="col">
                                         <div class="btn btn-secondary">
