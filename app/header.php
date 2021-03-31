@@ -4,10 +4,8 @@ $currentURL[pathinfo($_SERVER["REQUEST_URI"], PATHINFO_FILENAME)] = 1;
 
 $prodPage = pathinfo(pathinfo($_SERVER["REQUEST_URI"], PATHINFO_DIRNAME), PATHINFO_FILENAME) == "products" ? 1 : 0;
 
-$loggedIn = isset($_SESSION["user"]) ? 1:0;
-$clientRole = $_SESSION["user"]["role"] == 'client' ? 1:0;
-echo $loggedIn . "\n";
-echo $clientRole . "\n";
+$loggedIn = isset($_SESSION["user"]) ? 1 : 0;
+$clientRole = $_SESSION["user"]["role"] == 'client' ? 1 : 0;
 ?>
 
 <style>
@@ -45,18 +43,21 @@ echo $clientRole . "\n";
 				<div class="nav-item dropdown ml-auto">
 					<a href="#" class="nav-link dropdown-toggle <?php echo ($currentURL['login'] || $currentURL['register'] || $currentURL['admin']) ? 'active' : '' ?>" data-toggle="dropdown">Profile</a>
 					<div class="dropdown-menu">
-					<?php if($loggedIn):?>
-						<a href="#" class="dropdown-item">Logout</a>
-					<?php endif;?>
-					<?php if (!$loggedIn):?>
-						<a href="<?php echo $prodPage ? '../login.php' : 'login.php' ?>" class="dropdown-item <?php echo $currentURL['login'] ? 'active' : '' ?> ">Login</a>
-					<?php endif;?>
-					<?php if(!$loggedIn):?>
-						<a href="<?php echo $prodPage ? '../register.php' : 'register.php' ?>" class="dropdown-item <?php echo $currentURL['register'] ? 'active' : '' ?> ">Register</a>
-					<?php endif;?>
-					<?php if($loggedIn && !$clientRole):?>
-						<a href="<?php echo $prodPage ? '../admin.php' : 'admin.php' ?>" class="dropdown-item <?php echo $currentURL['admin'] ? 'active' : '' ?> ">Admin</a>
-					<?php endif;?>
+						<?php if ($loggedIn) : ?>
+							<a href="#" class="dropdown-item">History</a>
+						<?php endif; ?>
+						<?php if ($loggedIn) : ?>
+							<a href="#" class="dropdown-item">Logout</a>
+						<?php endif; ?>
+						<?php if (!$loggedIn) : ?>
+							<a href="<?php echo $prodPage ? '../login.php' : 'login.php' ?>" class="dropdown-item <?php echo $currentURL['login'] ? 'active' : '' ?> ">Login</a>
+						<?php endif; ?>
+						<?php if (!$loggedIn) : ?>
+							<a href="<?php echo $prodPage ? '../register.php' : 'register.php' ?>" class="dropdown-item <?php echo $currentURL['register'] ? 'active' : '' ?> ">Register</a>
+						<?php endif; ?>
+						<?php if ($loggedIn && !$clientRole) : ?>
+							<a href="<?php echo $prodPage ? '../admin.php' : 'admin.php' ?>" class="dropdown-item <?php echo $currentURL['admin'] ? 'active' : '' ?> ">Admin</a>
+						<?php endif; ?>
 					</div>
 				</div>
 			</ul>
