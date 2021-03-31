@@ -1,7 +1,7 @@
 <?php
+session_start();
 require("MQPublish.inc.php");
 require(__DIR__ . "/header.php");
-session_start();
 
 if (isset($_SESSION["user"])) {
 	if (isset($_POST["request"])) {
