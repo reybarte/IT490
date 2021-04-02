@@ -3,6 +3,9 @@ session_start();
 require(__DIR__ . "/MQPublish.inc.php");
 require(__DIR__ . "/header.php");
 
+if (isset($_SESSION["logout"])) {
+	logout();
+}
 
 if (isset($_POST["submit"])) {
 	$username = $_POST["username"];
