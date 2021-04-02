@@ -24,7 +24,11 @@ $clientRole = $_SESSION["user"]["role"] == 'client' ? 1 : 0;
 <!-- NavBar -->
 <nav class="navbar navbar-expand-md navbar-dark bg-dark">
 	<div class="container-fluid">
-		<a class="navbar-brand" href="index.php">GPU Guru</a>
+		
+		<div class="logo-image mr-1">
+			<a href="<?php echo $prodPage ? '../index.php' : 'index.php' ?>"> <img src="IMG/490IconPic.png" class="img-fluid"></a>
+		</div>
+		
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
 			<span class="navbar-toggler-icon"></span>
 		</button>
