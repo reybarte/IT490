@@ -32,10 +32,10 @@ foreach ($asinData as $key => $value) {
 
 <body>
     <!-- Homepage -->
-    <section class="jumbotron text-center">
+    <section class="jumbotron text-center pt-1 pb-2">
         <div class="container">
             <!--<h1 class="jumbotron-heading">GPU Guru</h1> -->
-            <img src="IMG/490TitlePic.png" class="img-fluid title">
+            <img src="IMG/490TitlePic.png" class="img-fluid title pb-2">
             <p class="lead text-muted mb-0">Anti-Scalper</p>
         </div>
     </section>
