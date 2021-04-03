@@ -47,7 +47,8 @@ $clientRole = $_SESSION["user"]["role"] == 'client' ? 1 : 0;
 							<a href="#" class="dropdown-item">History</a>
 						<?php endif; ?>
 						<?php if ($loggedIn) : ?>
-							<a href="#" class="dropdown-item">Logout</a>
+							<a href="<?php echo $prodPage ? '../login.php' : 'login.php' ?>" class="dropdown-item <?php echo $currentURL['login'] ? 'active' : '' ?> " >Logout</a>
+							<?php $_SESSION["logout"] = true; ?>
 						<?php endif; ?>
 						<?php if (!$loggedIn) : ?>
 							<a href="<?php echo $prodPage ? '../login.php' : 'login.php' ?>" class="dropdown-item <?php echo $currentURL['login'] ? 'active' : '' ?> ">Login</a>
