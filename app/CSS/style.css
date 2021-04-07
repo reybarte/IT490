@@ -75,8 +75,8 @@ footer a {
 
 /*Image settings for full Company Name inside of the jumbotron section on index.php*/
 .bigImage{
-    width: 50%;
-    height: 40%;
+    width: 400px;
+    height: 210px;
     align-self: center;
     margin-top: 10px;
     margin-left: auto;
@@ -90,15 +90,18 @@ footer a {
 /*Box settings for the container that holds Icon picture*/
 .icon-container{
     box-sizing: content-box;
-    width: 50px;
-    height: 50px;
+    width: 100%;
+    height: 100%;
     align-content: center;
     align-items: center;
 }
 
-/*Profile container restraints*/
-.profile-border{
-    
-    width: 100%;
-    height: 100%;
+/*Profile container*/
+.profile-border {
+    background-color: darkblue;
+    color:darkslateblue;
+}
+.profile-title {
+    color:floralwhite;
+    font-size: 200%;
 }

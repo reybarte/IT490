@@ -39,7 +39,7 @@ $clientRole = $_SESSION["user"]["role"] == 'client' ? 1 : 0;
 					<a class="nav-link" href="<?php echo $prodPage ? '../index.php' : 'index.php' ?>">Home</a>
 				</li>
 				<li class="nav-item <?php echo $currentURL['productlist'] ? 'active' : '' ?> ">
-					<a class="nav-link" href="<?php echo $prodPage ? '../prodpage.php' : 'prodpage.php' ?>">Products</a>
+					<a class="nav-link" href="<?php echo $prodPage ? '../productlist.php' : 'productlist.php' ?>">Products</a>
 				</li>
 				<li class="nav-item">
 					<a class="nav-link" href="#">Statistics</a>

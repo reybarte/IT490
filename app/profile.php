@@ -35,15 +35,13 @@ foreach ($asinData as $key => $value) {
         <div class="row justify-content-center">
 
             <!--Page container-->
-            <div class="card ">
+            <div class="card profile-border bg-secondary">
                 <div class="card-body">
                     <!--Header container-->
-                    <!--<div class="media align-items-center align-items-lg-start text-center text-lg-left flex-column flex-lg-row">-->
-
                     <div class="row">
                         <div class="col-12">
-                            <h4 class="card-title text-center">
-                                <a title="View Product"> (Username placeholder)'s Profile</a>
+                            <h4 class="card-title text-center profile-title">
+                                <a title="View Product "> (Username placeholder)'s Profile</a>
                             </h4>
                             <p class="mb-1"></p>
                         </div>
@@ -58,7 +56,7 @@ foreach ($asinData as $key => $value) {
                                             <div class="card-body">
 
                                                 <div class="media logo-image mr-1 icon-container">
-                                                    <img class="img-fluid float-left-md" href="IMG/490IconPic.png">
+                                                    <img class="img-fluid" src="#">
                                                 </div>
                                                 <p class="mb-1 text-center">
                                                     Change Profile Picture
@@ -151,11 +149,57 @@ foreach ($asinData as $key => $value) {
 
         </div>
     </div>
+    <footer class="text-light mt-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-lg-4 col-xl-3">
+                    <h5>About</h5>
+                    <hr class="bg-white mb-2 mt-0 d-inline-block mx-auto w-25">
+                    <p class="mb-0">
+                        We are a bot that notifies users via email when specific PC hardware (Geforce RTX 3000 Series) on Amazon has become available, directing them to a mockup product page on our site for purchasing and product details.
+                    </p>
+                </div>
 
+                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto">
+                    <h5>Information</h5>
+                    <hr class="bg-white mb-2 mt-0 d-inline-block mx-auto w-25">
+                    <ul class="list-unstyled">
+                        <li><a href="#">Link 1</a></li>
+                        <li><a href="#">Link 2</a></li>
+                        <li><a href="#">Link 3</a></li>
+                        <li><a href="#">Link 4</a></li>
+                    </ul>
+                </div>
 
+                <div class="col-md-3 col-lg-2 col-xl-2 mx-auto">
+                    <h5>Others links</h5>
+                    <hr class="bg-white mb-2 mt-0 d-inline-block mx-auto w-25">
+                    <ul class="list-unstyled">
+                        <li><a href="#">Link 1</a></li>
+                        <li><a href="#">Link 2</a></li>
+                        <li><a href="#">Link 3</a></li>
+                        <li><a href="#">Link 4</a></li>
+                    </ul>
+                </div>
 
-    </div>
-    </div>
+                <div class="col-md-4 col-lg-3 col-xl-3">
+                    <h5>Contact</h5>
+                    <hr class="bg-white mb-2 mt-0 d-inline-block mx-auto w-25">
+                    <ul class="list-unstyled">
+                        <li><i class="fa fa-home mr-2"></i> Couch Potatoes</li>
+                        <li><i class="fa fa-envelope mr-2"></i> couch@potatoes.com</li>
+                        <li><i class="fa fa-phone mr-2"></i> + 420 696 9696</li>
+                        <li><i class="fa fa-print mr-2"></i> + 420 696 9696</li>
+                    </ul>
+                </div>
+                <div class="col-12">
+                    <p class="float-left">
+                        <a href="#"><br>Back to top</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
 
 </html>
