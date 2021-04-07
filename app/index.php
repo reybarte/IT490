@@ -26,7 +26,6 @@ foreach ($asinData as $key => $value) {
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script src="JS/desclimit.js"></script> <!-- Add 'limitdesc' as a class variable to limit characters -->
-    <link rel="icon" class="img-fluid" href="IMG/490IconPic.png">
     <title>Home</title>
 </head>
 
@@ -35,7 +34,7 @@ foreach ($asinData as $key => $value) {
     <section class="jumbotron text-center">
         <div class="container">
             <!--<h1 class="jumbotron-heading">GPU Guru</h1> -->
-            <img src="IMG/490TitlePic.png" class=" title">
+            <img src="IMG/490TitlePic.png" class="bigImage title">
             <p class="lead text-muted mb-0">Anti-Scalper</p>
         </div>
     </section>
