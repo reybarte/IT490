@@ -38,8 +38,8 @@ function request_processor($req){
 			return roleChange($req['email'],$req['role']);
 		case "echo":
 			return array("return_code"=>'0', "message"=>"Echo: " .$req["message"]);
-		case "insertTransaction":
-			return insertTransaction($req["username"], $req["asin"], $req["product_name"], $req["price"]);
+		case "transaction":
+			return transaction($req["username"], $req["asin"], $req["product_name"], $req["price"]);
 	}
 	return array("return_code" => '0',
 		"message" => "Server received request and processed it");

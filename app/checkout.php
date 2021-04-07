@@ -18,7 +18,10 @@ if(isset($_POST["checkout"])) {
 	$prodName = $_POST["prodName"];
 	$user = $_SESSION["user"]["user_name"];
 	$email = $_SESSION["user"]["email"];
-} else {
+} elseif(isset($_POST["purchase"])) {
+	header("Location: purchase.php");
+} 
+else {
 	header("Location: prodList.php");
 }
 
@@ -68,7 +71,7 @@ if(isset($_POST["checkout"])) {
             </div>
 	    <div class="row borderRow media align-items-center align-items-lg-start text-center text-lg-left flex-column flex-lg-row m-1">
 		<div class="buy bottom-wrap"> 
-		<form method="POST" action="purchase.php">
+		<form method="POST" action="checkout.php">
 		<input type="hidden" name="username" value=<?php echo $user;?>>
 		<input type="hidden" name="email" value=<?php echo $email;?>>
 		<input type="hidden" name="asin" value=<?php echo $asin;?>>
