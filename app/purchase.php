@@ -3,6 +3,19 @@ session_start();
 require(__DIR__ . "/MQPublish.inc.php");
 require(__DIR__ . "/header.php");
 $confnum = (rand() . "<br>");
+
+
+if(isset($_POST["purchase"])) {
+	$asin = $_POST["asin"];
+	$user = $_POST["username"];
+	$prodName = $_POST["prodName"];
+	$price = $_POST["price"];
+	transaction($user, $asin, $prodName, $price);
+ } else {
+ 	header("Location: prodList.php");
+ }
+
+
 ?>
 
 <!DOCTYPE html>

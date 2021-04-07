@@ -38,7 +38,7 @@ function request_processor($req){
 		case "roleChange":
 			return roleChange($req['email'],$req['role']);
 		case "echo":
-			return array("return_code"=>'0', "message"=>"Echo: " .$req["message"]);
+			return ["return_code"=>'0', "message"=>"Echo: " .$req["message"]];
 		case "transaction":
 			return transaction($req["user"], $req["asin"], $req["product_name"], $req["price"]);
 	}

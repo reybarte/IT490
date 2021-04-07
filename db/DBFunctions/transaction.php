@@ -2,7 +2,7 @@
 function transaction($username, $asin, $product_name, $price)
 {
     //from dbconnection.php
-    $stmt = getDB()->prepare("INSERT INTO Table T$username (asin, product_name, price, purchase_date) VALUES (:asin,:product_name,:price,CURRENT_TIMESTAMP())");
+    $stmt = getDB()->prepare("INSERT INTO Table T$username (asin, product_name, price, purchase_date) VALUES (:asin,:product_name,:price, CURRENT_TIMESTAMP)");
     $result = $stmt->execute([":asin" => $asin, ":product_name" => $product_name, ":price" => $price]);
     if ($result) {
         return array("status" => 200, "message" => "Transaction Inserted");

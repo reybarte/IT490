@@ -17,16 +17,7 @@ if(isset($_POST["checkout"])) {
 	$price = $_POST["price"];
 	$prodName = $_POST["prodName"];
 	$user = $_SESSION["user"]["user_name"];
-} elseif(isset($_POST["purchase"])) {
-		$_POST["asin"] = $asin;
-		$_POST["price"] = $price;
-		$_POST["prodName"] = $prodName;
-		$user = $_SESSION["user"]["user_name"];
-		ob_start();
-		transaction($user, $asin, $prodName, $price);
-		ob_end_clean();
-		header("Location: purchase.php");
-	}
+}
 else {
 	header("Location: prodList.php");
 }
@@ -77,7 +68,7 @@ else {
             </div>
 	    <div class="row borderRow media align-items-center align-items-lg-start text-center text-lg-left flex-column flex-lg-row m-1">
 		<div class="buy bottom-wrap"> 
-		<form method="POST" action="checkout.php">
+		<form method="POST" action="purchase.php">
 		<input type="hidden" name="username" value=<?php echo $user;?>>
 		<input type="hidden" name="asin" value=<?php echo $asin;?>>
 		<input type="hidden" name="prodName" value=<?php echo "\"".$prodName."\"";?>>
