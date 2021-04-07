@@ -1,7 +1,7 @@
 <?php
 session_start();
-require(__DIR__ . "/../MQPublish.inc.php");
-require(__DIR__ . "/../header.php");
+require(__DIR__ . "/MQPublish.inc.php");
+require(__DIR__ . "/header.php");
 ob_start();
 $data = getCache()->data;
 ob_end_clean();
@@ -12,7 +12,13 @@ foreach ($data as $key => $value) {
 foreach ($asinData as $key => $value) {
     //echo $key . ":" . $value["current_price"]."\n";
 }
+if(isset($_POST["purchase"])) {
+	$asin = $_POST["asin"];
+} else {
+	header("Location: prodList.php");
+}
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -30,14 +36,14 @@ foreach ($asinData as $key => $value) {
 <body>
     <!--Product Page-->
     <div class="container d-flex justify-content-center">
-        <figure class="card card-product-grid card-lg"> <a href="#" class="img-wrap removeHover"> <img src="<?php echo $asinData["B08L8L9TCZ"]["images"]; ?>"> </a>
+        <figure class="card card-product-grid card-lg"> <a href="#" class="img-wrap removeHover"> <img src="<?php echo $asinData[$asin]["images"]; ?>"> </a>
             <figcaption class="info-wrap">
                 <div class="row">
-                    <div class="col-md-4 col-xs-4"> <a href="#" class="title removeHover">RTX 3070</a> <span class="rated"><?php echo $asinData["B08L8L9TCZ"]["asin"]; ?></span></div>
-                    <div class="col-md-4 col-xs-4 pl-5"> <a href="#" class="title removeHover"><?php echo "$" . $asinData["B08L8L9TCZ"]["current_price"]; ?></a><span class="rated">Price</span> </div>
+					<div class="col-md-4 col-xs-4"> <a href="#" class="title removeHover"><?php echo $asinData[$asin]["title"];?></a> <span class="rated"><?php echo $asinData[$asin]["asin"]; ?></span></div>
+                    <div class="col-md-4 col-xs-4 pl-5"> <a href="#" class="title removeHover"><?php echo "$" . $asinData[$asin]["current_price"]; ?></a><span class="rated">Price</span> </div>
                     <div class="col-md-4 col-xs-4 leftpad">
                         <div class="btn btn-secondary">
-                            <?php if ($asinData["B08L8L9TCZ"]["out_of_stock"]) {
+                            <?php if ($asinData[$asin]["out_of_stock"]) {
                                 echo "Out Of Stock";
                             } else {
                                 echo "In Stock";
@@ -49,7 +55,7 @@ foreach ($asinData as $key => $value) {
             <div class="bottom-wrap-desc">
                 <figcaption class="info-wrap">
                     <div class="row">
-                        <div class="col-md-12 col-xs-12"> <a href="#" class="title removeHover">Description</a> <span class="rated"> <span class="rated"><?php echo $asinData["B08L8L9TCZ"]["description"]; ?></span></div>
+                        <div class="col-md-12 col-xs-12"> <a href="#" class="title removeHover">Description</a> <span class="rated"> <span class="rated"><?php echo $asinData[$asin]["description"]; ?></span></div>
                     </div>
                 </figcaption>
             </div>
