@@ -10,8 +10,10 @@ if(isset($_POST["purchase"])) {
 	$user = $_POST["username"];
 	$prodName = $_POST["prodName"];
 	$price = $_POST["price"];
+	ob_start();
 	transaction($user, $asin, $prodName, $price);
- } else {
+	ob_end_clean();
+} else {
  	header("Location: prodList.php");
  }
 
