@@ -33,102 +33,128 @@ foreach ($asinData as $key => $value) {
 <body>
     <div class="container d-flex justify-content-center mt-50 mb-50">
         <div class="row justify-content-center">
-            <div class="col-md-100">
-                <!--Page container-->
-                <div class="card card-body">
+
+            <!--Page container-->
+            <div class="card ">
+                <div class="card-body">
                     <!--Header container-->
-                    <div class="media align-items-center align-items-lg-start text-center text-lg-left flex-column flex-lg-row">
-                        <div class="media-body">
-                            <div class="row profile-border">
-                                <div class="column">
-                                    <h4 class="card-title text-center">
-                                        <a title="View Product"> (Username placeholder)'s Profile</a>
-                                    </h4>
-                                    <p class="mb-1"></p>
-                                    <div class="row">
-                                        <div class="card card-body">
-                                            <!--PFP container-->
-                                            <div class="media align-items-center align-items-lg-start text-center text-lg-left flex-column flex-lg-row">
-                                                <div class="card">
-                                                    <div class="card-body">
-                                                        <p class="card-text limitdesc text-center"></p>
-                                                        <div class="logo-image mr-1 ">
-                                                            <img class="img-fluid" href="IMG/490IconPic.png">
-                                                        </div>
-                                                        <p class="mb-1">
-                                                        <p>Change Profile Picture</p>
-                                                        </p>
-                                                    </div>
+                    <!--<div class="media align-items-center align-items-lg-start text-center text-lg-left flex-column flex-lg-row">-->
+
+                    <div class="row">
+                        <div class="col-12">
+                            <h4 class="card-title text-center">
+                                <a title="View Product"> (Username placeholder)'s Profile</a>
+                            </h4>
+                            <p class="mb-1"></p>
+                        </div>
+                    </div>
+                    <div class="info row">
+                        <div class="col-6">
+                            <div class="card">
+                                <div class="card-body">
+                                    <!--PFP container-->
+                                    <div class="media align-items-center align-items-lg-start text-center text-lg-left flex-column flex-lg-row">
+                                        <div class="card">
+                                            <div class="card-body">
+
+                                                <div class="media logo-image mr-1 icon-container">
+                                                    <img class="img-fluid float-left-md" href="IMG/490IconPic.png">
                                                 </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="card card-body">
-                                            <!--Name/email container-->
-                                            <div class="media align-items-center align-items-lg-start text-center text-lg-left flex-column flex-lg-row">
-                                                <div class="card">
-                                                    <div class="card-body">
-                                                        <h4 class="card-title text-center">
-                                                            <a title="View Product">Name:</a>
-
-                                                        </h4>
-                                                        <p class="card-text limitdesc text-center"></p>
-                                                        <p class="mb-1">
-                                                        <p>Name of the user will be here.</p>
-                                                        </p>
-                                                        <h4 class="card-title text-center">
-                                                            <a title="View Product">Email:</a>
-
-                                                        </h4>
-                                                        <p class="card-text limitdesc text-center"></p>
-                                                        <p class="mb-1">
-                                                        <p>Email of the user will be here.</p>
-                                                        </p>
-                                                    </div>
-                                                </div>
+                                                <p class="mb-1 text-center">
+                                                    Change Profile Picture
+                                                </p>
                                             </div>
                                         </div>
                                     </div>
-
                                 </div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="card">
+                                <div class="card-body">
+                                    <!--Name/email container-->
+                                    <div class="media align-items-center align-items-lg-start text-center text-lg-left flex-column flex-lg-row">
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <h4 class="card-title text-center">
+                                                    <a title="View Product">Name:</a>
 
+                                                </h4>
+                                                <p class="card-text text-center"></p>
+                                                <p class="mb-1">
+                                                <p>Name of the user will be here.</p>
+                                                </p>
+                                                <h4 class="card-title text-center">
+                                                    <a title="View Product">Email:</a>
+
+                                                </h4>
+                                                <p class="card-text text-center"></p>
+                                                <p class="mb-1">
+                                                <p>Email of the user will be here.</p>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="card">
+                                <div class="card-body">
+                                    <!--Points container-->
+                                    <div class="media align-items-center align-items-lg-start text-center text-lg-left flex-column flex-lg-row">
+                                        <div class="media-body">
 
-                <div class="card card-body">
-                    <!--Points container-->
-                    <div class="media align-items-center align-items-lg-start text-center text-lg-left flex-column flex-lg-row">
-                        <div class="media-body">
-                            <div class="card-body">
-                                <h4 class="card-title text-center">
-                                    <a title="View Product">Point Balance</a>
-                                </h4>
-                                <p class="card-text limitdesc text-center"></p>
-                                <p class="mb-1">
+                                            <h4 class="card-title text-center">
+                                                <a title="View Product">Point Balance</a>
+                                            </h4>
+                                            <p class="card-text text-center"></p>
+                                            <p class="mb-1 ">
+                                            <p>50000 Pts (just a placeholder)</p>
+                                            </p>
 
-                                </p>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <div class="card card-body">
-                    <!--Tracking container-->
-                    <div class="media align-items-center align-items-lg-start text-center text-lg-left flex-column flex-lg-row">
-                        <div class="media-body">
-                            <h4 class="card-title text-center">
-                                <a title="View Product">Tracking Preferences</a>
-                            </h4>
-                            <p class="card-text limitdesc text-center"></p>
-                            <p class="mb-1"></p>
+                    <div class="row">
+                        <div class="col">
+                            <div class="card">
+                                <div class="card-body">
+                                    <!--Tracking container-->
+                                    <div class="media align-items-center align-items-lg-start text-center text-lg-left flex-column flex-lg-row">
+                                        <div class="media-body">
+                                            <h4 class="card-title text-center">
+                                                <a title="View Product">Tracking Preferences</a>
+                                            </h4>
+                                            <p class="card-text text-center"></p>
+                                            <p class="mb-1">
+                                                This is where the Tracking Information and Settings will be placed.
+                                            </p>
 
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
+
                     </div>
                 </div>
             </div>
+
+
+
         </div>
+    </div>
+
+
+
+    </div>
     </div>
 </body>
 

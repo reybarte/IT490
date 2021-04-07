@@ -85,18 +85,20 @@ footer a {
 /*Image Settings for the logo within header.php*/
 .img-fluid{
     width: 100%;
-    height: 100%;
+    height: 10%;
 }
 /*Box settings for the container that holds Icon picture*/
 .icon-container{
     box-sizing: content-box;
     width: 50px;
     height: 50px;
+    align-content: center;
+    align-items: center;
 }
 
-/*Profile picture container restraints*/
-.picture-border{
-    box-sizing: content box;
-    width: 100px;
-    height: 100px;
+/*Profile container restraints*/
+.profile-border{
+    
+    width: 100%;
+    height: 100%;
 }
