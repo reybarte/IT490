@@ -1,5 +1,5 @@
 <?php
-function insertTransaction($username, $asin, $product_name, $price)
+function transaction($username, $asin, $product_name, $price)
 {
     //from dbconnection.php
     $stmt = getDB()->prepare("INSERT INTO Table T$username (asin, product_name, price, purchase_date) VALUES (:asin,:product_name,:price,CURRENT_TIMESTAMP())");
