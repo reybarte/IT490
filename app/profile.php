@@ -48,7 +48,7 @@ foreach ($asinData as $key => $value) {
                 <div class="row">
                     <div class="card card-body">
                         <!--Name/email container-->
-                        <div class="col-12 col-md-6 col-lg-4 pb-3">
+                        <div class="media align-items-center align-items-lg-start text-center text-lg-left flex-column flex-lg-row">
                             <div class="card">
                                 <div class="card-body">
                                     <h4 class="card-title text-center"><a title="View Product">Email</a></h4>
@@ -62,7 +62,7 @@ foreach ($asinData as $key => $value) {
                     </div>
                     <div class="card card-body">
                         <!--Points container-->
-                        <div class="col-12 col-md-6 col-lg-4 pb-3">
+                        <div class="media align-items-center align-items-lg-start text-center text-lg-left flex-column flex-lg-row">
                             <div class="card">
                                 <div class="card-body">
                                     <h4 class="card-title text-center"><a title="View Product">Point Balance</a></h4>

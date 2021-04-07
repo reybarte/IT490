@@ -48,7 +48,7 @@ $clientRole = $_SESSION["user"]["role"] == 'client' ? 1 : 0;
 					<a href="#" class="nav-link dropdown-toggle <?php echo ($currentURL['login'] || $currentURL['register'] || $currentURL['admin']) ? 'active' : '' ?>" data-toggle="dropdown">Profile</a>
 					<div class="dropdown-menu">
 						<?php if ($loggedIn) : ?>
-							<a href="../profile.php" class="dropdown-item">Profile</a>
+							<a href="profile.php" class="dropdown-item nav-link">Profile</a>
 						<?php endif; ?>
 						<?php if ($loggedIn) : ?>
 							<a href="#" class="dropdown-item">History</a>
