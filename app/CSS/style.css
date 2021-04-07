@@ -73,7 +73,7 @@ footer a {
     color: #f8f9fa !important;
 }
 
-/*Image settings for full logo inside of the jumbotron section on index.php*/
+/*Image settings for full Company Name inside of the jumbotron section on index.php*/
 .bigImage{
     width: 40%;
     height: 40%;
@@ -81,5 +81,10 @@ footer a {
     margin-top: 10px;
     margin-left: auto;
     margin-right: auto;
+}
+/*Image Settings for the logo within header.php*/
+.img-fluid{
+    width: 10%;
+    height: 10%;
 }
 
