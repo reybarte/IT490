@@ -51,7 +51,7 @@ foreach ($asinData as $key => $value) {
                                     } ?></a>
 								<form method="POST" action="prodPage.php">
 								<input type="hidden" name="asin" value=<?php echo $value["asin"];?>>
-								<button type="submit" name="purchase" class="btn btn-primary">View</button>
+								<button type="submit" name="view" class="btn btn-primary">View</button>
 								</form>
 							</div>
                         </div>

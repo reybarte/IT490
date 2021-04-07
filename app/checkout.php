@@ -12,7 +12,18 @@ foreach ($data as $key => $value) {
 foreach ($asinData as $key => $value) {
     //echo $key . ":" . $value["current_price"]."\n";
 }
+if(isset($_POST["checkout"])) {
+	$asin = $_POST["asin"];
+	$price = $_POST["price"];
+	$title = $_POST["title"];
+} else {
+	header("Location: prodList.php");
+}
+
+
 ?>
+
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -37,11 +48,11 @@ foreach ($asinData as $key => $value) {
             </div>
             <div class="borderRow media align-items-center align-items-lg-start text-center text-lg-left flex-column flex-lg-row">
                 <div class="media-body">
-                    <h4 class="media-title font-weight-semibold">RTX 3090</h4>
-                    <h6 class="media-title font-weight-semibold"><?php echo $asinData["B08J5F3G18"]["asin"]; ?></h6>
+				<h4 class="media-title font-weight-semibold"><?php echo $title;?></h4>
+                    <h6 class="media-title font-weight-semibold"><?php echo $asin; ?></h6>
                 </div>
                 <div class="text-center pt-1">
-                    <a href="#" type="button" class="btn btn-secondary mt-2"><?php echo "$" . $asinData["B08J5F3G18"]["current_price"]; ?></a>
+                    <a href="#" type="button" class="btn btn-secondary mt-2"><?php echo "$" . $price; ?></a>
                 </div>
             </div>
 
@@ -54,7 +65,7 @@ foreach ($asinData as $key => $value) {
                 </div>
             </div>
             <div class="row borderRow media align-items-center align-items-lg-start text-center text-lg-left flex-column flex-lg-row m-1">
-                <div class="buy bottom-wrap"> <a href="confirmpurch.php" class="btn btn-primary"> Purchase </a></div>
+                <div class="buy bottom-wrap"> <a href="purchase.php" class="btn btn-primary"> Purchase </a></div>
             </div>
         </div>
     </div>
