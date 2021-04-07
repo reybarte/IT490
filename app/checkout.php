@@ -19,6 +19,9 @@ if(isset($_POST["checkout"])) {
 	$user = $_SESSION["user"]["user_name"];
 	$email = $_SESSION["user"]["email"];
 } elseif(isset($_POST["purchase"])) {
+	ob_start();
+	transaction($user, $asin, $prodName, $price);
+	ob_end_clean();
 	header("Location: purchase.php");
 } 
 else {

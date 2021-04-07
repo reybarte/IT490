@@ -12,6 +12,7 @@ require(__DIR__."/DBFunctions/apiClient.php");
 require(__DIR__."/DBFunctions/apiSaveDB.php");
 require(__DIR__."/DBFunctions/getCache.php");
 require(__DIR__."/DBFunctions/roleChange.php");
+require(__DIR__."/MQFunctions/transaction.php");
 //TODO add more as they're developed
 
 function request_processor($req){
