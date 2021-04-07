@@ -40,7 +40,7 @@ function request_processor($req){
 		case "echo":
 			return array("return_code"=>'0', "message"=>"Echo: " .$req["message"]);
 		case "transaction":
-			return transaction($req["username"], $req["asin"], $req["product_name"], $req["price"]);
+			return transaction($req["user"], $req["asin"], $req["product_name"], $req["price"]);
 	}
 	return array("return_code" => '0',
 		"message" => "Server received request and processed it");
