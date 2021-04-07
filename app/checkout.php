@@ -15,7 +15,9 @@ foreach ($asinData as $key => $value) {
 if(isset($_POST["checkout"])) {
 	$asin = $_POST["asin"];
 	$price = $_POST["price"];
-	$title = $_POST["title"];
+	$prodName = $_POST["prodName"];
+	$user = $_SESSION["user"]["user_name"];
+	$email = $_SESSION["user"]["email"];
 } else {
 	header("Location: prodList.php");
 }
@@ -48,7 +50,7 @@ if(isset($_POST["checkout"])) {
             </div>
             <div class="borderRow media align-items-center align-items-lg-start text-center text-lg-left flex-column flex-lg-row">
                 <div class="media-body">
-				<h4 class="media-title font-weight-semibold"><?php echo $title;?></h4>
+				<h4 class="media-title font-weight-semibold"><?php echo $prodName;?></h4>
                     <h6 class="media-title font-weight-semibold"><?php echo $asin; ?></h6>
                 </div>
                 <div class="text-center pt-1">
@@ -64,8 +66,16 @@ if(isset($_POST["checkout"])) {
                     <a href="#" type="button" class="btn btn-secondary">$5,000</a>
                 </div>
             </div>
-            <div class="row borderRow media align-items-center align-items-lg-start text-center text-lg-left flex-column flex-lg-row m-1">
-                <div class="buy bottom-wrap"> <a href="purchase.php" class="btn btn-primary"> Purchase </a></div>
+	    <div class="row borderRow media align-items-center align-items-lg-start text-center text-lg-left flex-column flex-lg-row m-1">
+		<div class="buy bottom-wrap"> 
+		<form method="POST" action="purchase.php">
+		<input type="hidden" name="username" value=<?php echo $user;?>>
+		<input type="hidden" name="email" value=<?php echo $email;?>>
+		<input type="hidden" name="asin" value=<?php echo $asin;?>>
+		<input type="hidden" name="prodName" value=<?php echo "\"".$prodName."\"";?>>
+		<input type="hidden" name="price" value=<?php echo $price;?>>
+		<button type="submit" name="purchase" class="btn btn-primary">Purchase</button>
+		</div>
             </div>
         </div>
     </div>

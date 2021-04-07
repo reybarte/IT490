@@ -38,6 +38,8 @@ function request_processor($req){
 			return roleChange($req['email'],$req['role']);
 		case "echo":
 			return array("return_code"=>'0', "message"=>"Echo: " .$req["message"]);
+		case "insertTransaction":
+			return insertTransaction($req["username"], $req["asin"], $req["product_name"], $req["price"]);
 	}
 	return array("return_code" => '0',
 		"message" => "Server received request and processed it");
@@ -48,4 +50,3 @@ echo "Rabbit MQ Server Start" . PHP_EOL;
 $server->process_requests('request_processor');
 echo "Rabbit MQ Server Stop" . PHP_EOL;
 exit();
-?>

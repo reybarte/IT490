@@ -51,6 +51,8 @@ foreach ($asinData as $key => $value) {
                                     } ?></a>
 								<form method="POST" action="prodPage.php">
 								<input type="hidden" name="asin" value=<?php echo $value["asin"];?>>
+								<input type="hidden" name="prodName" value=<?php echo "\"" . $value["title"] . "\"";?>>
+								<input type="hidden" name="price" value=<?php echo $value["current_price"];?>>
 								<button type="submit" name="view" class="btn btn-primary">View</button>
 								</form>
 							</div>
