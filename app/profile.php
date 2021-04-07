@@ -33,41 +33,43 @@ foreach ($asinData as $key => $value) {
 <body>
     <div class="container d-flex justify-content-center mt-50 mb-50">
         <div class="row justify-content-center">
-            <div class="col-md-10">
+            <div class="col-md-100">
                 <!--Page container-->
                 <div class="card card-body">
                     <!--Header container-->
                     <div class="media align-items-center align-items-lg-start text-center text-lg-left flex-column flex-lg-row">
                         <div class="media-body">
-                            <h6 class="media-title font-weight-semibold"> <a>Profile</a></h6>
+                            <h6 class="media-title font-weight-semibold"> <a title="View Product">Profile</a></h6>
                             <p class="mb-1"></p>
 
                         </div>
                     </div>
                 </div>
-                <div class="card card-body">
-                    <!--Name/email container-->
-                    <div class="col-12 col-md-6 col-lg-4 pb-3">
-                        <div class="card">
-                            <div class="card-body">
-                                <h4 class="card-title text-center"><a title="View Product">Email</a></h4>
-                                <p class="card-text limitdesc text-center"></p>
-                                <div class="row">
+                <div class="row">
+                    <div class="card card-body">
+                        <!--Name/email container-->
+                        <div class="col-12 col-md-6 col-lg-4 pb-3">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h4 class="card-title text-center"><a title="View Product">Email</a></h4>
+                                    <p class="card-text limitdesc text-center"></p>
+                                    <div class="row">
 
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="card card-body">
-                    <!--Points container-->
-                    <div class="col-12 col-md-6 col-lg-4 pb-3">
-                        <div class="card">
-                            <div class="card-body">
-                                <h4 class="card-title text-center"><a title="View Product">Point Balance</a></h4>
-                                <p class="card-text limitdesc text-center"></p>
-                                <div class="row">
+                    <div class="card card-body">
+                        <!--Points container-->
+                        <div class="col-12 col-md-6 col-lg-4 pb-3">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h4 class="card-title text-center"><a title="View Product">Point Balance</a></h4>
+                                    <p class="card-text limitdesc text-center"></p>
+                                    <div class="row">
 
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -77,7 +79,9 @@ foreach ($asinData as $key => $value) {
                     <!--Tracking container-->
                     <div class="media align-items-center align-items-lg-start text-center text-lg-left flex-column flex-lg-row">
                         <div class="media-body">
-                            <h6 class="media-title font-weight-semibold"> <a>Tracking Preferences</a></h6>
+                            <h6 class="media-title font-weight-semibold">
+                                <a title="View Product">Tracking Preferences</a>
+                            </h6>
                             <p class="mb-1"></p>
 
                         </div>
