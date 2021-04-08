@@ -1,11 +1,5 @@
 /*index.php, login.php, register.php, admin.php use this .css file*/
 
-
-/*For home page title size on 3060Ti card*/
-body {
-    overflow-y: scroll; /* Show vertical scrollbar */
-  }
-
 /*Removes hover effect*/
 .btn-secondary{
     pointer-events: none;
@@ -61,16 +55,6 @@ padding-bottom: 3%;
     cursor: pointer;
     background: #0062cc;
     color: #fff;
-}
-
-
-/*For home pages footer*/
-footer {
-    background: #343a40;
-    padding: 40px;
-}
-footer a {
-    color: #f8f9fa !important;
 }
 
 /*Image settings for full logo inside of the jumbotron section on index.php*/
