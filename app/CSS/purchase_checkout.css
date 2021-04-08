@@ -1,0 +1,76 @@
+/*Removes hover effect*/
+.btn-secondary{
+    pointer-events: none;
+}
+
+/*Removes hover effect*/
+.members{
+    pointer-events: none;
+}
+
+
+
+/*Titles*/
+.title {
+	color: #171a1d;
+	display: block;
+	font-size: 15pt;
+}
+.titleBig {
+	color: #171a1d;
+	display: block;
+	font-size: 18pt;
+}
+.rated {
+	font-size: 14px;
+	color: #747981;
+}
+.topCenter{
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+
+
+.buy{
+	margin-left: auto;
+	margin-right: auto;
+}
+.textCenter {
+    margin: auto;
+}
+
+.textRight {
+    border: 1px solid transparent;
+	padding: 0.45rem 0.85rem;
+	font-size: 1rem;
+	line-height: 1.5;
+	border-radius: 0.2rem;
+    text-align: right;
+}
+
+
+
+.box {
+    border-style: solid;
+    margin-top: 50px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 23px;
+
+    
+    
+}
+
+.rated {
+	color: #747981
+}
+
+.hrColor {
+    background-color: black;
+}
+
+.borderRow {
+    border-top: 1px solid #cccaca;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
