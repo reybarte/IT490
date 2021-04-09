@@ -36,6 +36,8 @@ function request_processor($req){
 			return getCache();
 		case "roleChange":
 			return roleChange($req['email'],$req['role']);
+		case "remove":
+			return remove($req['asin']);
 		case "echo":
 			return array("return_code"=>'0', "message"=>"Echo: " .$req["message"]);
 	}

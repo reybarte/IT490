@@ -11,7 +11,16 @@ if (isset($_SESSION["user"])) {
 		} else {
 			$prodFlag = false;
 		}
-	} elseif (isset($_POST["roleChange"])) {
+	} elseif(isset($_POST["remove"])) {
+		if ($_SESSION["user"]["role"] == "admin" || $_SESSION["user"]["role"] == "product manager") {
+            remove($_POST["asin"]);
+            $prodRemFlag = true;
+        } else {
+            $prodRemFlag = false;
+        }
+	} 
+
+	elseif (isset($_POST["roleChange"])) {
 		if ($_SESSION["user"]["role"] == "admin") {
 			roleChange($_POST["email"], $_POST["role"]);
 			$roleFlag = true;
@@ -62,6 +71,18 @@ if (isset($_SESSION["user"])) {
 								echo "You must have the proper priveleges";
 							}
 							?>
+							
+							<div class="form-group">
+                            	<input type="text" class="form-control" placeholder="Enter ASIN Number" name="asin" id="asin">
+                            </div>
+                            <div class="theButton pt-3">
+                                <button type="submit" name="remove" class="btnSubmit">Remove Product</button>
+                            </div>
+                            <?php
+                            if (isset($prodRemFlag) && !$prodRemFlag) {
+                                echo "You must have the proper priveleges";
+                            }
+                            ?>	
 
 							<div class="form-group pt-2">
 								<input type="text" class="form-control" placeholder="Enter Email" name="email" id="email">

@@ -8,6 +8,7 @@ require(__DIR__."/MQFunctions/apiCall.php");
 require(__DIR__."/MQFunctions/roleChange.php");
 require(__DIR__."/MQFunctions/getCache.php");
 require(__DIR__."/MQFunctions/logout.php");
+require(__DIR__."/MQFunctions/remove.php");
 
 
 //TODO include other functions here as they're developed
