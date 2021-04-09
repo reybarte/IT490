@@ -50,10 +50,10 @@ else {
             </div>
             <div class="borderRow media align-items-center align-items-lg-start text-center text-lg-left flex-column flex-lg-row">
                 <div class="media-body">
-				<h4 class="media-title font-weight-semibold"><?php echo $prodName;?></h4>
-                    <h6 class="media-title font-weight-semibold"><?php echo $asin; ?></h6>
+				<p class="title pr-3 mb-0"><?php echo $prodName;?></p>
+                    <span class="rated"><?php echo $asin; ?></span>
                 </div>
-                <div class="text-center pt-1">
+                <div class="row pt-1">
                     <a href="#" type="button" class="btn btn-secondary mt-2"><?php echo "$" . $price; ?></a>
 
                 </div>
