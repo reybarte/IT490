@@ -6,7 +6,7 @@ function remove($asin){
 		require_once(__DIR__.'/../../lib/rabbitMQLib.inc');
 
 		$client = new RabbitMQClient('APPDBQ.ini', 'testServer');
-		$msg = ["asin"=>$$asin, "type"=>"remove"];
+		$msg = ["asin"=>$asin, "type"=>"remove"];
 		$response = $client->send_request($msg);
 		return $response;
 	}
