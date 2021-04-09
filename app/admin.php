@@ -73,12 +73,13 @@ if (isset($_SESSION["user"])) {
 								<button type="submit" name="request" class="btnSubmit">Find Product</button>
 							</div>
 							<?php
-							if (isset($prodFlag) && !$prodFlag) {
-								echo "You must have the proper priveleges";
+							if (isset($prodFlag)) {
+								if(!$prodFlag) {
+									echo "You must have the proper priveleges";
+								} else {
+									echo $result["message"];
+								}
 							}
-							if (isset($result)) {
-                                echo $result["message"];
-                            }
 							?>
 							
 							<div class="form-group">
@@ -87,14 +88,17 @@ if (isset($_SESSION["user"])) {
                             <div class="theButton pt-3">
                                 <button type="submit" name="remove" class="btnSubmit">Remove Product</button>
                             </div>
-                            <?php
-                            if (isset($prodRemFlag) && !$prodRemFlag) {
-                                echo "You must have the proper priveleges";
+
+							<?php
+                            if (isset($prodRemFlag)) {
+                                if(!$prodRemFlag) {
+                                    echo "You must have the proper priveleges";
+                                } else {
+                                    echo $result["message"];
+                                }
                             }
-							if (isset($result)) {
-                                echo $result["message"];
-                            }
-							?>
+                            ?>
+
 
 							<div class="form-group pt-2">
 								<input type="text" class="form-control" placeholder="Enter Email" name="email" id="email">
@@ -110,13 +114,15 @@ if (isset($_SESSION["user"])) {
 								<button type="submit" name="roleChange" class="btnSubmit">Change Role</button>
 							</div>
 							<?php
-							if (isset($roleFlag) && !$roleFlag) {
-								echo "You must have the proper priveleges";
-							}
-							if (isset($result)) {
-								echo $result["message"];
-							}
-							?>
+							if (isset($roleFlag)) {
+                                if(!$roleFlag) {
+                                    echo "You must have the proper priveleges";
+								} else {
+                                    echo $result["message"];
+								}
+                            }
+                            ?>
+
 						</div>
 					</div>
 				</div>
