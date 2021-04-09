@@ -6,7 +6,7 @@ function register($email, $username, $fName, $lName, $password){
 	$result = $stmt->execute([":email"=>$email,":username"=>$username,":fName"=>$fName,":lName"=>$lName,":password"=>$password]);
 	//TODO do proper checking, maybe user doesn't exist
 	if($result){
-		$stmt = getDB()->prepare("CREATE TABLE Transactions$username (asin VARCHAR(10) NOT NULL, product_name VARCHAR (200) NOT NULL, price DECIMAL (10, 2) NOT NULL, quantity INT NOT NULL, purchase_date DATETIME NOT NULL)");
+		$stmt = getDB()->prepare("CREATE TABLE T$username (asin VARCHAR(10) NOT NULL, product_name VARCHAR (200) NOT NULL, price DECIMAL (10, 2) NOT NULL, purchase_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP())");
 		$stmt->execute();
 		return array("status"=>200, "message"=>"Registered");
 	}
@@ -16,4 +16,3 @@ function register($email, $username, $fName, $lName, $password){
 		return array("status"=>400, "message"=>"Error");
 	}
 }
-?>

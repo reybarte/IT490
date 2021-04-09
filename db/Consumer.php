@@ -12,6 +12,7 @@ require(__DIR__."/DBFunctions/apiClient.php");
 require(__DIR__."/DBFunctions/apiSaveDB.php");
 require(__DIR__."/DBFunctions/getCache.php");
 require(__DIR__."/DBFunctions/roleChange.php");
+require(__DIR__."/DBFunctions/transaction.php");
 require(__DIR__."/DBFunctions/remove.php");
 
 //TODO add more as they're developed
@@ -41,7 +42,9 @@ function request_processor($req){
 		case "remove":
 			return remove($req['asin']);
 		case "echo":
-			return array("return_code"=>'0', "message"=>"Echo: " .$req["message"]);
+			return ["return_code"=>'0', "message"=>"Echo: " .$req["message"]];
+		case "transaction":
+			return transaction($req["user"], $req["asin"], $req["product_name"], $req["price"]);
 	}
 	return array("return_code" => '0',
 		"message" => "Server received request and processed it");
@@ -52,4 +55,3 @@ echo "Rabbit MQ Server Start" . PHP_EOL;
 $server->process_requests('request_processor');
 echo "Rabbit MQ Server Stop" . PHP_EOL;
 exit();
-?>

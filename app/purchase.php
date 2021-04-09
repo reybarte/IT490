@@ -3,6 +3,21 @@ session_start();
 require(__DIR__ . "/MQPublish.inc.php");
 require(__DIR__ . "/header.php");
 $confnum = (rand() . "<br>");
+
+
+if(isset($_POST["purchase"])) {
+	$asin = $_POST["asin"];
+	$user = $_POST["username"];
+	$prodName = $_POST["prodName"];
+	$price = $_POST["price"];
+	ob_start();
+	transaction($user, $asin, $prodName, $price);
+	ob_end_clean();
+} else {
+ 	header("Location: prodList.php");
+ }
+
+
 ?>
 
 <!DOCTYPE html>
@@ -24,7 +39,7 @@ $confnum = (rand() . "<br>");
     <div class="jumbotron text-center pt-4 pb-5">
         <div class="card card-body mt-3">
             <div class="container">
-                <h1 class="jumbotron-heading">Thank You!</h1>
+		<h1 class="jumbotron-heading">Thank You, <?php echo $_SESSION["user"]["user_name"];?>!</h1>
             </div>
             <div class="borderRow media-body">
                 <h4> Order Confirmation Number: <?php echo $confnum; ?> </h4>
