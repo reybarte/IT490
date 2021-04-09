@@ -12,6 +12,8 @@ require(__DIR__."/DBFunctions/apiClient.php");
 require(__DIR__."/DBFunctions/apiSaveDB.php");
 require(__DIR__."/DBFunctions/getCache.php");
 require(__DIR__."/DBFunctions/roleChange.php");
+require(__DIR__."/DBFunctions/remove.php");
+
 //TODO add more as they're developed
 
 function request_processor($req){
@@ -36,6 +38,8 @@ function request_processor($req){
 			return getCache();
 		case "roleChange":
 			return roleChange($req['email'],$req['role']);
+		case "remove":
+			return remove($req['asin']);
 		case "echo":
 			return array("return_code"=>'0', "message"=>"Echo: " .$req["message"]);
 	}
