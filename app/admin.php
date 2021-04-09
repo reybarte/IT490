@@ -6,14 +6,18 @@ require(__DIR__ . "/header.php");
 if (isset($_SESSION["user"])) {
 	if (isset($_POST["request"])) {
 		if ($_SESSION["user"]["role"] == "admin" || $_SESSION["user"]["role"] == "product manager") {
-			apiCall($_POST["asin"]);
+			ob_start();
+			$result = (array)apiCall($_POST["asin"]);
+			ob_end_clean();
 			$prodFlag = true;
 		} else {
 			$prodFlag = false;
 		}
 	} elseif(isset($_POST["remove"])) {
 		if ($_SESSION["user"]["role"] == "admin" || $_SESSION["user"]["role"] == "product manager") {
-            remove($_POST["asin"]);
+			ob_start();
+            $result = (array)remove($_POST["asin"]);
+			ob_end_clean();
             $prodRemFlag = true;
         } else {
             $prodRemFlag = false;
@@ -22,7 +26,9 @@ if (isset($_SESSION["user"])) {
 
 	elseif (isset($_POST["roleChange"])) {
 		if ($_SESSION["user"]["role"] == "admin") {
-			roleChange($_POST["email"], $_POST["role"]);
+			ob_start();
+			$result = (array)roleChange($_POST["email"], $_POST["role"]);
+			ob_end_clean();
 			$roleFlag = true;
 		} else {
 			$roleFlag = false;
@@ -70,6 +76,9 @@ if (isset($_SESSION["user"])) {
 							if (isset($prodFlag) && !$prodFlag) {
 								echo "You must have the proper priveleges";
 							}
+							if (isset($result)) {
+                                echo $result["message"];
+                            }
 							?>
 							
 							<div class="form-group">
@@ -82,7 +91,10 @@ if (isset($_SESSION["user"])) {
                             if (isset($prodRemFlag) && !$prodRemFlag) {
                                 echo "You must have the proper priveleges";
                             }
-                            ?>	
+							if (isset($result)) {
+                                echo $result["message"];
+                            }
+							?>
 
 							<div class="form-group pt-2">
 								<input type="text" class="form-control" placeholder="Enter Email" name="email" id="email">
@@ -101,6 +113,9 @@ if (isset($_SESSION["user"])) {
 							if (isset($roleFlag) && !$roleFlag) {
 								echo "You must have the proper priveleges";
 							}
+							if (isset($result)) {
+								echo $result["message"];
+							}
 							?>
 						</div>
 					</div>
@@ -108,7 +123,5 @@ if (isset($_SESSION["user"])) {
 			</div>
 		</div>
 	</form>
-
 </body>
-
 </html>
