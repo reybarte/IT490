@@ -1,5 +1,5 @@
 <?php
-function purchase($confnumber)
+function purchase($confnumber, $username)
 {
     try {
         require_once(__DIR__ . '/../../lib/path.inc');
@@ -7,7 +7,7 @@ function purchase($confnumber)
         require_once(__DIR__ . '/../../lib/rabbitMQLib.inc');
 
         $client = new RabbitMQClient('APPDBQ.ini', 'testServer');
-        $msg = array("confnumber" => $confnumber, "type" => "purchase");
+        $msg = array("confnumber" => $confnumber, "username" => $username, "type" => "purchase");
         $response = $client->send_request($msg);
         return $response;
     } catch (Exception $e) {

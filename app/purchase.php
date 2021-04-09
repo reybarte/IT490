@@ -7,6 +7,7 @@ $confnumber = (rand());
 ob_start();
 //calls function from MQPublish.inc.php to communicate with MQ
 $username = $_SESSION["user"]["user_name"];
+echo $username;
 $response = (array)purchase($confnumber, $username);
 ob_end_clean();
 ?>

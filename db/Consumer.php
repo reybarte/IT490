@@ -39,7 +39,7 @@ function request_processor($req)
 		case "roleChange":
 			return roleChange($req['email'], $req['role']);
 		case "purchase":
-			return confNumber($req['confnumber']);
+			return confNumber($req['confnumber'], $req['username']);
 		case "echo":
 			return array("return_code" => '0', "message" => "Echo: " . $req["message"]);
 	}
