@@ -26,13 +26,13 @@ require(__DIR__ . "/header.php");
                 <h5 class="card-title text-center mb-0">Profile</h5>
             </div>
             <ul class="list-group list-group-flush">
-                <li class="list-group-item">Username: <?php echo $_SESSION["user"]["user_name"] ?></li>
-                <li class="list-group-item">Email: <?php echo $_SESSION["user"]["email"] ?></li>
-                <li class="list-group-item">Name: <?php echo $_SESSION["user"]["first_name"] . " " . $_SESSION["user"]["last_name"] ?></li>
-                <li class="list-group-item">Balance: 5,000</li>
+                <li class="list-group-item"><strong>Username:</strong> <?php echo $_SESSION["user"]["user_name"] ?></li>
+                <li class="list-group-item"><strong>Email:</strong> <?php echo $_SESSION["user"]["email"] ?></li>
+                <li class="list-group-item"><strong>Name:</strong> <?php echo $_SESSION["user"]["first_name"] . " " . $_SESSION["user"]["last_name"] ?></li>
+                <li class="list-group-item"><strong>Balance:</strong> 5,000</li>
             </ul>
-            <div class="card-body pl-3 pt-2 pb-1">
-                <h5 class="card-title"><a href="#" class="card-link">Tracking Page</a></h5>
+            <div class="card-body p-3">
+                <h5 class="card-title text-center mb-0"><a href="#" class="card-link">Tracking Preferences</a></h5>
             </div>
         </div>
     </div>
