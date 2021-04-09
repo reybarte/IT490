@@ -27,3 +27,8 @@ a {
 .buttonsright{
     float: right;
 }
+
+/*Make product list titles blue*/
+.titleBlue{
+    color: #007bff;
+}

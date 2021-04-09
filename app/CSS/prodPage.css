@@ -2,28 +2,15 @@
 .btn-secondary{
     pointer-events: none;
 }
-body {
-    overflow-y: scroll; /* Show vertical scrollbar */
-}
+
 /*Removes hover effect*/
 .removeHover{
     pointer-events: none;
 }
 
-
-.leftpad{
-	text-align: right;
-}
-
-
 /*All Product Page Below*/
 a {
 	text-decoration: none !important;
-}
-
-.card-product-list,
-.card-product-grid {
-	margin-bottom: 0;
 }
 
 .card {
@@ -45,10 +32,6 @@ a {
 	margin-top: 50px;
 }
 
-.card-product-grid .img-wrap {
-	border-radius: 0.2rem 0.2rem 0 0;
-	height: 220px;
-}
 
 .card .img-wrap {
 	overflow: hidden;
@@ -83,14 +66,16 @@ a {
 	padding: 18px 20px;
 }
 
+/*Titles*/
 [class*='card-product'] a.title {
 	color: #171a1d;
 	display: block;
 	font-size: 15pt;
 }
 
-.card-product-grid .bottom-wrap {
-	padding: 18px;
+.bottom-wrap {
+	padding: 12px;
+	padding-bottom: 0px;
 	border-top: 1px solid #e4e4e4;
 }
 
@@ -104,23 +89,7 @@ a {
 	color: #747981;
 }
 
-.btn {
-	display: inline-block;
-	font-weight: 600;
-	color: #343a40;
-	text-align: center;
-	vertical-align: middle;
-	-webkit-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
-	user-select: none;
-	background-color: transparent;
-	border: 1px solid transparent;
-	padding: 0.45rem 0.85rem;
-	font-size: 1rem;
-	line-height: 1.5;
-	border-radius: 0.2rem;
-}
+
 /*Centers the Buy Now Button*/
 .buy{
 	margin-left: auto;

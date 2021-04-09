@@ -6,14 +6,29 @@ require(__DIR__ . "/header.php");
 if (isset($_SESSION["user"])) {
 	if (isset($_POST["request"])) {
 		if ($_SESSION["user"]["role"] == "admin" || $_SESSION["user"]["role"] == "product manager") {
-			apiCall($_POST["asin"]);
+			ob_start();
+			$result = (array)apiCall($_POST["asin"]);
+			ob_end_clean();
 			$prodFlag = true;
 		} else {
 			$prodFlag = false;
 		}
-	} elseif (isset($_POST["roleChange"])) {
+	} elseif(isset($_POST["remove"])) {
+		if ($_SESSION["user"]["role"] == "admin" || $_SESSION["user"]["role"] == "product manager") {
+			ob_start();
+            $result = (array)remove($_POST["asin"]);
+			ob_end_clean();
+            $prodRemFlag = true;
+        } else {
+            $prodRemFlag = false;
+        }
+	} 
+
+	elseif (isset($_POST["roleChange"])) {
 		if ($_SESSION["user"]["role"] == "admin") {
-			roleChange($_POST["email"], $_POST["role"]);
+			ob_start();
+			$result = (array)roleChange($_POST["email"], $_POST["role"]);
+			ob_end_clean();
 			$roleFlag = true;
 		} else {
 			$roleFlag = false;
@@ -58,10 +73,32 @@ if (isset($_SESSION["user"])) {
 								<button type="submit" name="request" class="btnSubmit">Find Product</button>
 							</div>
 							<?php
-							if (isset($prodFlag) && !$prodFlag) {
-								echo "You must have the proper priveleges";
+							if (isset($prodFlag)) {
+								if(!$prodFlag) {
+									echo "You must have the proper priveleges";
+								} else {
+									echo $result["message"];
+								}
 							}
 							?>
+							
+							<div class="form-group">
+                            	<input type="text" class="form-control" placeholder="Enter ASIN Number" name="asin" id="asin">
+                            </div>
+                            <div class="theButton pt-3">
+                                <button type="submit" name="remove" class="btnSubmit">Remove Product</button>
+                            </div>
+
+							<?php
+                            if (isset($prodRemFlag)) {
+                                if(!$prodRemFlag) {
+                                    echo "You must have the proper priveleges";
+                                } else {
+                                    echo $result["message"];
+                                }
+                            }
+                            ?>
+
 
 							<div class="form-group pt-2">
 								<input type="text" class="form-control" placeholder="Enter Email" name="email" id="email">
@@ -77,17 +114,20 @@ if (isset($_SESSION["user"])) {
 								<button type="submit" name="roleChange" class="btnSubmit">Change Role</button>
 							</div>
 							<?php
-							if (isset($roleFlag) && !$roleFlag) {
-								echo "You must have the proper priveleges";
-							}
-							?>
+							if (isset($roleFlag)) {
+                                if(!$roleFlag) {
+                                    echo "You must have the proper priveleges";
+								} else {
+                                    echo $result["message"];
+								}
+                            }
+                            ?>
+
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 	</form>
-
 </body>
-
 </html>
