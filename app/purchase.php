@@ -6,23 +6,9 @@ $confnumber = (rand());
 
 ob_start();
 //calls function from MQPublish.inc.php to communicate with MQ
-$response = (array)purchase($confnumber);
+$username = $_SESSION["user"]["user_name"];
+$response = (array)purchase($confnumber, $username);
 ob_end_clean();
-
-if ($response["status"] == 200) {
-    $_SESSION["user"] = $response["data"];
-    //echo "<script>alert('Register Success');</script>";
-    //echo "<script>window.location = 'login.php'; </script>";
-} else if ($response["status"] == 400) {
-    //echo "<script>alert('Register Failed');</script>";
-    //echo "<script>window.location = 'register.php';</script>";
-} else {
-    echo "something else";
-    var_export($response);
-}
-
-
-
 ?>
 
 <!DOCTYPE html>
