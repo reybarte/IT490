@@ -2,10 +2,10 @@
 function remove($asin){
 	//from dbconnection.php
 	$stmt = getDB()->prepare("DELETE FROM Products where asin = :asin");
-	$result = $stmt->execute([":asin"=>$asin]);
-	
+	$stmt->execute([":asin"=>$asin]);
+	$result = $stmt->rowCount();
 	if($result){
-		return array("status"=>403, "message"=>"Product Removed");
+		return array("status"=>200, "message"=>"Product Removed");
 	}
 	else{
 		//must return a proper message so that the app can parse it

@@ -1,5 +1,5 @@
 <?php
-function register($asin){
+function remove($asin){
 	try{
 		require_once(__DIR__.'/../../lib/path.inc');
 		require_once(__DIR__.'/../../lib/get_host_info.inc');
