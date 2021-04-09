@@ -2,7 +2,27 @@
 session_start();
 require(__DIR__ . "/MQPublish.inc.php");
 require(__DIR__ . "/header.php");
-$confnum = (rand() . "<br>");
+$confnumber = (rand());
+
+ob_start();
+//calls function from MQPublish.inc.php to communicate with MQ
+$response = (array)purchase($confnumber);
+ob_end_clean();
+
+if ($response["status"] == 200) {
+    $_SESSION["user"] = $response["data"];
+    //echo "<script>alert('Register Success');</script>";
+    //echo "<script>window.location = 'login.php'; </script>";
+} else if ($response["status"] == 400) {
+    //echo "<script>alert('Register Failed');</script>";
+    //echo "<script>window.location = 'register.php';</script>";
+} else {
+    echo "something else";
+    var_export($response);
+}
+
+
+
 ?>
 
 <!DOCTYPE html>
@@ -27,7 +47,7 @@ $confnum = (rand() . "<br>");
                 <h1 class="jumbotron-heading">Thank You!</h1>
             </div>
             <div class="borderRow media-body">
-                <h4> Order Confirmation Number: <?php echo $confnum; ?> </h4>
+                <h4> Order Confirmation Number: <?php echo $confnumber; ?> </h4>
             </div>
             <div class="media-body">
                 <h5 class="media-title font-weight-semibold pb-2">Thank you for shopping with us and supporting our tireless fight against <strong>SCALPERS!</strong></h5>
