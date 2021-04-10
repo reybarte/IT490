@@ -10,6 +10,14 @@
     pointer-events: none;
 }
 
+.mt-50 {
+    margin-top: 50px
+}
+
+.mb-50 {
+    margin-bottom: 50px
+}
+
 
 
 /*For register and login page */

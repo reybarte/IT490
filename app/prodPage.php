@@ -12,8 +12,10 @@ foreach ($data as $key => $value) {
 foreach ($asinData as $key => $value) {
     //echo $key . ":" . $value["current_price"]."\n";
 }
-if (isset($_POST["view"])) {
-    $asin = $_POST["asin"];
+if(isset($_POST["view"])) {
+	$asin = $_POST["asin"];
+	$prodName = $_POST["prodName"];
+	$price = $_POST["price"];
 } else {
     header("Location: prodList.php");
 }
@@ -59,14 +61,14 @@ if (isset($_POST["view"])) {
                     </div>
                 </figcaption>
             </div>
-            <div class="bottom-wrap buy">
-                <form method="POST" action="checkout.php">
-                    <input type="hidden" name="asin" value=<?php echo $value["asin"]; ?>>
-                    <input type="hidden" name="price" value=<?php echo $value["current_price"]; ?>>
-                    <input type="hidden" name="title" value=<?php echo "\"" . $value["title"] . "\""; ?>>
-                    <button type="submit" name="checkout" class="btn btn-primary">Buy Now</button>
-                </form>
-            </div>
+			<div class="bottom-wrap buy"> 
+			<form method="POST" action="checkout.php">
+			<input type="hidden" name="asin" value=<?php echo $asin;?>>
+			<input type="hidden" name="prodName" value=<?php echo "\"".$prodName."\"";?>>
+			<input type="hidden" name="price" value=<?php echo $price;?>>
+			<button type="submit" name="checkout" class="btn btn-primary">Buy Now</button>	
+			</form>	
+			</div>
         </figure>
     </div>
 
