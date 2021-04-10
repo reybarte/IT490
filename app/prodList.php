@@ -45,7 +45,7 @@ foreach ($asinData as $key => $value) {
 
                                 <!-- Product List Price, Stock-->
                                 <form method="POST" action="prodPage.php">
-                                    <div class="row buttonsright">
+                                    <div class="row buttonsright pr-3">
                                         <button href="#" type="button" class="btn btn-secondary mr-2"><?php echo "$" . $value["current_price"]; ?></button>
                                         <button href="#" type="button" class="btn btn-secondary mr-2">
                                             <?php if ($value["out_of_stock"]) {
