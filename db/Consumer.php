@@ -12,9 +12,8 @@ require(__DIR__ . "/DBFunctions/apiClient.php");
 require(__DIR__ . "/DBFunctions/apiSaveDB.php");
 require(__DIR__ . "/DBFunctions/getCache.php");
 require(__DIR__ . "/DBFunctions/roleChange.php");
-require(__DIR__ . "/DBFunctions/confNumber.php");
-require(__DIR__."/DBFunctions/transaction.php");
-require(__DIR__."/DBFunctions/remove.php");
+require(__DIR__ . "/DBFunctions/transaction.php");
+require(__DIR__ . "/DBFunctions/remove.php");
 //TODO add more as they're developed
 
 function request_processor($req)
@@ -42,12 +41,10 @@ function request_processor($req)
 			return roleChange($req['email'], $req['role']);
 		case "remove":
 			return remove($req['asin']);
-		case "purchase":
-			return confNumber($req['confnumber'], $req['username']);
 		case "transaction":
-			return transaction($req["user"], $req["asin"], $req["product_name"], $req["price"]);
+			return transaction($req["user"], $req["asin"], $req["product_name"]);
 		case "echo":
-			return ["return_code"=>'0', "message"=>"Echo: " .$req["message"]];
+			return ["return_code" => '0', "message" => "Echo: " . $req["message"]];
 	}
 	return array(
 		"return_code" => '0',

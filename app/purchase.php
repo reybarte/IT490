@@ -2,27 +2,20 @@
 session_start();
 require(__DIR__ . "/MQPublish.inc.php");
 require(__DIR__ . "/header.php");
-$confnumber = (rand());
-
-ob_start();
-//calls function from MQPublish.inc.php to communicate with MQ
-$username = $_SESSION["user"]["user_name"];
-echo $username;
-$response = (array)purchase($confnumber, $username);
-ob_end_clean();
 
 
-if(isset($_POST["purchase"])) {
-	$asin = $_POST["asin"];
-	$user = $_POST["username"];
-	$prodName = $_POST["prodName"];
-	$price = $_POST["price"];
-	ob_start();
-	transaction($user, $asin, $prodName, $price);
-	ob_end_clean();
+if (isset($_POST["purchase"])) {
+    $asin = $_POST["asin"];
+    $user = $_POST["username"];
+    $prodName = $_POST["prodName"];
+    $price = $_POST["price"];
+
+    ob_start();
+    transaction($user, $asin, $prodName);
+    ob_end_clean();
 } else {
- 	header("Location: prodList.php");
- }
+    header("Location: prodList.php");
+}
 ?>
 
 <!DOCTYPE html>
@@ -44,7 +37,7 @@ if(isset($_POST["purchase"])) {
     <div class="jumbotron text-center pt-4 pb-5">
         <div class="card card-body mt-3">
             <div class="container">
-		<h1 class="jumbotron-heading">Thank You, <?php echo $_SESSION["user"]["user_name"];?>!</h1>
+                <h1 class="jumbotron-heading">Thank You, <?php echo $_SESSION["user"]["user_name"]; ?>!</h1>
             </div>
             <div class="borderRow media-body">
                 <h4> Order Confirmation Number: <?php echo $confnumber; ?> </h4>
