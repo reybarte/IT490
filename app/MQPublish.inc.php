@@ -11,6 +11,7 @@ require(__DIR__."/MQFunctions/logout.php");
 require(__DIR__."/MQFunctions/transaction.php");
 require(__DIR__."/MQFunctions/remove.php");
 require(__DIR__."/MQFunctions/tracking.php");
+require(__DIR__."/MQFunctions/getTrackersCount.php");
 
 
 

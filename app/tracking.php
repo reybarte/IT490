@@ -3,22 +3,15 @@ session_start();
 require(__DIR__ . "/MQPublish.inc.php");
 if (isset($_SESSION["user"])) {
         if (isset($_POST["submit"])) {
-                tracking($_POST["family"], $_SESSION["user"]["user_name"]);
-        }
+		ob_start();
+		$preference = ((array)tracking($_POST["family"], $_SESSION["user"]["user_name"]))["message"];
+		ob_end_clean();       
+	}
 } else {
         echo "<script>alert('You must be logged in to access this page.')</script>";
         echo "<script>window.location = 'login.php'; </script>";
 }
 require(__DIR__ . "/header.php");
-/*
-if (isset($_SESSION["user"])) {
-	if (isset($_POST["submit"])) {
-		subscribe($_POST["family"], $_SESSION["user"]["user_name"]);
-	}
-} else {
-	echo "<script>alert('You must be logged in to access this page.')</script>";
-        echo "<script>window.location = 'login.php'; </script>";	
-}*/
 ?>
 <!DOCTYPE html>
 <html>
@@ -56,64 +49,15 @@ if (isset($_SESSION["user"])) {
     <input type="checkbox" id="5" name="family[]" value="3090">
     <label for="5"> 3090 </label>
     <br><br>
-    <button type="submit" name="submit"></button>
+    <button type="submit" name="submit">Submit</button>
   </form>
+  <?php echo $preference;?>
   <br>
   <h2> Trackers </h2>
   <br>
   <h3> Number of people tracking a particular GPU Group </h3>
-  <p> 3060: </p>
   <?php
-  echo $tracka
-  ?>
-  <p> 3060Ti: </p>
-  <?php
-  echo $trackb
-  ?>
-  <p> 3070: </p>
-  <?php
-  echo $trackc
-  ?>
-  <p> 3080: </p>
-  <?php
-  echo $trackd
-  ?>
-  <p> 3090: </p>
-  <?php
-  echo $tracke
   ?>
 </body>
 
 </html>
-
-<?php
-//Checking for individual checkboxes being checked off
-function IsChecked($chkname, $value)
-{
-  if (!empty($_POST[$chkname])) {
-    foreach ($_POST[$chkname] as $chkval) {
-      if ($chkval == $value) {
-        return true;
-      }
-    }
-  }
-  return false;
-}
-
-//checked off boxes if statements, counts the amount of subscribers to a GPU family 
-if (IsChecked('3060', '3060')) {
-  //tracka is the number of people who're tracking the 3060 category
-}
-if (IsChecked('3060Ti', '3060Ti')) {
-  //trackb is the number of people who're tracking the 3060 category
-}
-if (IsChecked('3070', '3070')) {
-  //trackc is the number of people who're tracking the 3060 category
-}
-if (IsChecked('3080', '3080')) {
-  //trackd is the number of people who're tracking the 3060 category
-}
-if (IsChecked('3090', '3090')) {
-  //tracke is the number of people who're tracking the 3060 category
-}
-?>
