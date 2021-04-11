@@ -14,6 +14,8 @@ require(__DIR__."/DBFunctions/getCache.php");
 require(__DIR__."/DBFunctions/roleChange.php");
 require(__DIR__."/DBFunctions/transaction.php");
 require(__DIR__."/DBFunctions/remove.php");
+require(__DIR__."/DBFunctions/tracking.php");
+
 
 //TODO add more as they're developed
 
@@ -45,6 +47,8 @@ function request_processor($req){
 			return ["return_code"=>'0', "message"=>"Echo: " .$req["message"]];
 		case "transaction":
 			return transaction($req["user"], $req["asin"], $req["product_name"], $req["price"]);
+		case "tracking":
+			return tracking($req["family"], $req["user"]);
 	}
 	return array("return_code" => '0',
 		"message" => "Server received request and processed it");

@@ -1,7 +1,24 @@
 <?php
 session_start();
 require(__DIR__ . "/MQPublish.inc.php");
+if (isset($_SESSION["user"])) {
+        if (isset($_POST["submit"])) {
+                tracking($_POST["family"], $_SESSION["user"]["user_name"]);
+        }
+} else {
+        echo "<script>alert('You must be logged in to access this page.')</script>";
+        echo "<script>window.location = 'login.php'; </script>";
+}
 require(__DIR__ . "/header.php");
+/*
+if (isset($_SESSION["user"])) {
+	if (isset($_POST["submit"])) {
+		subscribe($_POST["family"], $_SESSION["user"]["user_name"]);
+	}
+} else {
+	echo "<script>alert('You must be logged in to access this page.')</script>";
+        echo "<script>window.location = 'login.php'; </script>";	
+}*/
 ?>
 <!DOCTYPE html>
 <html>
@@ -23,23 +40,23 @@ require(__DIR__ . "/header.php");
   <h1> Tracking </h1>
   <h2> Which group(s) of GPU's do you want to track?</h2>
 
-  <form action="/subscribe.php">
-    <input type="checkbox" id="1" name="3060" value="3060">
-    <label for="3060"> 3060 </label>
+  <form method=POST action="tracking.php">
+    <input type="checkbox" id="1" name="family[]" value="3060">
+    <label for="1"> 3060 </label>
     <br><br>
-    <input type="checkbox" id="2" name="3060TI" value="3060Ti">
-    <label for="3060Ti"> 3060Ti </label>
+    <input type="checkbox" id="2" name="family[]" value="3060Ti">
+    <label for="2"> 3060Ti </label>
     <br><br>
-    <input type="checkbox" id="3" name="3070" value="3070">
-    <label for="3070"> 3070 </label>
+    <input type="checkbox" id="3" name="family[]" value="3070">
+    <label for="3"> 3070 </label>
     <br><br>
-    <input type="checkbox" id="4" name="3080" value="3080">
-    <label for="3080"> 3080 </label>
+    <input type="checkbox" id="4" name="family[]" value="3080">
+    <label for="4"> 3080 </label>
     <br><br>
-    <input type="checkbox" id="5" name="3090" value="3090">
-    <label for="3090"> 3090 </label>
+    <input type="checkbox" id="5" name="family[]" value="3090">
+    <label for="5"> 3090 </label>
     <br><br>
-    <input type="submit" value="Submit">
+    <button type="submit" name="submit"></button>
   </form>
   <br>
   <h2> Trackers </h2>

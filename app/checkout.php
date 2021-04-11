@@ -19,7 +19,7 @@ if(isset($_POST["checkout"])) {
 	$user = $_SESSION["user"]["user_name"];
 }
 else {
-	header("Location: prodList.php");
+	echo "<script>window.location = 'prodList.php'; </script>";
 }
 
 
