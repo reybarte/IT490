@@ -1,5 +1,5 @@
 <?php
-$currentURL = ["index" => 0, "prodList" => 0, "login" => 0, "register" => 0, "admin" => 0, "statistics" => 0,"490IconPic" => 0];
+$currentURL = ["index" => 0, "prodList" => 0, "login" => 0, "register" => 0, "admin" => 0, "490IconPic" => 0, "tracking" => 0];
 $currentURL[pathinfo($_SERVER["REQUEST_URI"], PATHINFO_FILENAME)] = 1;
 
 $prodPage = pathinfo(pathinfo($_SERVER["REQUEST_URI"], PATHINFO_DIRNAME), PATHINFO_FILENAME) == "products" ? 1 : 0;
@@ -19,22 +19,12 @@ $clientRole = $_SESSION["user"]["role"] == 'client' ? 1 : 0;
 	.dropdown-menu {
 		margin-top: 0 !important;
 	}
-
-	/*Image settings for small logo in navbar*/
-	.logo-image {
-		width: 50px;
-		height: 50px;
-	}
 </style>
 
 <!-- NavBar -->
 <nav class="navbar navbar-expand-md navbar-dark bg-dark">
 	<div class="container-fluid">
-
-		<div class="logo-image mr-1">
-			<a href="<?php echo $prodPage ? '../index.php' : 'index.php' ?>"> <img src="<?php echo $prodPage ? '../IMG/490IconPic.png' : 'IMG/490IconPic.png' ?>" class="img-fluid"></a>
-		</div>
-
+		<a class="navbar-brand" href="index.php">GPU Guru</a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
 			<span class="navbar-toggler-icon"></span>
 		</button>
@@ -44,10 +34,10 @@ $clientRole = $_SESSION["user"]["role"] == 'client' ? 1 : 0;
 				<li class="nav-item <?php echo $currentURL['index'] ? 'active' : '' ?> ">
 					<a class="nav-link" href="<?php echo $prodPage ? '../index.php' : 'index.php' ?>">Home</a>
 				</li>
-				<li class="nav-item <?php echo $currentURL['prodList'] ? 'active' : '' ?> ">
-					<a class="nav-link" href="<?php echo $prodPage ? '../prodList.php' : 'prodList.php' ?>">Products</a>
+				<li class="nav-item <?php echo $currentURL['productlist'] ? 'active' : '' ?> ">
+					<a class="nav-link" href="<?php echo $prodPage ? '../productlist.php' : 'productlist.php' ?>">Products</a>
 				</li>
-				<li class="nav-item  <?php echo $currentURL['statistics'] ? 'active' : '' ?>">
+				<li class="nav-item <?php echo $currentURL['statistics'] ? 'active' : '' ?> ">
 					<a class="nav-link" href="<?php echo $prodPage ? '../statistics.php' : 'statistics.php' ?>">Statistics</a>
 				</li>
 				<div class="nav-item dropdown ml-auto">
@@ -57,8 +47,7 @@ $clientRole = $_SESSION["user"]["role"] == 'client' ? 1 : 0;
 							<a href="#" class="dropdown-item">History</a>
 						<?php endif; ?>
 						<?php if ($loggedIn) : ?>
-							<a href="<?php echo $prodPage ? '../login.php' : 'login.php' ?>" class="dropdown-item <?php echo $currentURL['login'] ? 'active' : '' ?> ">Logout</a>
-							<?php $_SESSION["logout"] = true; ?>
+							<a href="#" class="dropdown-item">Logout</a>
 						<?php endif; ?>
 						<?php if (!$loggedIn) : ?>
 							<a href="<?php echo $prodPage ? '../login.php' : 'login.php' ?>" class="dropdown-item <?php echo $currentURL['login'] ? 'active' : '' ?> ">Login</a>
