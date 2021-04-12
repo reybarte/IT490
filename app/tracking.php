@@ -8,7 +8,9 @@ if (isset($_SESSION["user"])) {
 		$preference = ((array)tracking($_POST["family"], $user))["message"];
 		ob_end_clean();       
 	}
+	ob_start();
 	$info = (array)getTrackingInfo($user);
+	ob_end_clean();
 } else {
         echo "<script>alert('You must be logged in to access this page.')</script>";
         echo "<script>window.location = 'login.php'; </script>";
@@ -39,26 +41,17 @@ require(__DIR__ . "/header.php");
 
   <form method=POST action="tracking.php">
   <?php
-	$familyGroups = $info["families"];
-	$userPreference = $info["preference"];
+	ob_start();
+	$familyGroups = $info["countData"];
+	$userPreference = $info["userPref"];
+	ob_end_clean();
 	ksort($familyGroups);
-	foreach ($familyGroups)
+	foreach ($familyGroups as $key => $value) {
+		$prodName = ((array)$value)["product_family_name"];
+		$userPref = isset(((array)$userPreference)[$prodName]) ? "checked":"";
+		echo "<label><input type='checkbox' id='1' name='family[]' value='" . $prodName . "'" . $userPref . " > " . $prodName . "</label> <br>";
+	}
   ?>
-	<input type="checkbox" id="1" name="family[]" value="3060">
-    <label for="1"> 3060 </label>
-    <br><br>
-    <input type="checkbox" id="2" name="family[]" value="3060Ti">
-    <label for="2"> 3060Ti </label>
-    <br><br>
-    <input type="checkbox" id="3" name="family[]" value="3070">
-    <label for="3"> 3070 </label>
-    <br><br>
-    <input type="checkbox" id="4" name="family[]" value="3080">
-    <label for="4"> 3080 </label>
-    <br><br>
-    <input type="checkbox" id="5" name="family[]" value="3090">
-    <label for="5"> 3090 </label>
-    <br><br>
     <button type="submit" name="submit">Submit</button>
   </form>
   <?php echo $preference;?>
