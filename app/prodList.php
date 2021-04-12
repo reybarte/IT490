@@ -37,7 +37,7 @@ foreach ($asinData as $key => $value) {
             <div class="col-md-10">
 
                 <?php foreach ($asinData as $key => $value) : ?>
-                    <div class="card card-body mt-2">
+                    <div class="card card-body mt-3">
                         <div class="media align-items-center align-items-lg-start text-center text-lg-left flex-column flex-lg-row">
                             <div class="media-body">
                                 <h6 class="media-title font-weight-semibold titleBlue"> <a> <?php echo $value["title"]; ?></a></h6>
@@ -45,7 +45,7 @@ foreach ($asinData as $key => $value) {
 
                                 <!-- Product List Price, Stock-->
                                 <form method="POST" action="prodPage.php">
-                                    <div class="row buttonsright">
+                                    <div class="row buttonsright pr-3">
                                         <button href="#" type="button" class="btn btn-secondary mr-2"><?php echo "$" . $value["current_price"]; ?></button>
                                         <button href="#" type="button" class="btn btn-secondary mr-2">
                                             <?php if ($value["out_of_stock"]) {
@@ -54,10 +54,10 @@ foreach ($asinData as $key => $value) {
                                                 echo "In Stock";
                                             } ?>
                                         </button>
-
                                         <input type="hidden" name="asin" value=<?php echo $value["asin"]; ?>>
-                                        <!-- View Button -->
-                                        <button type="submit" name="view" class="btn btn-primary mr-2">View</button>
+                                        <input type="hidden" name="prodName" value=<?php echo "\"" . $value["title"] . "\""; ?>>
+                                        <input type="hidden" name="price" value=<?php echo $value["current_price"]; ?>>
+                                        <button type="submit" name="view" class="btn btn-primary">View</button>
                                 </form>
                             </div>
 

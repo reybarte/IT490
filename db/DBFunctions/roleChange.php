@@ -5,7 +5,7 @@ function roleChange($email, $role){
 	$stmt->execute(["email"=>$email]);
 	//check if user not found
 	if (!$stmt->rowCount()) {
-		return ["status"=>400, "message"=>"Nonexistent"];
+		return ["status"=>400, "message"=>"User Not Found"];
 	}
 	$result = $stmt->fetch(PDO::FETCH_ASSOC);
 	//check if user already has same role
@@ -21,7 +21,7 @@ function roleChange($email, $role){
 	} else {
 		//must return a proper message so that the app can parse it
 		//and display a user friendly message to the user
-		return array("status"=>400, "message"=>"Error");
+		return array("status"=>400, "message"=>"Role Change Unsuccessful");
 	}
 }
 ?>

@@ -1,5 +1,6 @@
 <?php
 $currentURL = ["index" => 0, "prodList" => 0, "login" => 0, "register" => 0, "admin" => 0, "490IconPic" => 0, "tracking" => 0];
+
 $currentURL[pathinfo($_SERVER["REQUEST_URI"], PATHINFO_FILENAME)] = 1;
 
 $prodPage = pathinfo(pathinfo($_SERVER["REQUEST_URI"], PATHINFO_DIRNAME), PATHINFO_FILENAME) == "products" ? 1 : 0;

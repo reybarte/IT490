@@ -12,12 +12,14 @@ foreach ($data as $key => $value) {
 foreach ($asinData as $key => $value) {
     //echo $key . ":" . $value["current_price"]."\n";
 }
-if (isset($_POST["checkout"])) {
-    $asin = $_POST["asin"];
-    $price = $_POST["price"];
-    $title = $_POST["title"];
-} else {
-    header("Location: prodList.php");
+if(isset($_POST["checkout"])) {
+	$asin = $_POST["asin"];
+	$price = $_POST["price"];
+	$prodName = $_POST["prodName"];
+	$user = $_SESSION["user"]["user_name"];
+}
+else {
+	echo "<script>window.location = 'prodList.php'; </script>";
 }
 
 
@@ -48,11 +50,12 @@ if (isset($_POST["checkout"])) {
             </div>
             <div class="borderRow media align-items-center align-items-lg-start text-center text-lg-left flex-column flex-lg-row">
                 <div class="media-body">
-                    <p class="title pr-3 mb-0"><?php echo $title; ?></p>
+				<p class="title pr-3 mb-0"><?php echo $prodName;?></p>
                     <span class="rated"><?php echo $asin; ?></span>
-                    <div class="row pt-1">
-                        <a href="#" type="button" class="buy btn btn-secondary"><?php echo "$" . $price; ?></a>
-                    </div>
+                </div>
+                <div class="row pt-1">
+                    <a href="#" type="button" class="btn btn-secondary mt-2"><?php echo "$" . $price; ?></a>
+
                 </div>
             </div>
 
@@ -64,8 +67,15 @@ if (isset($_POST["checkout"])) {
                     <a href="#" type="button" class="topCenter btn btn-secondary">$5,000</a>
                 </div>
             </div>
-            <div class="row borderRow media align-items-center align-items-lg-start text-center text-lg-left flex-column flex-lg-row m-1">
-                <div class="buy bottom-wrap"> <a href="purchase.php" class="btn btn-primary"> Purchase </a></div>
+	    <div class="row borderRow media align-items-center align-items-lg-start text-center text-lg-left flex-column flex-lg-row m-1">
+		<div class="buy bottom-wrap"> 
+		<form method="POST" action="purchase.php">
+		<input type="hidden" name="username" value=<?php echo $user;?>>
+		<input type="hidden" name="asin" value=<?php echo $asin;?>>
+		<input type="hidden" name="prodName" value=<?php echo "\"".$prodName."\"";?>>
+		<input type="hidden" name="price" value=<?php echo $price;?>>
+		<button type="submit" name="purchase" class="btn btn-primary">Purchase</button>
+		</div>
             </div>
         </div>
     </div>

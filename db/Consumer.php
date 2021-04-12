@@ -12,6 +12,12 @@ require(__DIR__."/DBFunctions/apiClient.php");
 require(__DIR__."/DBFunctions/apiSaveDB.php");
 require(__DIR__."/DBFunctions/getCache.php");
 require(__DIR__."/DBFunctions/roleChange.php");
+require(__DIR__."/DBFunctions/transaction.php");
+require(__DIR__."/DBFunctions/remove.php");
+require(__DIR__."/DBFunctions/tracking.php");
+require(__DIR__."/DBFunctions/getTrackingInfo.php");
+
+
 //TODO add more as they're developed
 
 function request_processor($req){
@@ -36,8 +42,16 @@ function request_processor($req){
 			return getCache();
 		case "roleChange":
 			return roleChange($req['email'],$req['role']);
+		case "remove":
+			return remove($req['asin']);
 		case "echo":
-			return array("return_code"=>'0', "message"=>"Echo: " .$req["message"]);
+			return ["return_code"=>'0', "message"=>"Echo: " .$req["message"]];
+		case "transaction":
+			return transaction($req["user"], $req["asin"], $req["product_name"], $req["price"]);
+		case "tracking":
+			return tracking($req["family"], $req["user"]);
+		case "getTrackingInfo":
+			return getTrackingInfo($req["user"]);
 	}
 	return array("return_code" => '0',
 		"message" => "Server received request and processed it");
@@ -48,4 +62,3 @@ echo "Rabbit MQ Server Start" . PHP_EOL;
 $server->process_requests('request_processor');
 echo "Rabbit MQ Server Stop" . PHP_EOL;
 exit();
-?>
