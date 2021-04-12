@@ -1,5 +1,5 @@
 <?php
-$currentURL = ["index" => 0, "prodList" => 0, "login" => 0, "register" => 0, "admin" => 0, "490IconPic" => 0, "tracking" => 0];
+$currentURL = ["index" => 0, "prodList" => 0, "login" => 0, "register" => 0, "admin" => 0, "490IconPic" => 0, "tracking" => 0, "statistics" => 0 ];
 
 $currentURL[pathinfo($_SERVER["REQUEST_URI"], PATHINFO_FILENAME)] = 1;
 
@@ -51,8 +51,8 @@ $clientRole = $_SESSION["user"]["role"] == 'client' ? 1 : 0;
 				<li class="nav-item <?php echo $currentURL['tracking'] ? 'active' : '' ?> ">
 					<a class="nav-link" href="<?php echo $prodPage ? '../tracking.php' : 'tracking.php' ?>">Tracking</a>
 				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="#">Statistics</a>
+				<li class="nav-item <?php echo $currentURL['statistics'] ? 'active' : '' ?> ">
+					<a class="nav-link" href="<?php echo $prodPage ? '../statistics.php' : 'statistics.php' ?>">Statistics</a>
 				</li>
 				<div class="nav-item dropdown ml-auto">
 					<a href="#" class="nav-link dropdown-toggle <?php echo ($currentURL['login'] || $currentURL['register'] || $currentURL['admin']) ? 'active' : '' ?>" data-toggle="dropdown">Profile</a>
