@@ -2,16 +2,20 @@
 session_start();
 require(__DIR__ . "/MQPublish.inc.php");
 if (isset($_SESSION["user"])) {
-        if (isset($_POST["submit"])) {
+	$user = $_SESSION["user"]["user_name"];
+	if (isset($_POST["submit"])) {
 		ob_start();
-		$preference = ((array)tracking($_POST["family"], $_SESSION["user"]["user_name"]))["message"];
+		$preference = ((array)tracking($_POST["family"], $user))["message"];
 		ob_end_clean();       
 	}
+	$info = (array)getTrackingInfo($user);
 } else {
         echo "<script>alert('You must be logged in to access this page.')</script>";
         echo "<script>window.location = 'login.php'; </script>";
 }
 require(__DIR__ . "/header.php");
+
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -34,7 +38,13 @@ require(__DIR__ . "/header.php");
   <h2> Which group(s) of GPU's do you want to track?</h2>
 
   <form method=POST action="tracking.php">
-    <input type="checkbox" id="1" name="family[]" value="3060">
+  <?php
+	$familyGroups = $info["families"];
+	$userPreference = $info["preference"];
+	ksort($familyGroups);
+	foreach ($familyGroups)
+  ?>
+	<input type="checkbox" id="1" name="family[]" value="3060">
     <label for="1"> 3060 </label>
     <br><br>
     <input type="checkbox" id="2" name="family[]" value="3060Ti">
@@ -57,7 +67,15 @@ require(__DIR__ . "/header.php");
   <br>
   <h3> Number of people tracking a particular GPU Group </h3>
   <?php
-  ?>
+	ob_start();
+	$countData = $info["countData"];
+	ob_end_clean();
+	ksort($countData);
+	foreach ($countData as $key => $value){
+		//product family : count of trackers
+		echo ((array)$value)["product_family_name"] . ":" . ((array)$value)["count"] . "<br>";
+	}
+?>
 </body>
 
 </html>

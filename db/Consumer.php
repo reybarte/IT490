@@ -15,7 +15,7 @@ require(__DIR__."/DBFunctions/roleChange.php");
 require(__DIR__."/DBFunctions/transaction.php");
 require(__DIR__."/DBFunctions/remove.php");
 require(__DIR__."/DBFunctions/tracking.php");
-require(__DIR__."/DBFunctions/getTrackersCount.php");
+require(__DIR__."/DBFunctions/getTrackingInfo.php");
 
 
 //TODO add more as they're developed
@@ -50,8 +50,8 @@ function request_processor($req){
 			return transaction($req["user"], $req["asin"], $req["product_name"], $req["price"]);
 		case "tracking":
 			return tracking($req["family"], $req["user"]);
-		case "getTrackersCount":
-			return getTrackersCount();
+		case "getTrackingInfo":
+			return getTrackingInfo($req["user"]);
 	}
 	return array("return_code" => '0',
 		"message" => "Server received request and processed it");
