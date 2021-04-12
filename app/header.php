@@ -1,5 +1,5 @@
 <?php
-$currentURL = ["index" => 0, "prodList" => 0, "login" => 0, "register" => 0, "admin" => 0, "490IconPic" => 0];
+$currentURL = [ "index" => 0, "prodList" => 0, "login" => 0, "register" => 0, "admin" => 0, "490IconPic" => 0, "tracking" => 0 ];
 $currentURL[pathinfo($_SERVER["REQUEST_URI"], PATHINFO_FILENAME)] = 1;
 
 $prodPage = pathinfo(pathinfo($_SERVER["REQUEST_URI"], PATHINFO_DIRNAME), PATHINFO_FILENAME) == "products" ? 1 : 0;
@@ -46,6 +46,9 @@ $clientRole = $_SESSION["user"]["role"] == 'client' ? 1 : 0;
 				</li>
 				<li class="nav-item <?php echo $currentURL['prodList'] ? 'active' : '' ?> ">
 					<a class="nav-link" href="<?php echo $prodPage ? '../prodList.php' : 'prodList.php' ?>">Products</a>
+				</li>
+				<li class="nav-item <?php echo $currentURL['tracking'] ? 'active' : '' ?> ">
+					<a class="nav-link" href="<?php echo $prodPage ? '../tracking.php' : 'tracking.php' ?>">Tracking</a>
 				</li>
 				<li class="nav-item">
 					<a class="nav-link" href="#">Statistics</a>
