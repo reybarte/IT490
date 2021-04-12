@@ -43,7 +43,7 @@ require(__DIR__ . "/header.php");
                         </div>
                     </div>
                 </div>
-
+                <!-- Graph for User Purchase(s) over Time -->
                 <div class="card card-body mt-3">
                     <div class="media align-items-center align-items-lg-start text-center text-lg-left flex-column flex-lg-row">
                         <div class="media-body">
@@ -55,7 +55,7 @@ require(__DIR__ . "/header.php");
                         </div>
                     </div>
                 </div>
-
+                <!-- Graph for Popularity Rating -->
                 <div class="card card-body mt-3">
                     <div class="media align-items-center align-items-lg-start text-center text-lg-left flex-column flex-lg-row">
                         <div class="media-body">
