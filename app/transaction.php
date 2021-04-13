@@ -1,8 +1,3 @@
-<script>
-    function post(asin, price, prodName) {
-
-    }
-</script>
 <?php
 session_start();
 require(__DIR__ . "/MQPublish.inc.php");
