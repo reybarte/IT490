@@ -50,7 +50,7 @@ else {
             </div>
             <div class="borderRow media align-items-center align-items-lg-start text-center text-lg-left flex-column flex-lg-row">
                 <div class="media-body">
-				<p class="title pr-3 mb-0"><?php echo $prodName;?></p>
+                    <p class="title pr-3 mb-0"><?php echo $prodName; ?></p>
                     <span class="rated"><?php echo $asin; ?></span>
                 </div>
                 <div class="row pt-1">
@@ -67,15 +67,16 @@ else {
                     <a href="#" type="button" class="topCenter btn btn-secondary">$5,000</a>
                 </div>
             </div>
-	    <div class="row borderRow media align-items-center align-items-lg-start text-center text-lg-left flex-column flex-lg-row m-1">
-		<div class="buy bottom-wrap"> 
-		<form method="POST" action="purchase.php">
-		<input type="hidden" name="username" value=<?php echo $user;?>>
-		<input type="hidden" name="asin" value=<?php echo $asin;?>>
-		<input type="hidden" name="prodName" value=<?php echo "\"".$prodName."\"";?>>
-		<input type="hidden" name="price" value=<?php echo $price;?>>
-		<button type="submit" name="purchase" class="btn btn-primary">Purchase</button>
-		</div>
+            <div class="row borderRow media align-items-center align-items-lg-start text-center text-lg-left flex-column flex-lg-row m-1">
+                <div class="buy bottom-wrap">
+                    <form method="POST" action="transaction.php">
+                        <input type="hidden" name="username" value=<?php echo $user; ?>>
+                        <input type="hidden" name="asin" value=<?php echo $asin; ?>>
+                        <input type="hidden" name="prodName" value=<?php echo "\"" . $prodName . "\""; ?>>
+                        <input type="hidden" name="price" value=<?php echo $price; ?>>
+                        <button type="submit" name="purchase" class="btn btn-primary">Purchase</button>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
