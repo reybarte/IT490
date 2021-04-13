@@ -12,10 +12,10 @@ foreach ($data as $key => $value) {
 foreach ($asinData as $key => $value) {
     //echo $key . ":" . $value["current_price"]."\n";
 }
-if(isset($_POST["view"])) {
-	$asin = $_POST["asin"];
-	$prodName = $_POST["prodName"];
-	$price = $_POST["price"];
+if (isset($_POST["view"])) {
+    $asin = $_POST["asin"];
+    $prodName = $_POST["prodName"];
+    $price = $_POST["price"];
 } else {
     header("Location: prodList.php");
 }
@@ -33,6 +33,7 @@ if(isset($_POST["view"])) {
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <title>Product Page</title>
 </head>
 
 <body>
@@ -61,14 +62,14 @@ if(isset($_POST["view"])) {
                     </div>
                 </figcaption>
             </div>
-			<div class="bottom-wrap buy"> 
-			<form method="POST" action="checkout.php">
-			<input type="hidden" name="asin" value=<?php echo $asin;?>>
-			<input type="hidden" name="prodName" value=<?php echo "\"".$prodName."\"";?>>
-			<input type="hidden" name="price" value=<?php echo $price;?>>
-			<button type="submit" name="checkout" class="btn btn-primary">Buy Now</button>	
-			</form>	
-			</div>
+            <div class="bottom-wrap buy">
+                <form method="POST" action="checkout.php">
+                    <input type="hidden" name="asin" value=<?php echo $asin; ?>>
+                    <input type="hidden" name="prodName" value=<?php echo "\"" . $prodName . "\""; ?>>
+                    <input type="hidden" name="price" value=<?php echo $price; ?>>
+                    <button type="submit" name="checkout" class="btn btn-primary">Buy Now</button>
+                </form>
+            </div>
         </figure>
     </div>
 

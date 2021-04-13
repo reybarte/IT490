@@ -1,102 +1,92 @@
 <?php
 session_start();
 require(__DIR__ . "/MQPublish.inc.php");
+if (isset($_SESSION["user"])) {
+	$user = $_SESSION["user"]["user_name"];
+	if (isset($_POST["submit"])) {
+		ob_start();
+		$preference = ((array)tracking($_POST["family"], $user))["message"];
+		ob_end_clean();
+	}
+	ob_start();
+	$info = (array)getTrackingInfo($user);
+	ob_end_clean();
+} else {
+	echo "<script>alert('You must be logged in to access this page.')</script>";
+	echo "<script>window.location = 'login.php'; </script>";
+}
 require(__DIR__ . "/header.php");
+
+
 ?>
 <!DOCTYPE html>
 <html>
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link rel="stylesheet" href="CSS/style.css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-  <title>Home</title>
-
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="CSS/tracking.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	<title>Tracking</title>
 </head>
 
 <body>
+	<div class="container d-flex justify-content-center mt-50">
+		<div class="card pt-2 pb-0" style="width: 500px;">
+			<div class="card-body pb-2 pr-0 pl-0 pt-0">
+				<h4 class="card-title text-center mb-0">Tracking Preferences</h4>
+			</div>
+			<div class="borderRow pb-0"></div>
 
-  <h1> Tracking </h1>
-  <h2> Which group(s) of GPU's do you want to track?</h2>
+			<div class='text-center'>
+				<form method=POST action="tracking.php">
+					<?php
+					ob_start();
+					$familyGroups = $info["countData"];
+					$userPreference = $info["userPref"];
+					ob_end_clean();
+					ksort($familyGroups);
+					foreach ($familyGroups as $key => $value) {
+						$prodName = ((array)$value)["product_family_name"];
+						$userPref = isset(((array)$userPreference)[$prodName]) ? "checked" : "";
+						echo "<div class=''><label>" . $prodName . "&nbsp<input type='checkbox' id='1' name='family[]' value='" . $prodName . "'" . $userPref . " > " . "</label></div>";
+					}
+					?>
+			</div>
+			<div class="text-center pb-2 pt-0">
+				<button type="submit" name="submit" class="btn btn-primary">Track/Untrack</button>
+			</div>
+			</form>
+			<div class='text-center pb-2 font-weight-bold'><?php echo $preference; ?></div>
+		</div>
+	</div>
 
-  <form action="/subscribe.php">
-    <input type="checkbox" id="1" name="3060" value="3060">
-    <label for="3060"> 3060 </label>
-    <br><br>
-    <input type="checkbox" id="2" name="3060TI" value="3060Ti">
-    <label for="3060Ti"> 3060Ti </label>
-    <br><br>
-    <input type="checkbox" id="3" name="3070" value="3070">
-    <label for="3070"> 3070 </label>
-    <br><br>
-    <input type="checkbox" id="4" name="3080" value="3080">
-    <label for="3080"> 3080 </label>
-    <br><br>
-    <input type="checkbox" id="5" name="3090" value="3090">
-    <label for="3090"> 3090 </label>
-    <br><br>
-    <input type="submit" value="Submit">
-  </form>
-  <br>
-  <h2> Trackers </h2>
-  <br>
-  <h3> Number of people tracking a particular GPU Group </h3>
-  <p> 3060: </p>
-  <?php
-  echo $tracka
-  ?>
-  <p> 3060Ti: </p>
-  <?php
-  echo $trackb
-  ?>
-  <p> 3070: </p>
-  <?php
-  echo $trackc
-  ?>
-  <p> 3080: </p>
-  <?php
-  echo $trackd
-  ?>
-  <p> 3090: </p>
-  <?php
-  echo $tracke
-  ?>
+
+
+
+	<div class="container d-flex justify-content-center mt-3">
+		<div class="card pt-2 pb-2" style="width: 500px;">
+			<div class="card-body pb-2 pr-0 pl-0 pt-0">
+				<h4 class="card-title text-center mb-0">Total Trackers</h4>
+			</div>
+			<div class="borderRow pb-0"></div>
+			<div class='text-center'>
+				<?php
+				ob_start();
+				$countData = $info["countData"];
+				ob_end_clean();
+				ksort($countData);
+				foreach ($countData as $key => $value) {
+					//product family : count of trackers
+					echo ((array)$value)["product_family_name"] . ": " . ((array)$value)["count"] . "<br>";
+				}
+				?>
+			</div>
+		</div>
+	</div>
 </body>
 
 </html>
-
-<?php
-//Checking for individual checkboxes being checked off
-function IsChecked($chkname, $value)
-{
-  if (!empty($_POST[$chkname])) {
-    foreach ($_POST[$chkname] as $chkval) {
-      if ($chkval == $value) {
-        return true;
-      }
-    }
-  }
-  return false;
-}
-
-//checked off boxes if statements, counts the amount of subscribers to a GPU family 
-if (IsChecked('3060', '3060')) {
-  //tracka is the number of people who're tracking the 3060 category
-}
-if (IsChecked('3060Ti', '3060Ti')) {
-  //trackb is the number of people who're tracking the 3060 category
-}
-if (IsChecked('3070', '3070')) {
-  //trackc is the number of people who're tracking the 3060 category
-}
-if (IsChecked('3080', '3080')) {
-  //trackd is the number of people who're tracking the 3060 category
-}
-if (IsChecked('3090', '3090')) {
-  //tracke is the number of people who're tracking the 3060 category
-}
-?>

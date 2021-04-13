@@ -12,13 +12,14 @@ foreach ($data as $key => $value) {
 foreach ($asinData as $key => $value) {
     //echo $key . ":" . $value["current_price"]."\n";
 }
-if (isset($_POST["checkout"])) {
-    $asin = $_POST["asin"];
-    $price = $_POST["price"];
-    $prodName = $_POST["prodName"];
-    $user = $_SESSION["user"]["user_name"];
-} else {
-    header("Location: prodList.php");
+if(isset($_POST["checkout"])) {
+	$asin = $_POST["asin"];
+	$price = $_POST["price"];
+	$prodName = $_POST["prodName"];
+	$user = $_SESSION["user"]["user_name"];
+}
+else {
+	echo "<script>window.location = 'prodList.php'; </script>";
 }
 
 

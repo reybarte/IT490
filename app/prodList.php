@@ -35,28 +35,32 @@ foreach ($asinData as $key => $value) {
     <div class="container d-flex justify-content-center mt-50 mb-50">
         <div class="row justify-content-center">
             <div class="col-md-10">
-				
-				<?php foreach ($asinData as $key => $value): ?>
-				<div class="card card-body mt-3">
-                    <div class="media align-items-center align-items-lg-start text-center text-lg-left flex-column flex-lg-row">
-                        <div class="media-body">
-						<h6 class="media-title font-weight-semibold"> <a> <?php echo $value["title"]; ?></a></h6>
-                            <p class="mb-1"><?php echo $value["description"]; ?></p>
-                            <div class="buttonsright">
-                                <a href="#" type="button" class="btn btn-secondary mr-2"><?php echo "$" . $value["current_price"]; ?></a>
-                                <a href="#" type="button" class="btn btn-secondary mr-2">
-                                    <?php if ($value["out_of_stock"]) {
-                                        echo "Out Of Stock";
-                                    } else {
-                                        echo "In Stock";
-                                    } ?></a>
-								<form method="POST" action="prodPage.php">
-								<input type="hidden" name="asin" value=<?php echo $value["asin"];?>>
-								<input type="hidden" name="prodName" value=<?php echo "\"" . $value["title"] . "\"";?>>
-								<input type="hidden" name="price" value=<?php echo $value["current_price"];?>>
-								<button type="submit" name="view" class="btn btn-primary">View</button>
-								</form>
-							</div>
+
+                <?php foreach ($asinData as $key => $value) : ?>
+                    <div class="card card-body mt-3">
+                        <div class="media align-items-center align-items-lg-start text-center text-lg-left flex-column flex-lg-row">
+                            <div class="media-body">
+                                <h6 class="media-title font-weight-semibold titleBlue"> <a> <?php echo $value["title"]; ?></a></h6>
+                                <p class="mb-1 limitdesc"><?php echo $value["description"]; ?></p>
+
+                                <!-- Product List Price, Stock-->
+                                <form method="POST" action="prodPage.php">
+                                    <div class="row buttonsright pr-3">
+                                        <button href="#" type="button" class="btn btn-secondary mr-2"><?php echo "$" . $value["current_price"]; ?></button>
+                                        <button href="#" type="button" class="btn btn-secondary mr-2">
+                                            <?php if ($value["out_of_stock"]) {
+                                                echo "Out Of Stock";
+                                            } else {
+                                                echo "In Stock";
+                                            } ?>
+                                        </button>
+                                        <input type="hidden" name="asin" value=<?php echo $value["asin"]; ?>>
+                                        <input type="hidden" name="prodName" value=<?php echo "\"" . $value["title"] . "\""; ?>>
+                                        <input type="hidden" name="price" value=<?php echo $value["current_price"]; ?>>
+                                        <button type="submit" name="view" class="btn btn-primary">View</button>
+                                </form>
+                            </div>
+
 
                         </div>
                     </div>

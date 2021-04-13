@@ -32,7 +32,7 @@ require(__DIR__ . "/header.php");
                 <li class="list-group-item"><strong>Balance:</strong> 5,000</li>
             </ul>
             <div class="card-body p-3">
-                <h5 class="card-title text-center mb-0"><a href="#" class="card-link">Tracking Preferences</a></h5>
+                <h5 class="card-title text-center mb-0"><a href="tracking.php" class="card-link">Tracking Preferences</a></h5>
             </div>
         </div>
     </div>
