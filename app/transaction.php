@@ -1,3 +1,8 @@
+<script>
+    function post(asin, price, prodName) {
+
+    }
+</script>
 <?php
 session_start();
 require(__DIR__ . "/MQPublish.inc.php");
@@ -11,8 +16,15 @@ if (isset($_POST["purchase"])) {
     $price = $_POST["price"];
 
     ob_start();
-    transaction($user, $asin, $prodName);
+    $confnumber = ((array)transaction($user, $asin, $prodName))["confnum"];
     ob_end_clean();
+    if ($confnumber == -1) {
+        echo "<script>alert('Out Of Stock')</script>";
+        echo "<script>window.location = 'prodList.php'; </script>";
+    } elseif ($confnumber == -2) {
+        echo "<script>alert('Not Enough Funds')</script>";
+        echo "<script>window.location = 'prodList.php'; </script>";
+    }
 } else {
     header("Location: prodList.php");
 }

@@ -15,20 +15,20 @@ function transaction($username, $asin, $product_name)
     $outOfStock = ($stmt->fetch(PDO::FETCH_ASSOC))["out_of_stock"];
 
     if ($outOfStock == 1) {
-        return ["status" => 401, "message" => "Out Of Stock"];
+        return ["status" => 401, "confnum" => -1, "message" => "Out Of Stock"];
     } elseif ($balance < $currentPrice) {
-        return ["status" => 402, "message" => "Not Enough Funds"];
+        return ["status" => 402, "confnum" => -2, "message" => "Not Enough Funds"];
     }
 
     $confnumber = (rand());
 
     //from dbconnection.php
-    $stmt = getDB()->prepare("INSERT INTO T$username (asin, product_name, price, purchase_date, conf_number) VALUES (:asin,:product_name,:price, CURRENT_TIMESTAMP, :confnumber)");
-    $result = $stmt->execute([":asin" => $asin, ":product_name" => $product_name, ":price" => $currentPrice, ":confnumber" => $confnumber]);
-    $stmt = getDB()->prepare("UPDATE Users WHERE user_name = :username SET balance = balance - :currentPrice");
+    $stmt = getDB()->prepare("INSERT INTO T$username (asin, product_name, price, purchase_date, conf_num) VALUES (:asin,:product_name,:price, CURRENT_TIMESTAMP, :confnum)");
+    $result = $stmt->execute([":asin" => $asin, ":product_name" => $product_name, ":price" => $currentPrice, ":confnum" => $confnumber]);
+    $stmt = getDB()->prepare("UPDATE Users SET balance = (balance - :currentPrice) WHERE user_name = :username");
     $result1 = $stmt->execute([":username" => $username, ":currentPrice" => $currentPrice]);
     if ($result && $result1) {
-        return ["status" => 200, "message" => "Transaction Inserted"];
+        return ["status" => 200, "confnum" => $confnumber, "message" => "Transaction Inserted"];
     } else {
         //must return a proper message so that the app can parse it
         //and display a user friendly message to the user
