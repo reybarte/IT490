@@ -4,15 +4,9 @@ require(__DIR__ . "/MQPublish.inc.php");
 require(__DIR__ . "/header.php");
 
 ob_start();
-$data = getTransactionHistory($_SESSION["user"]["user_name"])->data;
+$data = (array)getTransactionHistory($_SESSION["user"]["user_name"])->data;
 ob_end_clean();
-foreach ($data as $key => $value) {
-    $asinData[strval($value->asin)] = (array)$value;
-}
-//var_dump($asinData);
-foreach ($asinData as $key => $value) {
-    //echo $key . ":" . $value["current_price"]."\n";
-}
+
 ?>
 
 <!DOCTYPE html>
@@ -40,18 +34,19 @@ foreach ($asinData as $key => $value) {
                     <h5 class="card-title text-center p-3 mb-0">Transaction History</h5>
                 </div>
                 <!-- Each card that is generated that shows GPU info starts here -->
-                <?php foreach ($asinData as $key => $value) : ?>
+                <?php foreach ($data as $key => $value) : ?>
                     <div class="card card-body mt-3 pt-3 pb-3">
                         <div class="media align-items-center align-items-lg-start text-center text-lg-left flex-column flex-lg-row">
                             <div class="media-body">
-                                <h6 class="media-title font-weight-semibold titleBlue text-center"> <a> <?php echo $value["title"]; ?></a></h6>
+                                <h6 class="media-title font-weight-semibold titleBlue text-center"> <a> <?php $value = (array)$value;
+                                                                                                        echo $value["product_name"]; ?></a></h6>
                                 <div class="borderRow row justify-content-center text-center">
-                                    <div class="mr-2"><span class="rated">Price<br></span><button href="#" type="button" class="btn btn-secondary fullButton"><?php echo "$" . $value["current_price"]; ?></button></div>
+                                    <div class="mr-2"><span class="rated">Price<br></span><button href="#" type="button" class="btn btn-secondary fullButton"><?php echo "$" . $value["price"]; ?></button></div>
                                     <div class="mr-2"><span class="rated">ASIN<br></span><button href="#" type="button" class="btn btn-secondary fullButton"><?php echo $key; ?></button></div>
-                                    <div class="mr-2"><span class="rated">Confirmation Number<br></span><button href="#" type="button" class="btn btn-secondary fullButton">Confirmation Number</button></div>
+                                    <div class="mr-2"><span class="rated">Confirmation Number<br></span><button href="#" type="button" class="btn btn-secondary fullButton"><?php echo $value["conf_num"]; ?></button></div>
                                 </div>
                                 <div class="row justify-content-center text-center">
-                                    <div><span class="rated">Purchase Date<br></span></div>
+                                    <div><span class="rated"><?php echo $value["purchase_date"]; ?><br></span></div>
                                 </div>
                             </div>
                         </div>
