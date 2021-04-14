@@ -27,7 +27,17 @@ function transaction($username, $asin, $product_name)
     $result = $stmt->execute([":asin" => $asin, ":product_name" => $product_name, ":price" => $currentPrice, ":confnum" => $confnumber]);
     $stmt = getDB()->prepare("UPDATE Users SET balance = (balance - :currentPrice) WHERE user_name = :username");
     $result1 = $stmt->execute([":username" => $username, ":currentPrice" => $currentPrice]);
-    if ($result && $result1) {
+    $stmt = getDB()->prepare("UPDATE Products SET quantity = (quantity - 1) WHERE asin = :asin");
+    $result2 = $stmt->execute([":asin" => $asin]);
+    $stmt = getDB()->prepare("SELECT quantity FROM Products WHERE asin = :asin");
+    $stmt->execute([":asin" => $asin]);
+    $quantity = ($stmt->fetch(PDO::FETCH_ASSOC))["quantity"];
+    if ($quantity == 0) {
+        $stmt = getDB()->prepare("UPDATE Products SET out_of_stock = 1 WHERE asin = :asin");
+        $stmt->execute([":asin" => $asin]);
+    }
+
+    if ($result && $result1 && $result2) {
         return ["status" => 200, "confnum" => $confnumber, "message" => "Transaction Inserted"];
     } else {
         //must return a proper message so that the app can parse it

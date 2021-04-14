@@ -17,7 +17,13 @@ function apiSaveDB($asin, $title, $current_price, $description, $features, $imag
 	$stmt = getDB()->prepare("INSERT INTO Products (asin, title, current_price, description, features, images, out_of_stock) VALUES(:asin, :title, :current_price, :description, :features, :images, :out_of_stock) ON DUPLICATE KEY UPDATE title=:title, current_price=:current_price, description=:description, features=:features, images=:images, out_of_stock=:out_of_stock");
 	$stmt->execute([":asin"=>$asin, ":title"=>$title, ":current_price"=>$current_price, ":description"=>$description, ":features"=>$features, ":images"=>$images, ":out_of_stock"=>$out_of_stock]);
 	$affected = $stmt->rowCount();
-	echo $affected;
+	$stmt = getDB()->prepare("SELECT out_of_stock FROM Products WHERE asin = :asin");
+	$stmt->execute([":asin" => $asin]);
+	$outOfStock = ($stmt->fetch(PDO::FETCH_ASSOC))["out_of_stock"];
+	if($outOfStock == 0){
+		$stmt = getDB()->prepare("UPDATE Products SET quantity = 5 WHERE asin = :asin");
+    	$stmt->execute([":asin" => $asin]);
+	}
 	if($affected == 1){
 		return array("status"=>200, "message"=>"Product data found");
 	} else if ($affected == 2) {
@@ -29,4 +35,3 @@ function apiSaveDB($asin, $title, $current_price, $description, $features, $imag
 		return array("status"=>400, "message"=>"Product not found");
 	}
 }
-?>
