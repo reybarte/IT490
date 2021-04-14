@@ -1,0 +1,57 @@
+/*Used in prodList.php*/
+
+/*Removes hover effect*/
+.btn-secondary{
+    pointer-events: none;
+}
+
+/*For products page list*/
+body {
+    margin: 0;
+    font-size: .8125rem;
+    font-weight: 400;
+    line-height: 1.5385;
+    text-align: left;
+}
+
+.mt-50 {
+    margin-top: 50px
+}
+
+.mb-50 {
+    margin-bottom: 50px
+}
+
+a {
+    text-decoration: none !important
+}
+
+.buttonsright{
+    float: right;
+}
+
+/*Make product list titles blue*/
+.titleBlue{
+    color: #007bff;
+}
+
+/*adds a border*/
+.borderRow {
+    border-top: 1px solid #cccaca;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+/*For button labels*/
+.rated {
+	font-size: 14px;
+	color: #747981;
+}
+
+/*For button's, makes the button take up the entire container or div that its inside*/
+.fullButton{
+    box-sizing: border-box;
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+}
