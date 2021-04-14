@@ -35,11 +35,11 @@ require(__DIR__ . "/header.php");
                 <div class="card card-body">
                     <div class="media align-items-center align-items-lg-start text-center text-lg-left flex-column flex-lg-row">
                         <div class="media-body">
-                            <h6 class="media-title font-weight-semibold"> <a href="products/product3090.php" data-abc="true">Visual Data for Total Product Trackers over Time</a> </h6>
+                            <h6 class="media-title font-weight-semibold"> <a href="#" data-abc="true">Visual Data for Total Product Trackers over Time</a> </h6>
                             <p class="mb-3">With all of the different products and series of GPU's to choose from, here is a linear, graphical representation of the progression of users tracking products over linear intervals of time.</p>
                         </div>
                         <div class="mt-3 mt-lg-3 ml-lg-3 text-center">
-                            <a href="products/product3090.php" type="button" class="btn btn-primary mt-4">View Total User Tracking Data</a>
+                            <a href="#" type="button" class="btn btn-primary mt-4">View Total User Tracking Data</a>
                         </div>
                     </div>
                 </div>
@@ -47,11 +47,11 @@ require(__DIR__ . "/header.php");
                 <div class="card card-body mt-3">
                     <div class="media align-items-center align-items-lg-start text-center text-lg-left flex-column flex-lg-row">
                         <div class="media-body">
-                            <h6 class="media-title font-weight-semibold"> <a href="products/product3080.php" data-abc="true">Graph Displaying the Number of your Puchases over Time </a> </h6>
+                            <h6 class="media-title font-weight-semibold"> <a href="#" data-abc="true">Graph Displaying the Number of your Puchases over Time </a> </h6>
                             <p class="mb-3">Here you can find statistics of your aggregate purchases of products and GPU's over specific intervals of time since the creation of your account!</p>
                         </div>
                         <div class="mt-3 mt-lg-3 ml-lg-3 text-center">
-                            <a href="products/product3080.php" type="button" class="btn btn-primary mt-4">View Personal Purchase Data</a>
+                            <a href="#" type="button" class="btn btn-primary mt-4">View Personal Purchase Data</a>
                         </div>
                     </div>
                 </div>
@@ -59,11 +59,11 @@ require(__DIR__ . "/header.php");
                 <div class="card card-body mt-3">
                     <div class="media align-items-center align-items-lg-start text-center text-lg-left flex-column flex-lg-row">
                         <div class="media-body">
-                            <h6 class="media-title font-weight-semibold"> <a href="products/product3070.php" data-abc="true">Visual Data Showcasing Popularity Ranking for GPU families and Standalone Products</a> </h6>
+                            <h6 class="media-title font-weight-semibold"> <a href="popularityRankings.php" data-abc="true">Visual Data Showcasing Popularity Ranking for GPU families and Standalone Products</a> </h6>
                             <p class="mb-3">Here you will find listings of the most popular GPU(s) on the website in order, based on how many individual users are tracking at GPU at any given time (#1 product having the highest number of tracks and the lowest having the least).</p>
                         </div>
                         <div class="mt-3 mt-lg-3 ml-lg-3 text-center">
-                            <a href="products/product3070.php" type="button" class="btn btn-primary mt-4">View Overall Product Ratings</a>
+                            <a href="popularityRankings.php" type="button" class="btn btn-primary mt-4">View Overall Product Ratings</a>
                         </div>
                     </div>
                 </div>
