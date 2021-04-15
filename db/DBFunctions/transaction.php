@@ -35,6 +35,8 @@ function transaction($username, $asin, $product_name)
     if ($quantity == 0) {
         $stmt = getDB()->prepare("UPDATE Products SET out_of_stock = 1 WHERE asin = :asin");
         $stmt->execute([":asin" => $asin]);
+        $stmt = getDB()->prepare("UPDATE Products SET current_price = 0 WHERE asin = :asin");
+        $stmt->execute([":asin" => $asin]);
     }
 
     if ($result && $result1 && $result2) {
