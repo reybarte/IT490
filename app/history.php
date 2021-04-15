@@ -42,7 +42,7 @@ ob_end_clean();
                                                                                                         echo $value["product_name"]; ?></a></h6>
                                 <div class="borderRow row justify-content-center text-center">
                                     <div class="mr-2"><span class="rated">Price<br></span><button href="#" type="button" class="btn btn-secondary fullButton"><?php echo "$" . $value["price"]; ?></button></div>
-                                    <div class="mr-2"><span class="rated">ASIN<br></span><button href="#" type="button" class="btn btn-secondary fullButton"><?php echo $key; ?></button></div>
+                                    <div class="mr-2"><span class="rated">ASIN<br></span><button href="#" type="button" class="btn btn-secondary fullButton"><?php echo $value["asin"]; ?></button></div>
                                     <div class="mr-2"><span class="rated">Confirmation Number<br></span><button href="#" type="button" class="btn btn-secondary fullButton"><?php echo $value["conf_num"]; ?></button></div>
                                 </div>
                                 <div class="row justify-content-center text-center">
