@@ -6,17 +6,17 @@ require_once(__DIR__ . '/../lib/rabbitMQLib.inc');
 require(__DIR__ . "/dbconnection.php");
 
 //separate files for DB calls so it's easier to divide work
-require(__DIR__."/DBFunctions/login.php");
-require(__DIR__."/DBFunctions/register.php");
-require(__DIR__."/DBFunctions/apiClient.php");
-require(__DIR__."/DBFunctions/apiSaveDB.php");
-require(__DIR__."/DBFunctions/getCache.php");
-require(__DIR__."/DBFunctions/roleChange.php");
-require(__DIR__."/DBFunctions/transaction.php");
-require(__DIR__."/DBFunctions/remove.php");
-require(__DIR__."/DBFunctions/tracking.php");
-require(__DIR__."/DBFunctions/getTrackingInfo.php");
-
+require(__DIR__ . "/DBFunctions/login.php");
+require(__DIR__ . "/DBFunctions/register.php");
+require(__DIR__ . "/DBFunctions/apiClient.php");
+require(__DIR__ . "/DBFunctions/apiSaveDB.php");
+require(__DIR__ . "/DBFunctions/getCache.php");
+require(__DIR__ . "/DBFunctions/roleChange.php");
+require(__DIR__ . "/DBFunctions/transaction.php");
+require(__DIR__ . "/DBFunctions/remove.php");
+require(__DIR__ . "/DBFunctions/tracking.php");
+require(__DIR__ . "/DBFunctions/getTrackingInfo.php");
+require(__DIR__ . "/DBFunctions/getTransactionHistory.php");
 //TODO add more as they're developed
 
 function request_processor($req)
@@ -50,7 +50,9 @@ function request_processor($req)
 			return tracking($req["family"], $req["user"]);
 		case "getTrackingInfo":
 			return getTrackingInfo($req["user"]);
-    case "echo":
+		case "getTransactionHistory":
+			return getTransactionHistory($req["user"]);
+		case "echo":
 			return ["return_code" => '0', "message" => "Echo: " . $req["message"]];
 	}
 	return array(
