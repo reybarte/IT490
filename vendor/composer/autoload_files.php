@@ -7,4 +7,5 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'decc78cc4436b1292c6c0d151b19445c' => $vendorDir . '/phpseclib/phpseclib/phpseclib/bootstrap.php',
+    '79f66bc0a1900f77abe4a9a299057a0a' => $vendorDir . '/starkbank/ecdsa/src/ellipticcurve.php',
 );

@@ -13,19 +13,5 @@ function mailList($asin, $family) {
         }
 
 
-	$headers = "FROM: GPU GURU" . "\r\n" .
-		   "X-Mailer: PHP/" . phpversion();
-        $subject = "Tracked Item Back in Stock";
-        $message = "Item ASIN #" . $asin . "is NOW IN STOCK." . "\r\n" .
-                   "Visit us at 18.216.101.142/repo/app to purchase now!";
-        foreach($mailList as $value) {
-		echo "send to: " . $value . "\n";
-		$to = $value;
-
-                mail($to, $subject, $message, $headers);
-		echo "mailed" . "\n";
-        }
-
 }
-mailList("B08J5F3G18", "3090");
 ?>
