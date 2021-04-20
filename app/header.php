@@ -1,5 +1,6 @@
 <?php
-$currentURL = [ "index" => 0, "prodList" => 0, "login" => 0, "register" => 0, "admin" => 0, "490IconPic" => 0, "tracking" => 0 ];
+$currentURL = ["index" => 0, "prodList" => 0, "login" => 0, "register" => 0, "admin" => 0, "490IconPic" => 0, "tracking" => 0, "statistics" => 0, "history" => 0];
+
 $currentURL[pathinfo($_SERVER["REQUEST_URI"], PATHINFO_FILENAME)] = 1;
 
 $prodPage = pathinfo(pathinfo($_SERVER["REQUEST_URI"], PATHINFO_DIRNAME), PATHINFO_FILENAME) == "products" ? 1 : 0;
@@ -50,8 +51,8 @@ $clientRole = $_SESSION["user"]["role"] == 'client' ? 1 : 0;
 				<li class="nav-item <?php echo $currentURL['tracking'] ? 'active' : '' ?> ">
 					<a class="nav-link" href="<?php echo $prodPage ? '../tracking.php' : 'tracking.php' ?>">Tracking</a>
 				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="#">Statistics</a>
+				<li class="nav-item <?php echo $currentURL['statistics'] ? 'active' : '' ?> ">
+					<a class="nav-link" href="<?php echo $prodPage ? '../statistics.php' : 'statistics.php' ?>">Statistics</a>
 				</li>
 				<div class="nav-item dropdown ml-auto">
 					<a href="#" class="nav-link dropdown-toggle <?php echo ($currentURL['login'] || $currentURL['register'] || $currentURL['admin']) ? 'active' : '' ?>" data-toggle="dropdown">Profile</a>
@@ -60,7 +61,7 @@ $clientRole = $_SESSION["user"]["role"] == 'client' ? 1 : 0;
 							<a href="<?php echo $prodPage ? '../profile.php' : 'profile.php' ?>" class="dropdown-item <?php echo $currentURL['profile'] ? 'active' : '' ?> ">Profile</a>
 						<?php endif; ?>
 						<?php if ($loggedIn) : ?>
-							<a href="#" class="dropdown-item">History</a>
+							<a href="<?php echo $prodPage ? '../history.php' : 'history.php' ?>" class="dropdown-item <?php echo $currentURL['history'] ? 'active' : '' ?> ">History</a>
 						<?php endif; ?>
 						<?php if ($loggedIn) : ?>
 							<a href="<?php echo $prodPage ? '../login.php' : 'login.php' ?>" class="dropdown-item <?php echo $currentURL['login'] ? 'active' : '' ?> ">Logout</a>

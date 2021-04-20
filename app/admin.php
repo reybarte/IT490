@@ -7,7 +7,7 @@ if (isset($_SESSION["user"])) {
 	if (isset($_POST["request"])) {
 		if ($_SESSION["user"]["role"] == "admin" || $_SESSION["user"]["role"] == "product manager") {
 			ob_start();
-			$result = (array)apiCall($_POST["asin"]);
+			$result = (array)apiCall($_POST["add"]);
 			ob_end_clean();
 			$prodFlag = true;
 		} else {
@@ -16,7 +16,7 @@ if (isset($_SESSION["user"])) {
 	} elseif (isset($_POST["remove"])) {
 		if ($_SESSION["user"]["role"] == "admin" || $_SESSION["user"]["role"] == "product manager") {
 			ob_start();
-			$result = (array)remove($_POST["asin"]);
+			$result = (array)remove($_POST["rem"]);
 			ob_end_clean();
 			$prodRemFlag = true;
 		} else {
@@ -64,8 +64,9 @@ if (isset($_SESSION["user"])) {
 				<div class="form-content">
 					<div class="row">
 						<div class="col-md-12">
+							<!-- Add Product -->
 							<div class="form-group">
-								<input type="text" class="form-control" placeholder="Enter ASIN Number to Add Product" name="asin" id="asin">
+								<input type="text" class="form-control" placeholder="Enter ASIN Number to Add Product" name="add" id="asin">
 							</div>
 							<div class="theButton pt-3">
 								<button type="submit" name="request" class="btnSubmit">Find Product</button>
@@ -80,8 +81,9 @@ if (isset($_SESSION["user"])) {
 							}
 							?>
 
+							<!-- Remove Product -->
 							<div class="form-group pt-5">
-								<input type="text" class="form-control" placeholder="Enter ASIN Number to Remove Product" name="asin" id="asin">
+								<input type="text" class="form-control" placeholder="Enter ASIN Number to Remove Product" name="rem" id="asin">
 							</div>
 							<div class="theButton pt-3">
 								<button type="submit" name="remove" class="btnSubmit">Remove Product</button>
@@ -97,7 +99,7 @@ if (isset($_SESSION["user"])) {
 							}
 							?>
 
-
+							<!-- Role Change -->
 							<div class="form-group pt-5">
 								<input type="text" class="form-control" placeholder="Enter Email of User and Select Role Change" name="email" id="email">
 								<label for="cl" class="pl-2 pr-1">Select Role Change:</label>
@@ -120,6 +122,14 @@ if (isset($_SESSION["user"])) {
 								}
 							}
 							?>
+
+							<!-- Refresh Quantity -->
+							<div class="form-group pt-5">
+								<h5 class="text-center mb-0">Refresh Quantity for All Products</h5>
+							</div>
+							<div class="theButton pt-3">
+								<button type="submit" name="reload" class="btnSubmit">Refresh Quantity</button>
+							</div>
 
 						</div>
 					</div>
