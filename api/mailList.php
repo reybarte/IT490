@@ -1,7 +1,7 @@
 <?php
 require (__DIR__ . '/../vendor/autoload.php');
 
-function mailList($mailList $asin, $title, $image){
+function mailList($mailList, $asin, $title, $image){
 	foreach($mailList as $key => $value){
 		$email = new \SendGrid\Mail\Mail(); 
 		$email->setFrom("gpuguru123@gmail.com", "GPU Guru");

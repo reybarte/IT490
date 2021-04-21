@@ -2,7 +2,7 @@
 
 require_once(__DIR__.'/../lib/path.inc');
 require_once(__DIR__.'/../lib/get_host_info.inc');
-require_once(__DIR__.'/../lib/rabbitMQLib.inc');
+require_once(__DIR__.'/rabbitMQLib.inc');
 require(__DIR__."/api.php");
 require(__DIR__."/mailList.php");
 
