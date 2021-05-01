@@ -1,6 +1,11 @@
 <?php
 require (__DIR__ . '/../vendor/autoload.php');
-
+/*
+do on api server
+echo "export SENDGRID_API_KEY='YOUR_API_KEY'" > sendgrid.env
+echo "sendgrid.env" >> .gitignore
+source ./sendgrid.env
+*/
 function mailList($mailList, $asin, $title, $image){
 	foreach($mailList as $key => $value){
 		$email = new \SendGrid\Mail\Mail(); 
@@ -17,7 +22,7 @@ function mailList($mailList, $asin, $title, $image){
 				");
 		$sendgrid = new \SendGrid(getenv('SENDGRID_API_KEY'));
 		try {
-			$response = $sendgrid->send($key);
+			$response = $sendgrid->send($email);
 			print $response->statusCode() . "\n";
 			print_r($response->headers());
 			print $response->body() . "\n";
