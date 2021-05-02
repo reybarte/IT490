@@ -13,7 +13,7 @@ if (isset($_SESSION["user"])) {
 		} else {
 			$prodFlag = false;
 		}
-		unset($_POST["request"])
+		unset($_POST["request"]);
 	} elseif (isset($_POST["remove"])) {
 		if ($_SESSION["user"]["role"] == "admin" || $_SESSION["user"]["role"] == "product manager") {
 			ob_start();
@@ -23,7 +23,7 @@ if (isset($_SESSION["user"])) {
 		} else {
 			$prodRemFlag = false;
 		}
-		unset($_POST["remove"])
+		unset($_POST["remove"]);
 	} elseif (isset($_POST["roleChange"])) {
 		if ($_SESSION["user"]["role"] == "admin") {
 			ob_start();
@@ -33,7 +33,7 @@ if (isset($_SESSION["user"])) {
 		} else {
 			$roleFlag = false;
 		}
-		unset($_POST["roleChange"])
+		unset($_POST["roleChange"]);
 	}
 	elseif (isset($_POST["update"])) {
 		if ($_SESSION["user"]["role"] == "admin" || $_SESSION["user"]["role"] == "product manager") {
@@ -44,6 +44,7 @@ if (isset($_SESSION["user"])) {
 		} else {
 			$updateFlag = false;
 		}
+			unset($_POST["update"]);
 	}
 } else {
 	echo "<script>alert('You must be logged in to access this page.')</script>";
@@ -145,7 +146,7 @@ if (isset($_SESSION["user"])) {
 							</div>
 							<?php
 							if(isset($updateFlag)){
-								if ($updateFlag) {
+								if (!$updateFlag) {
 									echo "You must have the proper priveleges";
 								} else {
 									echo $result["message"];

@@ -37,6 +37,9 @@ function apiSaveDB($asin, $title, $current_price, $description, $features, $imag
 		$stmt = getDB()->prepare("UPDATE Products SET quantity = 5 WHERE asin = :asin");
  	   	$stmt->execute([":asin" => $asin]);
 		$stockUpdated = 1;
+	} elseif ($newStock == 1) {
+		$stmt = getDB()->prepare("UPDATE Products SET quantity = 0 WHERE asin = :asin");
+		$stmt->execute([":asin" => $asin]);
 	}
 	if($affected == 2){
 		if($oldProd && $stockUpdated) {
