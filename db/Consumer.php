@@ -17,6 +17,7 @@ require(__DIR__ . "/DBFunctions/remove.php");
 require(__DIR__ . "/DBFunctions/tracking.php");
 require(__DIR__ . "/DBFunctions/getTrackingInfo.php");
 require(__DIR__ . "/DBFunctions/getTransactionHistory.php");
+require(__DIR__ . "/DBFunctions/updateStock.php");
 //TODO add more as they're developed
 
 function request_processor($req)
@@ -52,6 +53,8 @@ function request_processor($req)
 			return getTrackingInfo($req["user"]);
 		case "getTransactionHistory":
 			return getTransactionHistory($req["user"]);
+		case "updateStock":
+			return updateStock();
 		case "echo":
 			return ["return_code" => '0', "message" => "Echo: " . $req["message"]];
 	}
