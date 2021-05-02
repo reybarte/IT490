@@ -18,6 +18,7 @@ require(__DIR__ . "/DBFunctions/tracking.php");
 require(__DIR__ . "/DBFunctions/getTrackingInfo.php");
 require(__DIR__ . "/DBFunctions/getTransactionHistory.php");
 require(__DIR__ . "/DBFunctions/updateStock.php");
+require(__DIR__ . "/DBFunctions/mailClient.php");
 //TODO add more as they're developed
 
 function request_processor($req)

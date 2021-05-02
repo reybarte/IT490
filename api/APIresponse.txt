@@ -152,3 +152,191 @@ https://images-na.ssl-images-amazon.com/images/I/81hR9CkZz5L.jpg
 Brand ASUS,Graphics Coprocessor NVIDIA GeForce RTX 3080,Video Output Interface DisplayPort, HDMI,Chipset Brand NVIDIA,Graphics RAM Type GDDR6
 
 
+|asin|
+B08HH5WF97
+|title|
+ASUS TUF Gaming NVIDIA GeForce RTX 3080 OC Edition Graphics Card- PCIe 4.0, 10GB GDDR6X, HDMI 2.1, DisplayPort 1.4a, Dual Ball Fan Bearings
+|current_price|
+-1
+|description|
+Make sure this fits by entering your model number.
+NVIDIA Ampere Streaming Multiprocessors: The building blocks for the world’s fastest, most efficient GPU, the all-new Ampere SM brings 2X the FP32 throughput and improved power efficiency.
+2nd Generation RT Cores: Experience 2X the throughput of 1st Gen RT Cores, plus concurrent RT and shading for a whole new level of ray tracing performance.
+3rd Generation Tensor Cores: Get up to 2X the throughput with structural sparsity and advanced AI algorithms such as DLSS. Now with support for up to 8K resolution, these cores deliver a massive boost in game performance and all-new AI capabilities.
+Axial-Tech Fan Design has been newly tuned with a reversed central fan direction for less turbulence.
+Military-grade Capacitors and other TUF components enhance durability and performance.
+Dual Ball Fan Bearings can last up to twice as long as sleeve bearing designs.
+GPU Tweak II provides intuitive performance tweaking, thermal controls, and system monitoring.
+
+|out_of_stock|
+true
+|images|
+https://images-na.ssl-images-amazon.com/images/I/81hR9CkZz5L.jpg
+|features|
+Brand ASUS|||Graphics Coprocessor NVIDIA GeForce RTX 3080|||Video Output Interface DisplayPort, HDMI|||Chipset Brand NVIDIA|||Graphics RAM Type GDDR6
+
+
+|asin|
+B08HH5WF97
+|title|
+ASUS TUF Gaming NVIDIA GeForce RTX 3080 OC Edition Graphics Card- PCIe 4.0, 10GB GDDR6X, HDMI 2.1, DisplayPort 1.4a, Dual Ball Fan Bearings
+|current_price|
+-1
+|description|
+Make sure this fits by entering your model number.
+NVIDIA Ampere Streaming Multiprocessors: The building blocks for the world’s fastest, most efficient GPU, the all-new Ampere SM brings 2X the FP32 throughput and improved power efficiency.
+2nd Generation RT Cores: Experience 2X the throughput of 1st Gen RT Cores, plus concurrent RT and shading for a whole new level of ray tracing performance.
+3rd Generation Tensor Cores: Get up to 2X the throughput with structural sparsity and advanced AI algorithms such as DLSS. Now with support for up to 8K resolution, these cores deliver a massive boost in game performance and all-new AI capabilities.
+Axial-Tech Fan Design has been newly tuned with a reversed central fan direction for less turbulence.
+Military-grade Capacitors and other TUF components enhance durability and performance.
+Dual Ball Fan Bearings can last up to twice as long as sleeve bearing designs.
+GPU Tweak II provides intuitive performance tweaking, thermal controls, and system monitoring.
+
+|out_of_stock|
+true
+|images|
+https://images-na.ssl-images-amazon.com/images/I/81hR9CkZz5L.jpg
+|features|
+Brand ASUS|||Graphics Coprocessor NVIDIA GeForce RTX 3080|||Video Output Interface DisplayPort, HDMI|||Chipset Brand NVIDIA|||Graphics RAM Type GDDR6
+
+
+|asin|
+B08HH5WF97
+|title|
+ASUS TUF Gaming NVIDIA GeForce RTX 3080 OC Edition Graphics Card- PCIe 4.0, 10GB GDDR6X, HDMI 2.1, DisplayPort 1.4a, Dual Ball Fan Bearings
+|current_price|
+-1
+|description|
+Make sure this fits by entering your model number.
+NVIDIA Ampere Streaming Multiprocessors: The building blocks for the world’s fastest, most efficient GPU, the all-new Ampere SM brings 2X the FP32 throughput and improved power efficiency.
+2nd Generation RT Cores: Experience 2X the throughput of 1st Gen RT Cores, plus concurrent RT and shading for a whole new level of ray tracing performance.
+3rd Generation Tensor Cores: Get up to 2X the throughput with structural sparsity and advanced AI algorithms such as DLSS. Now with support for up to 8K resolution, these cores deliver a massive boost in game performance and all-new AI capabilities.
+Axial-Tech Fan Design has been newly tuned with a reversed central fan direction for less turbulence.
+Military-grade Capacitors and other TUF components enhance durability and performance.
+Dual Ball Fan Bearings can last up to twice as long as sleeve bearing designs.
+GPU Tweak II provides intuitive performance tweaking, thermal controls, and system monitoring.
+
+|out_of_stock|
+true
+|images|
+https://images-na.ssl-images-amazon.com/images/I/81hR9CkZz5L.jpg
+|features|
+Brand ASUS|||Graphics Coprocessor NVIDIA GeForce RTX 3080|||Video Output Interface DisplayPort, HDMI|||Chipset Brand NVIDIA|||Graphics RAM Type GDDR6
+
+
+|asin|
+B08HH5WF97
+|title|
+ASUS TUF Gaming NVIDIA GeForce RTX 3080 OC Edition Graphics Card- PCIe 4.0, 10GB GDDR6X, HDMI 2.1, DisplayPort 1.4a, Dual Ball Fan Bearings
+|current_price|
+-1
+|description|
+Make sure this fits by entering your model number.
+NVIDIA Ampere Streaming Multiprocessors: The building blocks for the world’s fastest, most efficient GPU, the all-new Ampere SM brings 2X the FP32 throughput and improved power efficiency.
+2nd Generation RT Cores: Experience 2X the throughput of 1st Gen RT Cores, plus concurrent RT and shading for a whole new level of ray tracing performance.
+3rd Generation Tensor Cores: Get up to 2X the throughput with structural sparsity and advanced AI algorithms such as DLSS. Now with support for up to 8K resolution, these cores deliver a massive boost in game performance and all-new AI capabilities.
+Axial-Tech Fan Design has been newly tuned with a reversed central fan direction for less turbulence.
+Military-grade Capacitors and other TUF components enhance durability and performance.
+Dual Ball Fan Bearings can last up to twice as long as sleeve bearing designs.
+GPU Tweak II provides intuitive performance tweaking, thermal controls, and system monitoring.
+
+|out_of_stock|
+true
+|images|
+https://images-na.ssl-images-amazon.com/images/I/81hR9CkZz5L.jpg
+|features|
+Brand ASUS|||Graphics Coprocessor NVIDIA GeForce RTX 3080|||Video Output Interface DisplayPort, HDMI|||Chipset Brand NVIDIA|||Graphics RAM Type GDDR6
+
+
+|asin|
+B08J5F3G18
+|title|
+EVGA GeForce RTX 3090 FTW3 Ultra Gaming, 24GB GDDR6X, iCX3 Technology, ARGB LED, Metal Backplate, 24G-P5-3987-KR
+|current_price|
+3499
+|description|
+Make sure this fits by entering your model number.
+Real boost clock: 1800 MHz; Memory detail: 24576 MB GDDR6X.
+Real-time ray tracing in games for cutting-edge, hyper-realistic graphics.
+Triple HDB fans + 9 iCX3 thermal sensors offer higher performance cooling and much quieter acoustic noise.
+All-metal backplate & adjustable ARGB
+3 year warranty & EVGA's top notch technical support.
+
+|out_of_stock|
+false
+|images|
+https://images-na.ssl-images-amazon.com/images/I/81-GWj0nEkL.jpg
+|features|
+Series 24G-P5-3987-KR|||Brand EVGA|||Graphics Coprocessor NVIDIA GeForce RTX 3090|||Chipset Brand NVIDIA|||Graphics RAM Type GDDR6
+
+
+|asin|
+B08J5F3G18
+|title|
+EVGA GeForce RTX 3090 FTW3 Ultra Gaming, 24GB GDDR6X, iCX3 Technology, ARGB LED, Metal Backplate, 24G-P5-3987-KR
+|current_price|
+3499
+|description|
+Make sure this fits by entering your model number.
+Real boost clock: 1800 MHz; Memory detail: 24576 MB GDDR6X.
+Real-time ray tracing in games for cutting-edge, hyper-realistic graphics.
+Triple HDB fans + 9 iCX3 thermal sensors offer higher performance cooling and much quieter acoustic noise.
+All-metal backplate & adjustable ARGB
+3 year warranty & EVGA's top notch technical support.
+
+|out_of_stock|
+false
+|images|
+https://images-na.ssl-images-amazon.com/images/I/81-GWj0nEkL.jpg|https://images-na.ssl-images-amazon.com/images/I/817A6v5o8%2BL.jpg|https://images-na.ssl-images-amazon.com/images/I/81SDOWJ0YlL.jpg|https://images-na.ssl-images-amazon.com/images/I/71zgPretixL.jpg|https://images-na.ssl-images-amazon.com/images/I/81GmQ6GgGfL.jpg|https://images-na.ssl-images-amazon.com/images/I/71Gc1ggzK1L.jpg|https://images-na.ssl-images-amazon.com/images/I/71GnuQ-zyCL.jpg
+|features|
+Series 24G-P5-3987-KR|||Brand EVGA|||Graphics Coprocessor NVIDIA GeForce RTX 3090|||Chipset Brand NVIDIA|||Graphics RAM Type GDDR6
+
+
+|asin|
+
+|title|
+
+|current_price|
+
+|description|
+
+|out_of_stock|
+false
+|images|
+none
+|features|
+Array
+
+
+|asin|
+
+|title|
+
+|current_price|
+
+|description|
+
+|out_of_stock|
+false
+|images|
+none
+|features|
+Array
+
+
+|asin|
+
+|title|
+
+|current_price|
+
+|description|
+
+|out_of_stock|
+false
+|images|
+none
+|features|
+Array
+
+

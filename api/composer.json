@@ -1,0 +1,6 @@
+{
+    "require": {
+        "sendgrid/sendgrid": "~7",
+	"php-amqplib/php-amqplib": "^2.10"
+    }
+}
