@@ -13,6 +13,7 @@ if (isset($_SESSION["user"])) {
 		} else {
 			$prodFlag = false;
 		}
+		unset($_POST["request"]);
 	} elseif (isset($_POST["remove"])) {
 		if ($_SESSION["user"]["role"] == "admin" || $_SESSION["user"]["role"] == "product manager") {
 			ob_start();
@@ -22,6 +23,7 @@ if (isset($_SESSION["user"])) {
 		} else {
 			$prodRemFlag = false;
 		}
+		unset($_POST["remove"]);
 	} elseif (isset($_POST["roleChange"])) {
 		if ($_SESSION["user"]["role"] == "admin") {
 			ob_start();
@@ -31,6 +33,18 @@ if (isset($_SESSION["user"])) {
 		} else {
 			$roleFlag = false;
 		}
+		unset($_POST["roleChange"]);
+	}
+	elseif (isset($_POST["update"])) {
+		if ($_SESSION["user"]["role"] == "admin" || $_SESSION["user"]["role"] == "product manager") {
+			ob_start();
+			$result = (array)updateStock();
+			ob_end_clean();
+			$updateFlag = true;
+		} else {
+			$updateFlag = false;
+		}
+			unset($_POST["update"]);
 	}
 } else {
 	echo "<script>alert('You must be logged in to access this page.')</script>";
@@ -128,8 +142,17 @@ if (isset($_SESSION["user"])) {
 								<h5 class="text-center mb-0">Refresh Quantity for All Products</h5>
 							</div>
 							<div class="theButton pt-3">
-								<button type="submit" name="reload" class="btnSubmit">Refresh Quantity</button>
+								<button type="submit" name="update" class="btnSubmit">Refresh Quantity</button>
 							</div>
+							<?php
+							if(isset($updateFlag)){
+								if (!$updateFlag) {
+									echo "You must have the proper priveleges";
+								} else {
+									echo $result["message"];
+								}
+							}
+							?>
 
 						</div>
 					</div>

@@ -11,15 +11,17 @@ if (isset($_POST["purchase"])) {
     $price = $_POST["price"];
 
     ob_start();
-    $confnumber = ((array)transaction($user, $asin, $prodName))["confnum"];
+    $transaction = ((array)transaction($user, $asin, $prodName));
+    $confNum = $transaction["confnum"];
     ob_end_clean();
-    if ($confnumber == -1) {
+    if ($confNum == -1) {
         echo "<script>alert('Out Of Stock')</script>";
         echo "<script>window.location = 'prodList.php'; </script>";
-    } elseif ($confnumber == -2) {
+    } elseif ($confNum == -2) {
         echo "<script>alert('Not Enough Funds')</script>";
         echo "<script>window.location = 'prodList.php'; </script>";
     }
+    $_SESSION["user"]["balance"] = $transaction["balance"];
 } else {
     header("Location: prodList.php");
 }

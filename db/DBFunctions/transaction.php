@@ -38,9 +38,11 @@ function transaction($username, $asin, $product_name)
         $stmt = getDB()->prepare("UPDATE Products SET current_price = 0 WHERE asin = :asin");
         $stmt->execute([":asin" => $asin]);
     }
-
+    $stmt = getDB()->prepare("SELECT balance FROM Users WHERE user_name = :username");
+    $stmt->execute([":username" => $username]);
+    $balance = ($stmt->fetch(PDO::FETCH_ASSOC))["balance"];
     if ($result && $result1 && $result2) {
-        return ["status" => 200, "confnum" => $confnumber, "message" => "Transaction Inserted"];
+        return ["status" => 200, "balance" => $balance, "confnum" => $confnumber, "message" => "Transaction Inserted"];
     } else {
         //must return a proper message so that the app can parse it
         //and display a user friendly message to the user
