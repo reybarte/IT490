@@ -14,7 +14,7 @@ function editProfile($oldUser, $newUser, $email, $fName, $lName)
 		$stmt = getDB()->prepare("RENAME TABLE T$oldUser to T$newUser");
 		$stmt->execute();
 		$stmt = getDB()->prepare("UPDATE Tracking set user_name = :newUser WHERE user_name = :oldUser");
-		$stmt->execute([":newUser"=>$newUser, ":oldUser" = $oldUser]);
+		$stmt->execute([":newUser"=>$newUser, ":oldUser"=>$oldUser]);
 
 	}
 	if ($result) {

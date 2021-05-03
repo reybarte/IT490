@@ -4,8 +4,16 @@ require(__DIR__ . "/MQPublish.inc.php");
 require(__DIR__ . "/header.php");
 if(isset($_POST["edit"])) {
 	ob_start();
-	$result = editProfile($_SESSION["user"]["user_name"], $_POST["username"], $_POST["email"], $_POST["firstName"], $_POST["lastName"]);
+	$result = (array)editProfile($_SESSION["user"]["user_name"], $_POST["username"], $_POST["email"], $_POST["firstName"], $_POST["lastName"]);
 	ob_end_clean();
+	if($result["status"] == 200) {
+		$_SESSION["user"]["email"] = $_POST["email"];
+		$_SESSION["user"]["user_name"] = $_POST["username"];
+		$_SESSION["user"]["first_name"] = $_POST["firstName"];
+		$_SESSION["user"]["last_name"] = $_POST["lastName"];
+		echo "<script>alert('Profile Updated');</script>";
+                echo "<script>window.location = 'profile.php';</script>";	
+	}
 }
 
 

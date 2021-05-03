@@ -6,7 +6,7 @@ function editProfile($oldUser, $newUser, $email, $fName, $lName){
 		require_once(__DIR__.'/../../lib/rabbitMQLib.inc');
 
 		$client = new RabbitMQClient('APPDBQ.ini', 'testServer');
-		$msg = ["oldUser"=>$oldUser, "newUser"=>$newUser, "email"=>$email, "fName"=>$fName, "lName"=>$lName, "type"=>"editProfile");
+		$msg = ["oldUser"=>$oldUser, "newUser"=>$newUser, "email"=>$email, "fName"=>$fName, "lName"=>$lName, "type"=>"editProfile"];
 		$response = $client->send_request($msg);
 		return $response;
 	}
