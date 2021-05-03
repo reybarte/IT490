@@ -49,7 +49,7 @@ if (isset($_POST["purchase"])) {
                 <h1 class="jumbotron-heading">Thank You, <?php echo $_SESSION["user"]["user_name"]; ?>!</h1>
             </div>
             <div class="borderRow media-body">
-                <h4> Order Confirmation Number: <?php echo $confnumber; ?> </h4>
+                <h4> Order Confirmation Number: <?php echo $confNum; ?> </h4>
             </div>
             <div class="media-body">
                 <h5 class="media-title font-weight-semibold pb-2">Thank you for shopping with us and supporting our tireless fight against <strong>SCALPERS!</strong></h5>

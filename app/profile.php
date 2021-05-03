@@ -30,7 +30,9 @@ require(__DIR__ . "/header.php");
                 <li class="list-group-item"><strong>Email:</strong> <?php echo $_SESSION["user"]["email"] ?></li>
                 <li class="list-group-item"><strong>Name:</strong> <?php echo $_SESSION["user"]["first_name"] . " " . $_SESSION["user"]["last_name"] ?></li>
                 <li class="list-group-item"><strong>Balance:</strong> <?php echo $_SESSION["user"]["balance"] ?></li>
-            </ul>
+		<li class="list-group-item text-center"><h5><a href="editProfile.php" class="card-link">Edit Profile</a></li></h5>
+	    </ul>
+
             <div class="card-body p-3">
                 <h5 class="card-title text-center mb-0"><a href="tracking.php" class="card-link">Tracking Preferences</a></h5>
             </div>
