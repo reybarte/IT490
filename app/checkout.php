@@ -64,7 +64,7 @@ else {
                     <p class="title topCenter">Points Balance</p>
                 </div>
                 <div class="text-center topCenter">
-                    <a href="#" type="button" class="topCenter btn btn-secondary">$5,000</a>
+		<a href="#" type="button" class="topCenter btn btn-secondary"><?php echo $_SESSION["balance"]; ?></a>
                 </div>
             </div>
             <div class="row borderRow media align-items-center align-items-lg-start text-center text-lg-left flex-column flex-lg-row m-1">
