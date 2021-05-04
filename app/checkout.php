@@ -12,6 +12,10 @@ foreach ($data as $key => $value) {
 foreach ($asinData as $key => $value) {
     //echo $key . ":" . $value["current_price"]."\n";
 }
+if(!isset($_SESSION["user"])) {
+	echo "<script>alert('You must be logged in to purchase')</script>";
+	echo "<script>window.location = 'prodList.php'; </script>";
+}
 if(isset($_POST["checkout"])) {
 	$asin = $_POST["asin"];
 	$price = $_POST["price"];
