@@ -33,7 +33,7 @@ function apiSaveDB($asin, $title, $current_price, $description, $features, $imag
 	$family = $prodData["product_family_name"];
 	echo $family;
 	$stockUpdated = 0;
-	if($oldStock == 1 && $newStock == 0){
+	if($newStock == 0){
 		$stmt = getDB()->prepare("UPDATE Products SET quantity = 5 WHERE asin = :asin");
  	   	$stmt->execute([":asin" => $asin]);
 		$stockUpdated = 1;
@@ -41,7 +41,7 @@ function apiSaveDB($asin, $title, $current_price, $description, $features, $imag
 		$stmt = getDB()->prepare("UPDATE Products SET quantity = 0 WHERE asin = :asin");
 		$stmt->execute([":asin" => $asin]);
 	}
-	if($affected == 2){
+	if($affected == 2 || $affected == 1){
 		if($oldProd && $stockUpdated) {
 			echo "Sending Mail";
 			$stmt = getDB()->prepare("SELECT * FROM Tracking");
@@ -59,8 +59,6 @@ function apiSaveDB($asin, $title, $current_price, $description, $features, $imag
 			}		
 		}
 		return ["status"=>200, "message"=>"Product data found"];
-	} else if ($affected == 2) {
-		return ["status"=>200, "message"=>"Product data updated"];
 	}
 	else{
 		//must return a proper message so that the app can parse it
