@@ -1,5 +1,5 @@
 <?php
-require (__DIR__ . '/../vendor/autoload.php');
+require (__DIR__ . '/vendor/autoload.php');
 /*
 do on api server
 echo "export SENDGRID_API_KEY='YOUR_API_KEY'" > sendgrid.env
