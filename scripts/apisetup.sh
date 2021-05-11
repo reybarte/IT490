@@ -9,19 +9,15 @@ fi
 sudo apt update -y
 #Upgrade packages
 sudo apt upgrade -y
-#install apache server
-sudo apt install apache2 -y
-sudo service apache2 start
 #install php modules
 sudo apt install php7.4 -y
+#install php-curl for api calls
+sudo apt install php-curl -y
+
 sudo apt install composer -y
 
 sudo mkdir repo
 sudo chown $1 repo
 sudo mkdir backups
 sudo chown $1 backups
-sudo rm /var/www/html/index.html
-sudo ln -s /home/$1/repo /var/www/html/
-sudo chmod 777 /var/www/html
-#manually edit /etc/apache2/sites-available/000-default.conf
-#DocumentRoot /var/www/html/repo/app
+
