@@ -1,0 +1,20 @@
+From local machine, use sshkeygen.sh $1 $2 $3 $4
+where $1 is name of key to be created for ssh
+$2 is username and $3 is ip of remote machine to connect to
+$4 is optional if transferring files, [app, mq, api, db], only used when doing dev->qa, qa->prod
+After script finishes, remote machine will have scripts needed to set up, migrate files/directories, and revert files
+Need to run sshkeygen.sh again to make key for connection qa->dev, prod->qa
+
+Once keys are made, migrate specific files needed for the machine.
+Run setup files as sent over by sshkeygen.sh
+After setup files are ran,
+From machine that needs the files, run migration.sh $1 $2 $3 $4 $5 $6 $7 $8
+Where:
+$1 = key name for target machine (machine in previous lane, if qa, target is dev)
+$2 = key name for local machine
+$3 = file/directory name to transfer
+$4 = user of target machine
+$5 = ip of target machine
+$6 = user of local machine
+$7 = ip of local machine
+$8 = location of file relative to /home/$3/repo
