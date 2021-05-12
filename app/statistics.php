@@ -22,12 +22,8 @@ require(__DIR__ . "/header.php");
 
 <body>
     <!-- Statistics List and Options -->
-    <div class="container d-flex justify-content-center mt-50 mb-50"></div>
-    <div class="row justify-content-center"></div>
-    <div class="col-md-10"></div>
-    <div class="card"></div>
-    <h2 class="card-title text-center p-3 mb-0">Product Data, Tracking, and more!</h2>
-    <div class="container d-flex justify-content-center mt-50 mb-50">
+<h2 class="card-title text-center p-3 mb-0">Product Data, Tracking, and more!</h2>
+    <div class="container d-flex justify-content-center mt-10 mb-50">
         <div class="row justify-content-center">
             <div class="col-md-10">
                 <!-- Graph for Total Trackers over Time -->
