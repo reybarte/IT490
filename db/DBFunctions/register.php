@@ -8,8 +8,12 @@ function register($email, $username, $fName, $lName, $password)
 	//TODO do proper checking, maybe user doesn't exist
 	if ($result) {
 		$stmt = getDB()->prepare("CREATE TABLE T$username (asin VARCHAR(10) NOT NULL, product_name VARCHAR (200) NOT NULL, price DECIMAL (10, 2) NOT NULL, purchase_date DATETIME NOT NULL, conf_num INT NOT NULL)");
-
 		$stmt->execute();
+		$stmt = getDB()->prepare("SELECT SUM(count) as trackCount FROM ProductFamily");
+		$stmt->execute();
+		$count = $stmt->fetch(PDO::FETCH_ASSOC);
+		$stmt = getDB()->prepare("INSERT INTO TrackStats (date, count) VALUES (CURRENT_TIMESTAMP, :count)");
+		$stmt->execute([":count" => $count["trackCount"]]);
 		return array("status" => 200, "message" => "Registered");
 	} else {
 		//must return a proper message so that the app can parse it
