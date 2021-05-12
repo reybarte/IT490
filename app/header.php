@@ -51,7 +51,7 @@ $clientRole = $_SESSION["user"]["role"] == 'client' ? 1 : 0;
 				<li class="nav-item <?php echo $currentURL['tracking'] ? 'active' : '' ?> ">
 					<a class="nav-link" href="<?php echo $prodPage ? '../tracking.php' : 'tracking.php' ?>">Tracking</a>
 				</li>
-				<li class="nav-item <?php echo $currentURL['statistics'] ? 'active' : '' ?> ">
+				<li class="nav-item <?php echo ($currentURL['statistics'] || $currentURL['totalTrackers'] || $currentURL['purchaseGraph'] || $currentURL['popularityRankings']) ? 'active' : '' ?> ">
 					<a class="nav-link" href="<?php echo $prodPage ? '../statistics.php' : 'statistics.php' ?>">Statistics</a>
 				</li>
 				<div class="nav-item dropdown ml-auto">

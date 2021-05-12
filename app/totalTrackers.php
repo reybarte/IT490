@@ -30,52 +30,67 @@ require(__DIR__ . "/header.php");
 </head>
 
 <body>
-    <h1>Pull from Workbench</h1>
-    <canvas id="myChart" width="400" height="400"></canvas>
-    <?php
-    $countData = (array) $info["data"];
-    foreach ($countData as $value) {
-    	echo $value;
-	echo "<br>";
-    }
-    ?>
-    <script>
-        var ctx = document.getElementById('myChart');
-        var myChart = new Chart(ctx, {
-            type: 'line',
-            data: {
-                labels: ['January', 'February', 'March', 'April', 'May', 'June', "July", "August", "September", "October", "November", "December"],
-                datasets: [{
-                    label: '# of Votes',
-                    data: [1, 2, 3, 4, 3, 2, 1, 2, 3, 4, 5, 6],
-                    backgroundColor: [
-                        'rgba(255, 99, 132, 0.2)',
-                        'rgba(54, 162, 235, 0.2)',
-                        'rgba(255, 206, 86, 0.2)',
-                        'rgba(75, 192, 192, 0.2)',
-                        'rgba(153, 102, 255, 0.2)',
-                        'rgba(255, 159, 64, 0.2)'
-                    ],
-                    borderColor: [
-                        'rgba(255, 99, 132, 1)',
-                        'rgba(54, 162, 235, 1)',
-                        'rgba(255, 206, 86, 1)',
-                        'rgba(75, 192, 192, 1)',
-                        'rgba(153, 102, 255, 1)',
-                        'rgba(255, 159, 64, 1)'
-                    ],
-                    borderWidth: 1
-                }]
-            },
-            options: {
-                scales: {
-                    y: {
-                        beginAtZero: true
+    
+	<div class="canvas" ><canvas id="chart"></canvas></div>
+<script>
+	function getTrackingChart(data, labels) {
+		var ctx = document.getElementById('chart');
+            var newData = {
+                type: 'line',
+                data: {
+                    labels: [],
+                    datasets: [{
+                        label: '# of Users vs. Active Tracked Product Families',
+                        data: [],
+                        backgroundColor: [
+                            'rgba(255, 99, 132, 0.2)',
+                            'rgba(54, 162, 235, 0.2)',
+                            'rgba(255, 206, 86, 0.2)',
+                            'rgba(75, 192, 192, 0.2)',
+                            'rgba(153, 102, 255, 0.2)',
+                            'rgba(255, 159, 64, 0.2)'
+                        ],
+                        borderColor: [
+                            'rgba(255, 99, 132, 1)',
+                            'rgba(54, 162, 235, 1)',
+                            'rgba(255, 206, 86, 1)',
+                            'rgba(75, 192, 192, 1)',
+                            'rgba(153, 102, 255, 1)',
+                            'rgba(255, 159, 64, 1)'
+                        ],
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
                     }
                 }
-            }
-        });
+            };
+
+            newData["data"]["datasets"][0]["data"] = data;
+            newData["data"]["labels"] = labels;
+            var myChart = new Chart(ctx, newData);
+	}
     </script>
+	    <?php
+	function getTrackingUserChart($trackStats) {
+		$count = 1;
+		$data[] = 0;
+		$labels[] = 0;
+		foreach ($trackStats as $value) { //value = time of each purchase
+ 		$data[] = ((array)$value)[1];
+		$labels[] = $count;
+		$count++;
+		}
+		//var_dump($data);
+        echo "<script>getTrackingChart(" . json_encode($data, 1) . "," . json_encode($labels, 1) . ")</script>";	
+	}
+	//var_dump((array)$info["data"]);
+	getTrackingUserChart(((array)$info["data"]));
+?>
 </body>
 
 </html>
@@ -104,5 +119,11 @@ require(__DIR__ . "/header.php");
         position: absolute;
         width: 15px;
 
+    }
+    .canvas {
+        width: 800px;
+        height: 400px;
+        margin: auto;
+        width: 50%;
     }
 </style>
