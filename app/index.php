@@ -2,16 +2,6 @@
 session_start();
 require(__DIR__ . "/MQPublish.inc.php");
 require(__DIR__ . "/header.php");
-ob_start();
-$data = getCache()->data;
-ob_end_clean();
-foreach ($data as $key => $value) {
-    $asinData[strval($value->asin)] = (array)$value;
-}
-//var_dump($asinData);
-foreach ($asinData as $key => $value) {
-    //echo $key . ":" . $value["current_price"]."\n";
-}
 ?>
 
 <!DOCTYPE html>
@@ -37,7 +27,7 @@ foreach ($asinData as $key => $value) {
             <img src="IMG/490TitlePic.png" class="img-fluid bigImage pb-2">
             <blockquote class="blockquote text-center">
                 <p class="mb-0">"Fuck Scalpers"</p>
-                <footer class="blockquote-footer"><cite title="Source Title">Reynaldo Barte</cite></footer>
+                <footer class="blockquote-footer"><cite title="Source Title">Derek</cite></footer>
             </blockquote>
         </div>
     </section>
