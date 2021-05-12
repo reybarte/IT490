@@ -20,6 +20,7 @@ require(__DIR__ . "/DBFunctions/getTransactionHistory.php");
 require(__DIR__ . "/DBFunctions/updateStock.php");
 require(__DIR__ . "/DBFunctions/mailClient.php");
 require(__DIR__ . "/DBFunctions/editProfile.php");
+require(__DIR__ . "/DBFunctions/getTrackingStats.php");
 //TODO add more as they're developed
 
 function request_processor($req)
@@ -59,6 +60,8 @@ function request_processor($req)
 			return updateStock();
 		case "editProfile":
 			return editProfile($req["oldUser"], $req["newUser"], $req["email"], $req["fName"], $req["lName"]);
+		case "getTrackingStats":
+			return getTrackingStats();
 		case "echo":
 			return ["return_code" => '0', "message" => "Echo: " . $req["message"]];
 	}

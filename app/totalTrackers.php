@@ -5,7 +5,7 @@ if (isset($_SESSION["user"])) {
     $user = $_SESSION["user"]["user_name"];
 
     ob_start();
-    $info = (array)getTrackingInfo($user);
+    $info = (array)getTrackingStats();
     ob_end_clean();
 } else {
     echo "<script>alert('You must be logged in to access this page.')</script>";
@@ -33,8 +33,10 @@ require(__DIR__ . "/header.php");
     <h1>Pull from Workbench</h1>
     <canvas id="myChart" width="400" height="400"></canvas>
     <?php
-    $countData = (array) $info["countData"];
+    $countData = (array) $info["data"];
     foreach ($countData as $value) {
+    	echo $value;
+	echo "<br>";
     }
     ?>
     <script>
